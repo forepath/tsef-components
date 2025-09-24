@@ -1,0 +1,24 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2020", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@forepath/devkit": ["tools/devkit/src/index.ts"],
+      "@forepath/identity/backend": ["libs/domains/identity/backend/index.ts"],
+      "@forepath/identity/frontend": ["libs/domains/identity/frontend/index.ts"]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}
