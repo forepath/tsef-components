@@ -12,6 +12,13 @@ This document defines the rules and best practices for general software developm
 
 > When trade-offs are necessary, prioritize principles in this order: KISS first, then maintainability and readability, then testability.
 
+### Conflict Resolution Guidelines
+
+- **KISS vs. Analysis**: When analysis requirements conflict with simplicity, you **MUST** prioritize analysis for critical systems, security, and compliance requirements
+- **Testing vs. Performance**: When testing requirements conflict with performance, you **MUST** prioritize testing for production systems, but **MAY** optimize performance for non-critical paths
+- **Security vs. Usability**: When security requirements conflict with usability, you **MUST** prioritize security while **SHOULD** implement user-friendly alternatives
+- **Coverage vs. Speed**: When test coverage conflicts with development speed, you **MUST** maintain minimum coverage requirements but **MAY** optimize test execution speed
+
 ### Simplicity
 - You **MUST** follow the **KISS (Keep It Simple, Stupid)** principle: solutions should be as simple as possible while still meeting requirements. Avoid unnecessary complexity.
 - You **MUST** avoid premature optimization unless performance issues are proven or critical.

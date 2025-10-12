@@ -23,7 +23,7 @@ This document defines comprehensive testing strategies and patterns for ensuring
 
 - Unit tests **MUST** test individual functions, methods, and components in isolation.
 - Unit tests **SHOULD** use mocking for external dependencies.
-- Unit tests **MUST** be fast (< 100ms per test) and deterministic.
+- Unit tests **MUST** be fast (< 100ms per individual test) and deterministic.
 - Unit tests **SHOULD** cover edge cases and error conditions.
 
 ### Integration Tests (`type:integration`)

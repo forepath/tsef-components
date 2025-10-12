@@ -63,6 +63,32 @@ This document defines comprehensive security practices and patterns for ensuring
 - Privacy **MUST** provide data subject rights (access, rectification, erasure).
 - Privacy **SHOULD** implement privacy by design principles.
 
+#### GDPR Compliance Requirements
+
+- **Data Processing Lawfulness**: Applications **MUST** document legal basis for data processing (consent, contract, legal obligation, vital interests, public task, legitimate interests)
+- **Consent Management**: Applications **MUST** implement granular consent mechanisms with clear opt-in/opt-out options
+- **Data Subject Rights**: Applications **MUST** provide automated systems for:
+  - **Right of Access**: Data subjects can request copies of their personal data within 30 days
+  - **Right of Rectification**: Data subjects can correct inaccurate personal data
+  - **Right of Erasure**: Data subjects can request deletion of personal data ("right to be forgotten")
+  - **Right to Portability**: Data subjects can export their data in machine-readable format
+  - **Right to Restrict Processing**: Data subjects can limit how their data is processed
+  - **Right to Object**: Data subjects can object to processing for marketing or legitimate interests
+- **Data Protection Impact Assessment**: Applications **MUST** conduct DPIAs for high-risk processing activities
+- **Data Breach Notification**: Applications **MUST** notify supervisory authority within 72 hours of data breaches
+- **Privacy by Design**: Applications **MUST** implement privacy controls by default (data minimization, purpose limitation, storage limitation)
+
+#### CCPA Compliance Requirements
+
+- **Consumer Rights**: Applications **MUST** provide California residents with:
+  - **Right to Know**: Information about personal information collected, used, and shared
+  - **Right to Delete**: Deletion of personal information upon request
+  - **Right to Opt-Out**: Opt-out of sale of personal information
+  - **Right to Non-Discrimination**: Equal service regardless of privacy choices
+- **Data Collection Transparency**: Applications **MUST** provide clear privacy notices explaining data collection practices
+- **Third-Party Data Sharing**: Applications **MUST** disclose categories of personal information shared with third parties
+- **Financial Incentives**: Applications **MUST** disclose any financial incentives offered for personal information
+
 ## API Security
 
 ### API Protection

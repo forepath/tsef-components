@@ -85,6 +85,31 @@ This document defines the rules and best practices for structuring applications 
 - Backend applications **MUST** respect dependency boundaries when implementing data flow across domains.
 - Backend applications **SHOULD** implement audit trails for data changes in production environments.
 
+### Microservices Architecture
+
+- Backend applications **SHOULD** implement microservices architecture for complex, scalable systems.
+- Microservices **MUST** be independently deployable and scalable.
+- Microservices **SHOULD** follow domain-driven design principles.
+- Microservices **MUST** implement service discovery and load balancing.
+- Microservices **SHOULD** use API gateways for external communication.
+- Microservices **MUST** implement circuit breakers and bulkhead patterns for fault tolerance.
+
+### Event-Driven Architecture
+
+- Backend applications **SHOULD** implement event-driven architecture for loose coupling.
+- Event-driven systems **MUST** use message queues or event streaming platforms.
+- Event-driven systems **SHOULD** implement event sourcing for audit trails.
+- Event-driven systems **MUST** handle event ordering and idempotency.
+- Event-driven systems **SHOULD** implement event replay capabilities for disaster recovery.
+
+### Distributed Systems Patterns
+
+- Backend applications **MUST** implement distributed tracing for request correlation.
+- Distributed systems **SHOULD** use consistent hashing for data distribution.
+- Distributed systems **MUST** implement leader election for coordination.
+- Distributed systems **SHOULD** use consensus algorithms (Raft, Paxos) for consistency.
+- Distributed systems **MUST** implement health checks and service mesh patterns.
+
 ## Device Native Applications (`scope:native`)
 
 - Native applications **MUST** contain code targeting mobile/desktop frameworks (e.g. Capacitor).
