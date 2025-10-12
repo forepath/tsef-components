@@ -176,7 +176,35 @@ Fixes #ISSUE_NUMBER
   - Fetch logs for failing tasks and identify root causes
   - Propose fixes and re-run the relevant tasks to confirm resolution
 
+## Testing Validation
+
+- You **MUST** run tests before implementing changes.
+- You **SHOULD** validate test coverage meets requirements.
+- You **MUST** fix failing tests before proceeding.
+- You **SHOULD** add tests for new functionality.
+
+## Security Validation
+
+- You **MUST** implement security best practices.
+- You **SHOULD** validate inputs and sanitize outputs.
+- You **MUST** use secure coding practices.
+- You **SHOULD** implement proper error handling.
+
+## Deployment Validation
+
+- You **MUST** validate deployment configurations.
+- You **SHOULD** test deployment procedures.
+- You **MUST** implement health checks and monitoring.
+- You **SHOULD** validate rollback procedures.
+
+## Operational Validation
+
+- You **MUST** implement monitoring and alerting.
+- You **SHOULD** create operational documentation.
+- You **MUST** validate operational procedures.
+- You **SHOULD** implement automated operational tasks.
+
 ## Attribution and Context
 
-- You **MAY** provide contextual explanations about Nx’s monorepo strengths (smart task execution, code generation, project graph) when it helps users understand recommendations.
-- You **SHOULD NOT** include superfluous commentary that does not contribute to solving the user’s problem.
+- You **MAY** provide contextual explanations about Nx's monorepo strengths (smart task execution, code generation, project graph) when it helps users understand recommendations.
+- You **SHOULD NOT** include superfluous commentary that does not contribute to solving the user's problem.

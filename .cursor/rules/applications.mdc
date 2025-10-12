@@ -31,6 +31,9 @@ This document defines the rules and best practices for structuring applications 
   - **Simple applications**: Angular Signals or RxJS BehaviorSubjects
   - **Medium complexity**: NgRx (Redux pattern for Angular)
   - **Complex applications**: Custom state management with clear patterns
+
+> **Example**: For a simple todo app, use Angular Signals. For a complex e-commerce app, use NgRx with domain-based state organization.
+
 - Frontend applications **MUST** maintain type safety throughout the state management layer using TypeScript.
 - Frontend applications **MUST** organize state management within `data-access` libraries following the domain structure.
 - Frontend applications **MUST** keep state management logic in `data-access` libraries, never in `ui` or `feature` libraries.
@@ -62,6 +65,9 @@ This document defines the rules and best practices for structuring applications 
   - **Simple applications**: Direct service-to-service communication with DTOs
   - **Medium complexity**: NestJS CQRS with Command/Query separation
   - **Complex applications**: Domain-Driven Design with Aggregate Roots and Domain Events
+
+> **Example**: For a simple CRUD API, use direct service communication. For a complex microservices architecture, use Domain-Driven Design with event sourcing.
+
 - Backend applications **MUST** maintain type safety throughout the data flow layer using TypeScript.
 - Backend applications **MUST** organize data flow within `data-access` libraries following the domain structure.
 - Backend applications **MUST** keep data flow logic in `data-access` libraries, never in `ui` or `feature` libraries.
@@ -107,3 +113,39 @@ This document defines the rules and best practices for structuring applications 
 - Applications **SHOULD** include a clearly defined build process.
 - Applications **SHOULD** be containerizable and deployable independently.
 - Applications **MAY** leverage environment-specific configurations, provided they do not break dependency rules.
+
+## Testing Requirements
+
+- Applications **MUST** implement comprehensive testing strategies.
+- Applications **SHOULD** maintain minimum 80% code coverage.
+- Applications **MUST** include unit, integration, and end-to-end tests.
+- Applications **SHOULD** use test-driven development for critical logic.
+
+> **Related Guidelines**: See [testing.mdc](./testing.mdc) for detailed testing strategies and [agents.mdc](./agents.mdc) for testing validation requirements.
+
+## Security Requirements
+
+- Applications **MUST** implement security best practices.
+- Applications **SHOULD** use authentication and authorization.
+- Applications **MUST** validate and sanitize all inputs.
+- Applications **SHOULD** implement security monitoring and logging.
+
+> **Related Guidelines**: See [security.mdc](./security.mdc) for comprehensive security practices and [agents.mdc](./agents.mdc) for security validation requirements.
+
+## Deployment Requirements
+
+- Applications **MUST** be containerized and deployable.
+- Applications **SHOULD** use infrastructure as code.
+- Applications **MUST** implement health checks and monitoring.
+- Applications **SHOULD** support automated deployment pipelines.
+
+> **Related Guidelines**: See [deployment.mdc](./deployment.mdc) for comprehensive deployment strategies and [agents.mdc](./agents.mdc) for deployment validation requirements.
+
+## Operational Requirements
+
+- Applications **MUST** implement comprehensive monitoring.
+- Applications **SHOULD** support 24/7 operations.
+- Applications **MUST** have documented operational procedures.
+- Applications **SHOULD** implement automated operational tasks.
+
+> **Related Guidelines**: See [operations.mdc](./operations.mdc) for comprehensive operational practices and [agents.mdc](./agents.mdc) for operational validation requirements. Note: Deployment monitoring is covered in [deployment.mdc](./deployment.mdc), operational monitoring in [operations.mdc](./operations.mdc), and security monitoring in [security.mdc](./security.mdc).
