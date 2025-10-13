@@ -88,6 +88,12 @@ jobs:
 
           echo "✅ PR template validation passed"
 
+      - name: Commitlint - Lint Commits
+        if: github.event_name == 'pull_request'
+        shell: bash
+        run: |
+          npx commitlint --from=origin/${{ github.base_ref }} --to=HEAD --config ./.commitlintrc.json
+
       - name: Nx Format - Check
         run: npx nx format:check
 
