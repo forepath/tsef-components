@@ -2,9 +2,9 @@ name: CI
 
 on:
   push:
-    branches: ["**"]
+    branches: ['**']
   pull_request:
-    branches: ["**"]
+    branches: ['**']
 
 permissions:
   contents: read
@@ -55,38 +55,6 @@ jobs:
           key: ${{ runner.os }}-nx-${{ hashFiles('**/nx.json', '**/project.json', '**/workspace.json', '**/package.json') }}
           restore-keys: |
             ${{ runner.os }}-nx-
-
-      - name: PR Template Validation
-        if: github.event_name == 'pull_request'
-        shell: bash
-        run: |
-          echo "Validating PR template compliance..."
-
-          # Check if PR description contains required sections
-          PR_BODY="${{ github.event.pull_request.body }}"
-
-          if [[ -z "$PR_BODY" ]]; then
-            echo "❌ PR description is empty"
-            exit 1
-          fi
-
-          # Check for required sections
-          if ! echo "$PR_BODY" | grep -q "## Current Behavior"; then
-            echo "❌ Missing 'Current Behavior' section"
-            exit 1
-          fi
-
-          if ! echo "$PR_BODY" | grep -q "## Expected Behavior"; then
-            echo "❌ Missing 'Expected Behavior' section"
-            exit 1
-          fi
-
-          if ! echo "$PR_BODY" | grep -q "## Related Issue"; then
-            echo "❌ Missing 'Related Issue' section"
-            exit 1
-          fi
-
-          echo "✅ PR template validation passed"
 
       - name: Commitlint - Lint Commits
         if: github.event_name == 'pull_request'

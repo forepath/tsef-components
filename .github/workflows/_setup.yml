@@ -54,3 +54,6 @@ jobs:
           if [ "$PM" = "pnpm" ]; then pnpm exec cypress install || true; fi
           if [ "$PM" = "yarn" ]; then yarn run -s cypress install || yarn dlx cypress install || true; fi
           if [ "$PM" = "npm" ]; then npx --yes cypress install || true; fi
+
+      - name: Setup Nx Cloud
+        uses: nrwl/nx-set-shas@v4
