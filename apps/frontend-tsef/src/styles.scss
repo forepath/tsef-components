@@ -21,11 +21,28 @@ $success: #b8a082; // Darker gold-brown for success
 
 body {
   background-color: #fafafc;
+
+  @media (max-width: 767px) {
+    text-align: center;
+  }
 }
 
 .py-10 {
   padding-top: 6rem !important;
   padding-bottom: 6rem !important;
+
+  @media (max-width: 991px) {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+  }
+}
+
+.mb-10 {
+  margin-bottom: 6rem !important;
+
+  @media (max-width: 767px) {
+    margin-bottom: 3rem !important;
+  }
 }
 
 .card {
@@ -48,4 +65,20 @@ body {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-fill-color: transparent;
+}
+
+.navbar {
+  position: unset;
+}
+
+.navbar-collapse {
+  @media (max-width: 991px) {
+    background-color: #fafafc;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    border-bottom: 1px solid #e2e8f0;
+  }
 }

@@ -16,6 +16,14 @@
     background-repeat: no-repeat;
     background-blend-mode: multiply;
     z-index: 1;
+
+    @media (max-width: 991px) {
+      display: none;
+    }
+
+    @media (max-width: 1799px) {
+      opacity: 0.5;
+    }
   }
 
   > * {
