@@ -2,24 +2,29 @@
 
 Welcome to the comprehensive development documentation for this monorepo. This documentation provides human-readable guides, best practices, and workflows to help you develop effectively within our structured environment.
 
-## 📚 Documentation Structure
+## Documentation Structure
 
-### 🚀 [Development Workflows](./development-workflows/)
+### [Development Workflows](./development-workflows/)
+
 Learn how to work effectively with our development processes, from planning to implementation to deployment.
 
-### 🏗️ [Architecture](./architecture/)
+### [Architecture](./architecture/)
+
 Understand the monorepo structure, library organization, and architectural principles that guide our development.
 
-### ✨ [Best Practices](./best-practices/)
+### [Best Practices](./best-practices/)
+
 Discover coding standards, quality guidelines, and proven practices for maintaining high-quality code.
 
-### 🛠️ [Tools](./tools/)
+### [Tools](./tools/)
+
 Explore the development tools, automation, and integrations that power our development workflow.
 
-### 📖 [Reference](./reference/)
+### [Reference](./reference/)
+
 Quick access to commands, troubleshooting guides, and comprehensive rule references.
 
-## 🎯 Quick Start
+## Quick Start
 
 New to the project? Start here:
 
@@ -27,7 +32,7 @@ New to the project? Start here:
 2. **[Operation Modes](./development-workflows/operation-modes.md)** - Understanding how to approach different types of tasks
 3. **[Monorepo Structure](./architecture/monorepo-structure.md)** - Learn how our code is organized
 
-## 🤖 AI Agent Rules
+## AI Agent Rules
 
 For detailed technical specifications and AI agent behavior, see the [Cursor Rules](../.cursor/rules/) directory:
 
@@ -37,7 +42,7 @@ For detailed technical specifications and AI agent behavior, see the [Cursor Rul
 - **[Conventional Commits](../.cursor/rules/conventional_commits.mdc)** - Commit message standards
 - **[Software Development Principles](../.cursor/rules/software_develoment_principals.mdc)** - Core development principles
 
-## 🔗 External Resources
+## External Resources
 
 - [Nx Documentation](https://nx.dev) - Monorepo tooling and best practices
 - [GitHub MCP Server](https://github.com/github/github-mcp-server) - GitHub integration tools
@@ -45,4 +50,4 @@ For detailed technical specifications and AI agent behavior, see the [Cursor Rul
 
 ---
 
-*This documentation is designed to be human-readable and practical. For technical specifications and AI agent behavior, preferably refer to the Cursor Rules directory.*
+_This documentation is designed to be human-readable and practical. For technical specifications and AI agent behavior, preferably refer to the Cursor Rules directory._

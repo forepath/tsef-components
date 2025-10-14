@@ -2,16 +2,17 @@
 
 Our GitHub workflow provides a structured approach to handling issues, implementing changes, and managing pull requests. This guide walks you through the complete process from issue to deployment.
 
-## 🎯 Overview
+## Overview
 
 The GitHub workflow consists of five main phases:
+
 1. **Retrieve Issue Details** - Understand what needs to be done
 2. **Plan and Analysis** - Determine the best approach
 3. **Implementation** - Build the solution
 4. **Validation** - Ensure quality and correctness
 5. **Pull Request** - Submit your work for review
 
-## 📋 Phase 1: Retrieve Issue Details
+## Phase 1: Retrieve Issue Details
 
 ### Gathering Information
 
@@ -43,7 +44,7 @@ gh issue list --assignee "@me" --json number,title,body,state --jq '.[]'
 - **Clone reproduction repositories** under `./tmp/repros/ISSUE_NUMBER` if needed
 - **Read all comments** - important context might be in the discussion
 
-## 🔍 Phase 2: Plan and Analysis
+## Phase 2: Plan and Analysis
 
 ### Understanding the Problem
 
@@ -70,7 +71,7 @@ Based on your analysis, create a clear implementation plan:
 4. **Consider risks** and mitigation strategies
 5. **Define success criteria** - How will you know it's done?
 
-## 🛠️ Phase 3: Implementation
+## Phase 3: Implementation
 
 ### Following Established Patterns
 
@@ -90,7 +91,7 @@ Based on your analysis, create a clear implementation plan:
 - **Add appropriate tests** - Ensure your changes work and continue to work
 - **Update documentation** - If you're changing behavior, update the docs
 
-## ✅ Phase 4: Validation
+## Phase 4: Validation
 
 ### Running Tests
 
@@ -118,6 +119,7 @@ nx prepush
 ### Handling Validation Failures
 
 If validation fails:
+
 - **Fix the issues** before proceeding
 - **Amend your commit** rather than adding new commits just for fixes
 - **Don't skip validation** - it's there to prevent problems
@@ -132,7 +134,7 @@ nx format:write
 
 This is **mandatory** - the CI pipeline will fail if code isn't formatted correctly.
 
-## 📤 Phase 5: Pull Request
+## Phase 5: Pull Request
 
 ### Creating the PR
 
@@ -174,7 +176,7 @@ Fixes #ISSUE_NUMBER
 - **Include testing instructions** - How can reviewers test your changes?
 - **Mention any special considerations** - Performance, security, etc.
 
-## 🔄 Common Workflow Patterns
+## Common Workflow Patterns
 
 ### Bug Fixes
 
@@ -200,21 +202,24 @@ Fixes #ISSUE_NUMBER
 4. **Validate frequently** - Run tests after each significant change
 5. **Document the changes** - Explain what you changed and why
 
-## 🚨 Troubleshooting
+## Troubleshooting
 
 ### Common Issues
 
 **Validation fails after changes**
+
 - Run `nx format:write` to fix formatting
 - Check for linting errors and fix them
 - Ensure all tests pass
 
 **PR feedback requires significant changes**
+
 - Don't be discouraged - feedback makes the code better
 - Ask for clarification if feedback is unclear
 - Make the requested changes and re-request review
 
 **Merge conflicts**
+
 - Rebase your branch on the latest main branch
 - Resolve conflicts carefully
 - Test after resolving conflicts
@@ -225,7 +230,7 @@ Fixes #ISSUE_NUMBER
 - **Ask in the PR** - Use comments to get clarification
 - **Reach out to the team** - Don't struggle alone
 
-## 🎯 Success Criteria
+## Success Criteria
 
 A successful GitHub workflow results in:
 
@@ -236,7 +241,7 @@ A successful GitHub workflow results in:
 - **Clear communication** through PR descriptions and comments
 - **Smooth review process** with minimal back-and-forth
 
-## 🚀 Next Steps
+## Next Steps
 
 Now that you understand the GitHub workflow:
 

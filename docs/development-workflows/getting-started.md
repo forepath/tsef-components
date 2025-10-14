@@ -2,7 +2,7 @@
 
 Welcome to the monorepo! This guide will help you understand how to work effectively within our structured development environment.
 
-## 🎯 What You'll Learn
+## What You'll Learn
 
 By the end of this guide, you'll understand:
 
@@ -11,7 +11,7 @@ By the end of this guide, you'll understand:
 - How to structure your work for maximum efficiency
 - Where to find help when you need it
 
-## 🚀 Your First Steps
+## Your First Steps
 
 ### 1. Understand Operation Modes
 
@@ -33,7 +33,7 @@ Ensure you have the right tools configured:
 - **[Development Tools](../tools/)** - Required tooling
 - **[GitHub Integration](../tools/github-mcp-setup.md)** - GitHub workflow setup
 
-## 🔄 Daily Workflow
+## Daily Workflow
 
 ### Typical Development Cycle
 
@@ -50,7 +50,7 @@ Ensure you have the right tools configured:
 - **Follow naming conventions** - Consistency helps everyone
 - **Keep changes focused** - Small, focused changes are easier to review
 
-## 🆘 Getting Help
+## Getting Help
 
 ### When You're Stuck
 
@@ -64,7 +64,7 @@ Ensure you have the right tools configured:
 - **[Troubleshooting](../reference/troubleshooting.md)** - Solutions to common problems
 - **[Rule Index](../reference/rule-index.md)** - Complete reference to all guidelines
 
-## 🎓 Next Steps
+## Next Steps
 
 Once you're comfortable with the basics:
 
@@ -73,7 +73,7 @@ Once you're comfortable with the basics:
 3. **[Understand the validation pipeline](./validation-pipeline.md)** - Ensure your code meets quality standards
 4. **[Review best practices](../best-practices/)** - Learn proven approaches for common scenarios
 
-## 💡 Pro Tips
+## Pro Tips
 
 - **Start with Plan-First Mode** when you're unsure - it's better to plan than to implement incorrectly
 - **Use the validation commands** frequently - catch issues early

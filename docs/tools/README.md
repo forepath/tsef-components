@@ -2,7 +2,7 @@
 
 This section covers the tools, automation, and integrations that power our development workflow. These tools are designed to streamline development, enforce standards, and accelerate productivity.
 
-## 🛠️ Available Tools
+## Available Tools
 
 ### MCP Servers (Model Context Protocol)
 
@@ -29,7 +29,7 @@ Cursor AI commands for common development tasks:
 - **[Implement Command](../../.cursor/commands/implement.md)** - Guidelines for implementing a recent plan
 - **[Ship Command](../../.cursor/commands/ship.md)** - Guidelines for opening a new PR regarding an implementation
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -54,7 +54,7 @@ Cursor AI commands for common development tasks:
    npx eslint --version
    ```
 
-## 🔧 Configuration
+## Configuration
 
 ### Environment Variables
 
@@ -70,7 +70,7 @@ MCP servers require specific environment variables:
 - **ESLint**: `.eslintrc.json` - Linting rules and standards
 - **Nx**: `nx.json` - Workspace configuration and task definitions
 
-## 📚 Documentation
+## Documentation
 
 Each tool has its own documentation:
 
@@ -79,7 +79,7 @@ Each tool has its own documentation:
 - **[Development Workflows](../development-workflows/)** - How to use tools in your daily workflow
 - **[Best Practices](../best-practices/)** - Proven approaches for using tools effectively
 
-## 🆘 Troubleshooting
+## Troubleshooting
 
 ### Common Issues
 
@@ -108,7 +108,7 @@ Each tool has its own documentation:
 - Ask the team for assistance
 - Check tool issue trackers
 
-## 🎯 Best Practices
+## Best Practices
 
 ### Using Tools Effectively
 

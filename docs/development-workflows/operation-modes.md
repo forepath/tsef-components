@@ -2,7 +2,7 @@
 
 Our development process uses two distinct operation modes to handle different types of tasks effectively. Understanding when and how to use each mode is crucial for productive development.
 
-## 🎯 Overview
+## Overview
 
 The operation modes are designed to match the natural flow of different types of work:
 
@@ -10,11 +10,12 @@ The operation modes are designed to match the natural flow of different types of
 - **Immediate Implementation Mode** - For direct fixes and implementations
 - **Mixed-Mode** - For tasks that require both analysis and implementation
 
-## 📋 Plan-First Mode
+## Plan-First Mode
 
 ### When to Use
 
 Use Plan-First Mode when you encounter requests that involve:
+
 - **Analysis** - "analyze this issue"
 - **Investigation** - "investigate why this is happening"
 - **Assessment** - "assess the impact of this change"
@@ -47,11 +48,12 @@ Use Plan-First Mode when you encounter requests that involve:
 - **Code Review**: "Review this PR for potential issues"
 - **Architecture Assessment**: "Assess the impact of migrating to a new framework"
 
-## ⚡ Immediate Implementation Mode
+## Immediate Implementation Mode
 
 ### When to Use
 
 Use Immediate Implementation Mode for requests that involve:
+
 - **Fixes** - "fix this bug"
 - **Implementation** - "implement this feature"
 - **Solving** - "solve this problem"
@@ -99,11 +101,12 @@ Use Immediate Implementation Mode for requests that involve:
 - **Quick Updates**: "Update the API endpoint to return the new field"
 - **Component Creation**: "Create a reusable button component"
 
-## 🔄 Mixed-Mode Guidelines
+## Mixed-Mode Guidelines
 
 ### When You Encounter Both
 
 Some requests contain both analysis and implementation keywords:
+
 - "analyze and fix this issue"
 - "review and implement this feature"
 - "investigate and solve this problem"
@@ -140,41 +143,45 @@ For "analyze and fix the login performance issue":
    - Test the improvements
    - Submit the changes
 
-## 🤔 Decision Making
+## Decision Making
 
 ### When in Doubt
 
 If you're unsure which mode to use:
+
 - **Default to Plan-First Mode** - It's better to plan than to implement incorrectly
 - **Ask for clarification** - Request more specific instructions
 - **Consider the complexity** - Complex tasks usually benefit from planning first
 
 ### Quick Decision Guide
 
-| Request Type | Mode | Reason |
-|-------------|------|--------|
-| "Fix this bug" | Immediate Implementation | Clear action needed |
-| "Analyze this issue" | Plan-First | Understanding required |
-| "Implement user auth" | Plan-First | Complex, needs planning |
-| "Update this text" | Immediate Implementation | Simple, direct change |
-| "Review this code" | Plan-First | Analysis and feedback needed |
-| "Add this field" | Immediate Implementation | Clear, simple addition |
+| Request Type          | Mode                     | Reason                       |
+| --------------------- | ------------------------ | ---------------------------- |
+| "Fix this bug"        | Immediate Implementation | Clear action needed          |
+| "Analyze this issue"  | Plan-First               | Understanding required       |
+| "Implement user auth" | Plan-First               | Complex, needs planning      |
+| "Update this text"    | Immediate Implementation | Simple, direct change        |
+| "Review this code"    | Plan-First               | Analysis and feedback needed |
+| "Add this field"      | Immediate Implementation | Clear, simple addition       |
 
 ## 💡 Best Practices
 
 ### For Plan-First Mode
+
 - **Be thorough** in your analysis
 - **Provide actionable insights** not just observations
 - **Consider multiple solutions** and their trade-offs
 - **Estimate effort** and identify risks
 
 ### For Immediate Implementation Mode
+
 - **Keep commits small** and focused
 - **Test frequently** during development
 - **Don't skip validation** - it prevents issues later
 - **Write clear commit messages** for better history
 
 ### For Mixed-Mode
+
 - **Separate analysis from implementation** clearly
 - **Use insights from analysis** to guide implementation
 - **Don't rush** - thorough analysis leads to better implementation

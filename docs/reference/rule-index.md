@@ -2,9 +2,9 @@
 
 Complete reference to all development rules and guidelines. This index provides quick access to specific rules and their locations.
 
-## 📋 Rule Categories
+## Rule Categories
 
-### 🤖 AI Agent Rules
+### AI Agent Rules
 
 Technical specifications for AI agent behavior and workflows.
 
@@ -15,7 +15,7 @@ Technical specifications for AI agent behavior and workflows.
 - **[Software Development Principles](../.cursor/rules/software_develoment_principals.mdc)** - Core development principles and practices
 - **[Internal Documentation](../.cursor/rules/internal_documentation.mdc)** - Documentation interaction guidelines
 
-### 🚀 Development Workflows
+### Development Workflows
 
 Human-readable guides for common development processes.
 
@@ -24,19 +24,19 @@ Human-readable guides for common development processes.
 - **[GitHub Workflow](../development-workflows/github-workflow.md)** - Issue handling and PR process
 - **[Validation Pipeline](../development-workflows/validation-pipeline.md)** - Code quality and testing workflow
 
-### 🏗️ Architecture Guidelines
+### Architecture Guidelines
 
 Structural and organizational principles for the monorepo.
 
 - **[Monorepo Structure](../architecture/monorepo-structure.md)** - High-level organization and principles
 
-### ✨ Best Practices
+### Best Practices
 
 Proven approaches and quality guidelines.
 
 - **[Code Quality](../best-practices/code-quality.md)** - Writing maintainable, high-quality code
 
-## 🔍 Quick Rule Lookup
+## Quick Rule Lookup
 
 ### By Topic
 
@@ -93,7 +93,7 @@ Proven approaches and quality guidelines.
 - Using scope in commit messages
 - Referencing plugin ecosystem
 
-## 📚 Rule Hierarchy
+## Rule Hierarchy
 
 ### Precedence Order
 
@@ -111,7 +111,7 @@ When rules conflict:
 3. **Development Workflows** guide process and procedure
 4. **Best Practices** provide recommendations when no specific rule exists
 
-## 🎯 Rule Categories Explained
+## Rule Categories Explained
 
 ### Technical Rules (AI Agent Rules)
 
@@ -141,7 +141,7 @@ When rules conflict:
 - **Audience**: All developers, code reviewers, team members
 - **Examples**: Testing strategies, code quality guidelines, review practices
 
-## 🔄 Rule Evolution
+## Rule Evolution
 
 ### How Rules Change
 
@@ -159,7 +159,7 @@ When rules conflict:
 - **Documentation Updates** - Keep both technical and human-readable docs in sync
 - **Tool Integration** - Update automated tools to enforce new rules
 
-## 🆘 Finding Rules
+## Finding Rules
 
 ### When You Need a Rule
 
@@ -193,7 +193,7 @@ When rules conflict:
 - [Tools Documentation](../tools/)
 - [Agent Guidelines](../.cursor/rules/agents.mdc#command-and-tooling-guidelines)
 
-## 📖 Rule Documentation Standards
+## Rule Documentation Standards
 
 ### AI Agent Rules
 

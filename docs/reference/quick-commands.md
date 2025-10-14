@@ -2,7 +2,7 @@
 
 Essential commands you'll use daily in the monorepo. Bookmark this page for quick reference.
 
-## 🚀 Development Commands
+## Development Commands
 
 ### Code Formatting
 
@@ -53,7 +53,7 @@ nx affected -t lint
 nx run-many -t lint
 ```
 
-## ✅ Validation Commands
+## Validation Commands
 
 ### Complete Validation
 
@@ -84,7 +84,7 @@ nx run-many -t test
 nx run-many -t build
 ```
 
-## 🔍 Project Management
+## Project Management
 
 ### Project Information
 
@@ -115,7 +115,7 @@ nx g @nx/angular:app apps/scope-name
 nx g @nx/angular:component components/name --project=PROJECT_NAME
 ```
 
-## 🐛 Debugging Commands
+## Debugging Commands
 
 ### Dependency Analysis
 
@@ -141,7 +141,7 @@ nx build PROJECT_NAME --analyze
 nx show project PROJECT_NAME --with-target=build
 ```
 
-## 📊 Monitoring Commands
+## Monitoring Commands
 
 ### Performance
 
@@ -163,7 +163,7 @@ nx test PROJECT_NAME --coverage
 open coverage/PROJECT_NAME/index.html
 ```
 
-## 🔧 Utility Commands
+## Utility Commands
 
 ### Cleanup
 
@@ -188,7 +188,7 @@ npm outdated
 npm install
 ```
 
-## 🚀 GitHub Integration
+## GitHub Integration
 
 ### Issue Management
 
@@ -217,7 +217,7 @@ gh pr list --state "open"
 gh pr create --title "Title" --body "Description"
 ```
 
-## 🎯 Workflow Commands
+## Workflow Commands
 
 ### Daily Development
 
@@ -253,34 +253,39 @@ gh pr create --title "Title" --body "Description"
 nx format:write && nx affected -t test,build,lint && git add . && git commit -m "fix(scope): quick fix"
 ```
 
-## 📝 Commit Message Templates
+## Commit Message Templates
 
 ### Feature
+
 ```bash
 git commit -m "feat(scope): add new functionality"
 ```
 
 ### Bug Fix
+
 ```bash
 git commit -m "fix(scope): resolve issue description"
 ```
 
 ### Documentation
+
 ```bash
 git commit -m "docs(scope): update documentation"
 ```
 
 ### Refactoring
+
 ```bash
 git commit -m "refactor(scope): improve code structure"
 ```
 
 ### Breaking Change
+
 ```bash
 git commit -m "feat(scope)!: breaking change description"
 ```
 
-## 🆘 Emergency Commands
+## Emergency Commands
 
 ### When Things Go Wrong
 
@@ -314,7 +319,7 @@ git mergetool
 git merge --abort
 ```
 
-## 💡 Pro Tips
+## Pro Tips
 
 ### Keyboard Shortcuts
 
@@ -356,19 +361,19 @@ alias gp='git push'
 alias gpl='git pull'
 ```
 
-## 🎯 Command Cheat Sheet
+## Command Cheat Sheet
 
-| Task | Command |
-|------|---------|
-| Format code | `nx format:write` |
-| Run tests | `nx affected -t test` |
-| Build projects | `nx affected -t build` |
-| Lint code | `nx affected -t lint` |
-| Full validation | `nx prepush` |
-| Show projects | `nx show projects` |
+| Task             | Command                          |
+| ---------------- | -------------------------------- |
+| Format code      | `nx format:write`                |
+| Run tests        | `nx affected -t test`            |
+| Build projects   | `nx affected -t build`           |
+| Lint code        | `nx affected -t lint`            |
+| Full validation  | `nx prepush`                     |
+| Show projects    | `nx show projects`               |
 | Generate library | `nx g @nx/angular:lib libs/name` |
-| View issue | `gh issue view NUMBER` |
-| Create PR | `gh pr create` |
+| View issue       | `gh issue view NUMBER`           |
+| Create PR        | `gh pr create`                   |
 
 ---
 

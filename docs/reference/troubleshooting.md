@@ -2,13 +2,14 @@
 
 Common issues and their solutions. This guide helps you resolve problems quickly and get back to productive development.
 
-## 🚨 Common Issues
+## Common Issues
 
 ### Code Formatting Problems
 
 **Issue**: CI fails with "Formatting check failed"
 
 **Solution**:
+
 ```bash
 # Format all changed files
 nx format:write
@@ -25,6 +26,7 @@ git commit -m "fix: format code"
 **Issue**: Prettier conflicts with ESLint
 
 **Solution**:
+
 1. Ensure Prettier and ESLint are properly configured
 2. Use `eslint-config-prettier` to disable conflicting rules
 3. Run formatting before linting:
@@ -38,6 +40,7 @@ git commit -m "fix: format code"
 **Issue**: "Lint check failed" in CI
 
 **Solution**:
+
 ```bash
 # Fix linting issues automatically where possible
 nx run-many -t lint --fix
@@ -47,6 +50,7 @@ nx run-many -t lint
 ```
 
 **Common Lint Issues**:
+
 - **Unused imports**: Remove unused import statements
 - **Missing return types**: Add explicit return types to functions
 - **Complex functions**: Break down functions that are too complex
@@ -57,6 +61,7 @@ nx run-many -t lint
 **Issue**: ESLint can't find configuration
 
 **Solution**:
+
 ```bash
 # Check if .eslintrc.json exists
 ls -la .eslintrc.json
@@ -70,6 +75,7 @@ nx g @nx/angular:lib --dry-run
 **Issue**: Tests fail after making changes
 
 **Solution**:
+
 1. **Read the error message** - It usually tells you exactly what's wrong
 2. **Check the test output** - Look for specific failure details
 3. **Run tests locally** - Don't wait for CI to catch issues
@@ -78,6 +84,7 @@ nx g @nx/angular:lib --dry-run
    ```
 
 **Common Test Issues**:
+
 - **Mock not working**: Check mock setup and expectations
 - **Async test not completing**: Ensure proper async/await usage
 - **Component not rendering**: Check imports and dependencies
@@ -88,6 +95,7 @@ nx g @nx/angular:lib --dry-run
 **Issue**: Tests are slow
 
 **Solution**:
+
 ```bash
 # Run tests in watch mode for faster feedback
 nx test PROJECT_NAME --watch
@@ -103,6 +111,7 @@ nx affected -t test
 **Issue**: "Build failed" in CI
 
 **Solution**:
+
 ```bash
 # Build locally to see the exact error
 nx run-many -t build -p PROJECT_NAME
@@ -112,6 +121,7 @@ nx run-many -t build --verbose
 ```
 
 **Common Build Issues**:
+
 - **Type errors**: Fix TypeScript type issues
 - **Missing dependencies**: Install missing packages
 - **Import errors**: Check import paths and exports
@@ -122,6 +132,7 @@ nx run-many -t build --verbose
 **Issue**: Build is slow
 
 **Solution**:
+
 ```bash
 # Use build cache
 nx run-many -t build --parallel
@@ -138,6 +149,7 @@ nx graph
 **Issue**: "Module not found" errors
 
 **Solution**:
+
 ```bash
 # Install missing dependencies
 npm install
@@ -155,6 +167,7 @@ npm install
 **Issue**: Version conflicts
 
 **Solution**:
+
 ```bash
 # Check for outdated packages
 npm outdated
@@ -171,6 +184,7 @@ npx nx build PROJECT_NAME
 **Issue**: Merge conflicts
 
 **Solution**:
+
 ```bash
 # Rebase on latest main
 git rebase origin/main
@@ -187,6 +201,7 @@ git rebase --continue
 **Issue**: Commit message format errors
 
 **Solution**:
+
 ```bash
 # Fix last commit message
 git commit --amend -m "feat(scope): correct message"
@@ -200,13 +215,16 @@ git rebase -i HEAD~3
 **Issue**: MCP server connection failed
 
 **Solution**:
+
 1. **Check Docker is running**:
+
    ```bash
    docker --version
    docker ps
    ```
 
 2. **Verify environment variables**:
+
    ```bash
    # Check if .env files exist
    ls -la ~/.cursor/.env
@@ -222,13 +240,16 @@ git rebase -i HEAD~3
 **Issue**: GitHub MCP server authentication failed
 
 **Solution**:
+
 1. **Check GitHub token**:
+
    ```bash
    # Verify token in ~/.cursor/.env
    cat ~/.cursor/.env | grep GITHUB_PERSONAL_ACCESS_TOKEN
    ```
 
 2. **Test token manually**:
+
    ```bash
    gh auth status
    ```
@@ -242,6 +263,7 @@ git rebase -i HEAD~3
 **Issue**: "Project not found" errors
 
 **Solution**:
+
 ```bash
 # List all projects
 nx show projects
@@ -258,6 +280,7 @@ cat nx.json | grep PROJECT_NAME
 **Issue**: Nx commands are slow
 
 **Solution**:
+
 ```bash
 # Use Nx daemon
 nx daemon --start
@@ -269,7 +292,7 @@ nx run-many -t build --parallel
 nx affected -t build
 ```
 
-## 🔧 Diagnostic Commands
+## Diagnostic Commands
 
 ### System Information
 
@@ -316,7 +339,7 @@ nx build PROJECT_NAME --analyze
 npm outdated
 ```
 
-## 🆘 Getting Help
+## Getting Help
 
 ### When to Ask for Help
 
@@ -328,12 +351,14 @@ npm outdated
 ### How to Ask for Help
 
 **Provide Context**:
+
 - What were you trying to do?
 - What error message did you get?
 - What steps did you take to try to fix it?
 - What environment are you using?
 
 **Include Information**:
+
 - Error messages (full text, not just screenshots)
 - Relevant code snippets
 - Steps to reproduce the issue
@@ -346,7 +371,7 @@ npm outdated
 - **Code reviews** - For code-specific questions
 - **Documentation** - For process and workflow questions
 
-## 🎯 Prevention Strategies
+## Prevention Strategies
 
 ### Daily Practices
 
@@ -369,7 +394,7 @@ npm outdated
 - **Document your setup** - Keep notes on your development environment
 - **Test your setup** - Verify everything works after changes
 
-## 📚 Additional Resources
+## Additional Resources
 
 - **[Quick Commands](./quick-commands.md)** - Essential commands for daily development
 - **[Rule Index](./rule-index.md)** - Complete reference to all guidelines

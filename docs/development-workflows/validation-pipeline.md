@@ -2,20 +2,22 @@
 
 Our validation pipeline ensures code quality, consistency, and reliability throughout the development process. Understanding how to use and troubleshoot the validation pipeline is essential for productive development.
 
-## 🎯 Overview
+## Overview
 
 The validation pipeline consists of multiple layers:
+
 - **Code Formatting** - Ensures consistent code style
 - **Linting** - Catches potential issues and enforces standards
 - **Testing** - Validates functionality and prevents regressions
 - **Build Verification** - Ensures code compiles and integrates correctly
 - **Pre-push Validation** - Final check before submitting changes
 
-## 🎨 Code Formatting
+## Code Formatting
 
 ### Why Formatting Matters
 
 Consistent code formatting:
+
 - **Improves readability** - Makes code easier to understand
 - **Reduces review time** - Reviewers focus on logic, not style
 - **Prevents CI failures** - Our pipeline requires proper formatting
@@ -30,6 +32,7 @@ nx format:write
 ```
 
 This command:
+
 - Formats all changed files using Prettier
 - Applies consistent indentation and spacing
 - Ensures code meets our style guidelines
@@ -41,11 +44,12 @@ This command:
 - **Before creating PRs** - Ensure your code is ready for review
 - **When CI fails** - If formatting is the issue, run this first
 
-## 🔍 Linting
+## Linting
 
 ### What Linting Does
 
 Linting catches:
+
 - **Potential bugs** - Logic errors and common mistakes
 - **Style violations** - Code that doesn't follow our standards
 - **Security issues** - Vulnerable patterns and practices
@@ -67,22 +71,26 @@ nx run-many -t lint
 ### Common Lint Issues
 
 **Unused imports**
+
 - Remove imports that aren't being used
 - Use your IDE's auto-import feature to avoid this
 
 **Missing return types**
+
 - Add explicit return types to functions
 - Helps with code clarity and tooling
 
 **Complex functions**
+
 - Break down functions that are too complex
 - Aim for single responsibility
 
-## 🧪 Testing
+## Testing
 
 ### Testing Strategy
 
 Our testing approach includes:
+
 - **Unit tests** - Test individual components and functions
 - **Integration tests** - Test how components work together
 - **End-to-end tests** - Test complete user workflows
@@ -107,25 +115,29 @@ nx run-many -t test
 ### Test Best Practices
 
 **Write meaningful tests**
+
 - Test behavior, not implementation
 - Use descriptive test names
 - Focus on edge cases and error conditions
 
 **Keep tests fast**
+
 - Use mocks for external dependencies
 - Avoid unnecessary setup and teardown
 - Run tests frequently during development
 
 **Maintain test coverage**
+
 - Aim for high coverage of critical paths
 - Don't sacrifice quality for coverage numbers
 - Focus on testing the right things
 
-## 🏗️ Build Verification
+## Build Verification
 
 ### Why Build Verification Matters
 
 Build verification ensures:
+
 - **Code compiles** - No syntax or type errors
 - **Dependencies resolve** - All imports and references work
 - **Integration works** - Components can be combined successfully
@@ -147,21 +159,24 @@ nx run-many -t build
 ### Common Build Issues
 
 **Type errors**
+
 - Fix TypeScript type issues
 - Ensure all imports are correctly typed
 - Check for missing type definitions
 
 **Dependency issues**
+
 - Ensure all dependencies are installed
 - Check for version conflicts
 - Verify import paths are correct
 
 **Configuration problems**
+
 - Check project configuration files
 - Ensure all required settings are present
 - Validate environment variables
 
-## 🚀 Pre-push Validation
+## Pre-push Validation
 
 ### Complete Validation Suite
 
@@ -172,6 +187,7 @@ nx prepush
 ```
 
 This command runs:
+
 - Code formatting checks
 - Linting for all affected projects
 - All relevant tests
@@ -194,7 +210,7 @@ This command runs:
 - **Test failures** → Fix the failing tests
 - **Build errors** → Resolve compilation issues
 
-## 🔄 Validation Workflow
+## Validation Workflow
 
 ### Recommended Development Flow
 
@@ -208,36 +224,42 @@ This command runs:
 ### Continuous Validation
 
 **During development:**
+
 - Run formatting frequently
 - Test changes as you make them
 - Use your IDE's linting features
 - Run builds to catch issues early
 
 **Before committing:**
+
 - Always run the full validation suite
 - Fix all issues before committing
 - Don't commit broken code
 
-## 🛠️ Troubleshooting
+## Troubleshooting
 
 ### Common Issues and Solutions
 
 **"Formatting check failed"**
+
 ```bash
 nx format:write
 ```
 
 **"Lint check failed"**
+
 - Read the lint error messages
 - Fix the specific issues mentioned
 - Re-run the lint check
 
 **"Test failed"**
+
 - Look at the test output for details
 - Fix the failing test
 - Ensure your changes don't break existing functionality
 
 **"Build failed"**
+
 - Check for TypeScript errors
 - Verify all dependencies are available
 - Ensure configuration is correct
@@ -245,12 +267,13 @@ nx format:write
 ### Getting Help
 
 **If you can't resolve validation issues:**
+
 - Check the error messages carefully
 - Look for similar issues in the codebase
 - Ask for help from the team
 - Don't skip validation - it's there for a reason
 
-## 📊 Validation Metrics
+## Validation Metrics
 
 ### What We Track
 
@@ -262,27 +285,30 @@ nx format:write
 ### Improving Validation
 
 **To make validation faster:**
+
 - Write focused, fast tests
 - Use appropriate test types for different scenarios
 - Optimize build configurations
 - Cache dependencies and build artifacts
 
 **To make validation more effective:**
+
 - Add tests for new functionality
 - Update linting rules as needed
 - Improve error messages
 - Add validation for new patterns
 
-## 🎯 Success Criteria
+## Success Criteria
 
 Successful validation means:
+
 - **All formatting checks pass** - Code follows style guidelines
 - **All linting checks pass** - Code meets quality standards
 - **All tests pass** - Functionality works as expected
 - **All builds succeed** - Code compiles and integrates correctly
 - **Validation runs quickly** - Doesn't slow down development
 
-## 🚀 Next Steps
+## Next Steps
 
 Now that you understand the validation pipeline:
 
