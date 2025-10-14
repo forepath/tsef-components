@@ -1,19 +1,10 @@
-import {
-  formatFiles,
-  generateFiles,
-  OverwriteStrategy,
-  Tree,
-  updateJson,
-} from '@nx/devkit';
 import { applicationGenerator as generatorFn } from '@nx/angular/generators';
+import { formatFiles, generateFiles, OverwriteStrategy, Tree, updateJson } from '@nx/devkit';
 import { setupDockerGenerator as setupDockerGeneratorFn } from '@nx/node/src/generators/setup-docker/setup-docker';
 import * as path from 'path';
 import { FrontendGeneratorSchema } from './schema';
 
-export async function frontendGenerator(
-  tree: Tree,
-  options: FrontendGeneratorSchema,
-) {
+export async function frontendGenerator(tree: Tree, options: FrontendGeneratorSchema) {
   const appName = `frontend-${options.name}`;
   const appRoot = `apps/${appName}`;
   const appPrefix = options.prefix || options.name;
@@ -31,22 +22,17 @@ export async function frontendGenerator(
   });
 
   updateJson(tree, '.eslintrc.json', (json) => {
-    const depConstraints =
-      json.overrides[1].rules['@nx/enforce-module-boundaries'][1]
-        .depConstraints || [];
+    const depConstraints = json.overrides[1].rules['@nx/enforce-module-boundaries'][1].depConstraints || [];
     const scopeTag = `scope:frontend`;
 
-    if (
-      !depConstraints.some((constraint) => constraint.sourceTag === scopeTag)
-    ) {
+    if (!depConstraints.some((constraint) => constraint.sourceTag === scopeTag)) {
       depConstraints.push({
         sourceTag: scopeTag,
         onlyDependOnLibsWithTags: [scopeTag, 'scope:shared'],
       });
     }
 
-    json.overrides[1].rules['@nx/enforce-module-boundaries'][1].depConstraints =
-      depConstraints;
+    json.overrides[1].rules['@nx/enforce-module-boundaries'][1].depConstraints = depConstraints;
 
     return json;
   });
@@ -60,15 +46,9 @@ export async function frontendGenerator(
         'WARN: SSR capabilities are skipped because the chosen UI framework is incompatible with Angular SSR.',
       );
     } else {
-      generateFiles(
-        tree,
-        path.join(__dirname, 'files', 'ssr'),
-        appSrcPath,
-        options,
-        {
-          overwriteStrategy: OverwriteStrategy.Overwrite,
-        },
-      );
+      generateFiles(tree, path.join(__dirname, 'files', 'ssr'), appSrcPath, options, {
+        overwriteStrategy: OverwriteStrategy.Overwrite,
+      });
 
       await setupDockerGeneratorFn(tree, {
         project: appName,
@@ -114,16 +94,8 @@ export async function frontendGenerator(
           .split('\n')
           .filter(
             (line) =>
-              !line
-                .trim()
-                .startsWith(
-                  '# You can remove this install step if you build with `--bundle` option.',
-                ) &&
-              !line
-                .trim()
-                .startsWith(
-                  '# The bundled output will include external dependencies.',
-                ) &&
+              !line.trim().startsWith('# You can remove this install step if you build with `--bundle` option.') &&
+              !line.trim().startsWith('# The bundled output will include external dependencies.') &&
               !line.trim().startsWith('RUN npm --omit=dev -f install'),
           )
           .join('\n');
@@ -132,15 +104,9 @@ export async function frontendGenerator(
       }
 
       if (options.localization) {
-        generateFiles(
-          tree,
-          path.join(__dirname, 'files', 'ssr'),
-          appSrcPath,
-          options,
-          {
-            overwriteStrategy: OverwriteStrategy.Overwrite,
-          },
-        );
+        generateFiles(tree, path.join(__dirname, 'files', 'ssr'), appSrcPath, options, {
+          overwriteStrategy: OverwriteStrategy.Overwrite,
+        });
 
         updateJson(tree, `${appRoot}/project.json`, (json) => {
           if (!json.targets?.['build-delegating-server']) {
@@ -165,12 +131,7 @@ export async function frontendGenerator(
           }
 
           if (json.targets?.docker?.dependsOn) {
-            json.targets.docker.dependsOn = [
-              'build',
-              'build-delegating-server',
-              'postbuild',
-              'prune',
-            ];
+            json.targets.docker.dependsOn = ['build', 'build-delegating-server', 'postbuild', 'prune'];
           }
 
           return json;
@@ -197,15 +158,9 @@ export async function frontendGenerator(
 
   if (options.ui) {
     if (options.ui !== 'none') {
-      generateFiles(
-        tree,
-        path.join(__dirname, 'files', options.ui),
-        appSrcPath,
-        options,
-        {
-          overwriteStrategy: OverwriteStrategy.Overwrite,
-        },
-      );
+      generateFiles(tree, path.join(__dirname, 'files', options.ui), appSrcPath, options, {
+        overwriteStrategy: OverwriteStrategy.Overwrite,
+      });
 
       const nxWelcomeComponentPath = `${appSrcPath}/app/nx-welcome.component.ts`;
 
@@ -218,13 +173,15 @@ export async function frontendGenerator(
       const projectJsonPath = `${appRoot}/project.json`;
 
       updateJson(tree, projectJsonPath, (projectJson) => {
-        if (projectJson.targets?.build?.options?.scripts) {
-          projectJson.targets.build.options.scripts = [
-            ...projectJson.targets.build.options.scripts,
-            'node_modules/@popperjs/core/dist/umd/popper.min.js',
-            'node_modules/bootstrap/dist/js/bootstrap.bundle.min.js',
-          ];
+        if (!projectJson.targets?.build?.options?.scripts) {
+          projectJson.targets.build.options.scripts = [];
         }
+
+        projectJson.targets.build.options.scripts = [
+          ...projectJson.targets.build.options.scripts,
+          'node_modules/@popperjs/core/dist/umd/popper.min.js',
+          'node_modules/bootstrap/dist/js/bootstrap.bundle.min.js',
+        ];
 
         return projectJson;
       });
@@ -292,20 +249,16 @@ export async function frontendGenerator(
       }
 
       if (projectJson.targets?.serve?.configurations) {
-        const serveConfigurations = Object.keys(
-          projectJson.targets.serve.configurations,
-        );
+        const serveConfigurations = Object.keys(projectJson.targets.serve.configurations);
 
         serveConfigurations.forEach((configuration: string) => {
           projectJson.targets.serve.configurations[configuration].buildTarget =
-            projectJson.targets.serve.configurations[configuration]
-              .buildTarget + ',en';
+            projectJson.targets.serve.configurations[configuration].buildTarget + ',en';
         });
       }
 
       if (projectJson.targets!['extract-i18n']?.options) {
-        projectJson.targets['extract-i18n'].options.outputPath =
-          projectTranslationsPath;
+        projectJson.targets['extract-i18n'].options.outputPath = projectTranslationsPath;
       }
 
       return projectJson;
@@ -314,12 +267,7 @@ export async function frontendGenerator(
     if (!tree.exists(projectTranslationsPath)) {
       const appI18nPath = `${appSrcPath}/i18n`;
 
-      generateFiles(
-        tree,
-        path.join(__dirname, 'files', 'i18n'),
-        appI18nPath,
-        options,
-      );
+      generateFiles(tree, path.join(__dirname, 'files', 'i18n'), appI18nPath, options);
     }
 
     const tsConfigPath = `${appRoot}/tsconfig.app.json`;
