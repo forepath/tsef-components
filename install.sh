@@ -3,8 +3,8 @@
 set -euo pipefail
 
 SCRIPT_NAME="install.sh"
-REPO_URL_SSH_DEFAULT="git@github.com:forepath/devkit.git"
-REPO_URL_HTTPS_DEFAULT="https://github.com/forepath/devkit.git"
+REPO_URL_SSH_DEFAULT="git@github.com:forepath/tsef.git"
+REPO_URL_HTTPS_DEFAULT="https://github.com/forepath/tsef.git"
 NVM_VERSION="v0.40.3"
 NODE_VERSION=""
 CLONE_DIR="devkit"

@@ -166,9 +166,9 @@ We value documentation improvements:
 
 ### Community Support
 
-- 💬 [GitHub Discussions](https://github.com/forepath/devkit/discussions)
+- 💬 [GitHub Discussions](https://github.com/forepath/tsef/discussions)
 - 📚 [Documentation](./docs/README.md)
-- 🐛 [Issue Tracker](https://github.com/forepath/devkit/issues)
+- 🐛 [Issue Tracker](https://github.com/forepath/tsef/issues)
 
 ### Direct Support
 
