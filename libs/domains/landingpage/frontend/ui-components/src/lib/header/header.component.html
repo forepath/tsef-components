@@ -1,38 +1,61 @@
-<header class="px-3">
+<header class="px-3 position-relative">
   <div class="container">
-    <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start gap-5">
-      <a
-        href="/"
-        class="d-flex align-items-center mb-2 mb-lg-0 link-body-emphasis text-decoration-none p-5 logo-container"
-      >
-        <img src="tsef.svg" alt="TSEF" width="32" height="32" />
-      </a>
-      <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-        <li>
-          <a
-            href="https://github.com/forepath/devkit/blob/main/docs/README.md"
-            target="_blank"
-            class="nav-link px-3"
-            i18n="@@headerDocs"
-            >Documentation</a
+    <nav class="navbar navbar-expand-lg p-0">
+      <div class="container-fluid">
+        <a
+          href="/"
+          class="navbar-brand d-flex align-items-center mb-2 mb-lg-0 link-body-emphasis text-decoration-none p-5 logo-container"
+        >
+          <img src="tsef.svg" alt="TSEF" width="32" height="32" />
+        </a>
+        <div class="d-flex gap-4 align-items-center justify-content-between flex-grow-1">
+          <button
+            class="navbar-toggler ms-auto border-0"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#headerNavbar"
+            aria-controls="headerNavbar"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
           >
-        </li>
-      </ul>
-      <ul class="nav col-12 col-lg-auto mb-2 justify-content-center mb-md-0">
-        <li>
-          <a href="https://github.com/forepath/tsef" target="_blank" class="nav-link px-2 link-secondary"
-            ><i class="bi bi-github fs-4"></i
-          ></a>
-        </li>
-      </ul>
-      <ul class="nav col-12 col-lg-auto mb-2 justify-content-center mb-md-0">
-        <li>
-          <a href="/en/" class="nav-link px-2" [class.text-highlight]="isEn">EN</a>
-        </li>
-        <li>
-          <a href="/de/" class="nav-link px-2" [class.text-highlight]="isDe">DE</a>
-        </li>
-      </ul>
-    </div>
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="headerNavbar">
+            <div
+              class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start gap-5 w-100"
+            >
+              <ul class="nav col-12 col-lg-auto me-lg-auto mb-0 justify-content-center mb-md-0">
+                <li>
+                  <a
+                    href="https://github.com/forepath/devkit/blob/main/docs/README.md"
+                    target="_blank"
+                    class="nav-link px-3"
+                    i18n="@@headerDocs"
+                    >Documentation</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="d-flex gap-4 align-items-center">
+            <ul class="nav col-auto mb-0 justify-content-center mb-md-0">
+              <li>
+                <a href="https://github.com/forepath/tsef" target="_blank" class="nav-link px-2 link-secondary"
+                  ><i class="bi bi-github fs-4"></i
+                ></a>
+              </li>
+            </ul>
+            <ul class="nav col-auto mb-0 justify-content-center mb-md-0">
+              <li>
+                <a href="/en/" class="nav-link px-2" [class.text-highlight]="isEn">EN</a>
+              </li>
+              <li>
+                <a href="/de/" class="nav-link px-2" [class.text-highlight]="isDe">DE</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
   </div>
 </header>
