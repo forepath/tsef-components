@@ -12,7 +12,7 @@ import { WhoBenefitsComponent } from './who-benefits/who-benefits.component';
 import { WhyTsefComponent } from './why-tsef/why-tsef.component';
 
 @Component({
-  selector: 'landingpage-landingpage-frontend-feature-home',
+  selector: 'landingpage-frontend-feature-home',
   imports: [
     ComparisonComponent,
     HowItWorksComponent,

@@ -20,12 +20,30 @@
           {
             "glob": "**/*",
             "input": "apps/frontend-tsef/public"
+          },
+          {
+            "glob": "**/*",
+            "input": "docs",
+            "output": "/docs"
           }
         ],
-        "styles": ["apps/frontend-tsef/src/styles.scss"],
+        "styles": [
+          "node_modules/prismjs/themes/prism-okaidia.css",
+          "node_modules/prismjs/plugins/line-numbers/prism-line-numbers.css",
+          "apps/frontend-tsef/src/styles.scss"
+        ],
         "scripts": [
           "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
-          "node_modules/@popperjs/core/dist/umd/popper.min.js"
+          "node_modules/@popperjs/core/dist/umd/popper.min.js",
+          "node_modules/mermaid/dist/mermaid.min.js",
+          "node_modules/prismjs/prism.js",
+          "node_modules/prismjs/components/prism-bash.min.js",
+          "node_modules/prismjs/components/prism-javascript.min.js",
+          "node_modules/prismjs/components/prism-json.min.js",
+          "node_modules/prismjs/components/prism-typescript.min.js",
+          "node_modules/prismjs/components/prism-markdown.min.js",
+          "node_modules/prismjs/components/prism-yaml.min.js",
+          "node_modules/prismjs/plugins/line-numbers/prism-line-numbers.js"
         ],
         "localize": true,
         "i18nMissingTranslation": "warning"
