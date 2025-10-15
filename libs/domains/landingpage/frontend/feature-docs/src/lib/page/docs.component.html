@@ -1,0 +1,32 @@
+<section class="docs py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="sticky-top">
+          <h5 class="mb-3" i18n="@@docsContents">Contents</h5>
+          @if (docsTree) {
+            <ng-container *ngTemplateOutlet="docNodeTemplate; context: { tree: docsTree, level: 0, route: '/docs' }"></ng-container>
+          }
+        </div>
+      </div>
+      <div class="col-md-9">
+        <div class="p-5 bg-white border rounded-3">
+          <markdown [src]="docUrl" lineNumbers mermaid></markdown>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<ng-template #docNodeTemplate let-tree="tree" let-level="level" let-route="route">
+  <ul class="list" [ngClass]="{ 'list-unstyled': level === 0, 'mb-0': level === 0 }">
+    @for (child of tree.children; track child.path) {
+      <li>
+        <a [routerLink]="route + '/' + child.path" class="link-body-emphasis text-decoration-none py-1 d-block small">{{ child.title }}</a>
+        @if (child.children) {
+          <ng-container *ngTemplateOutlet="docNodeTemplate; context: { tree: child, level: level + 1, route: route + '/' + child.path }"></ng-container>
+        }
+      </li>
+    }
+  </ul>
+</ng-template>

@@ -27,6 +27,22 @@ body {
   }
 }
 
+.pt-10 {
+  padding-top: 6rem !important;
+
+  @media (max-width: 991px) {
+    padding-top: 3rem !important;
+  }
+}
+
+.pb-10 {
+  padding-bottom: 6rem !important;
+
+  @media (max-width: 991px) {
+    padding-bottom: 3rem !important;
+  }
+}
+
 .py-10 {
   padding-top: 6rem !important;
   padding-bottom: 6rem !important;
