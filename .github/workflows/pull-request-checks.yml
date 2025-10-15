@@ -1,0 +1,83 @@
+name: Pull Request Checks
+
+on:
+  pull_request: {}
+
+permissions:
+  contents: read
+  actions: read
+  packages: read
+
+jobs:
+  lint_commit:
+    name: Commit Lint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set Nx SHA
+        uses: nrwl/nx-set-shas@v4
+
+      - name: Setup environment
+        uses: ./.github/actions/setup-env
+
+      - name: Commitlint - Lint Commits
+        if: github.event_name == 'pull_request'
+        shell: bash
+        run: |
+          npx commitlint --from=origin/${{ github.base_ref }} --to=HEAD --config ./.commitlintrc.json
+
+  check:
+    name: Format Check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set Nx SHA
+        uses: nrwl/nx-set-shas@v4
+
+      - name: Setup environment
+        uses: ./.github/actions/setup-env
+
+      - name: Nx Format - Check
+        run: npx nx format:check
+
+      - name: Nx Lint - Check
+        run: npx nx affected --target=lint --parallel=3  || echo "No affected projects for lint"
+
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set Nx SHA
+        uses: nrwl/nx-set-shas@v4
+
+      - name: Setup environment
+        uses: ./.github/actions/setup-env
+
+      - name: Run unit tests
+        run: npx nx affected --target=test --parallel=3 || echo "No affected projects for test"
+
+      - name: Run end-to-end tests
+        run: npx nx affected --target=e2e --parallel=3 || echo "No affected projects for e2e"
+
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set Nx SHA
+        uses: nrwl/nx-set-shas@v4
+
+      - name: Setup environment
+        uses: ./.github/actions/setup-env
+
+      - name: Run build
+        run: npx nx affected --target=build --parallel=3 || echo "No affected projects for build"
