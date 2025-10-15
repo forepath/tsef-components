@@ -34,8 +34,14 @@ export class HomeComponent {
   constructor() {
     this.titleService.setTitle('The AI-ready TypeScript Enterprise Framework | TSEF');
     this.metaService.addTags([
-      { name: 'description', content: 'Home' },
-      { name: 'keywords', content: 'Home' },
+      {
+        name: 'description',
+        content: $localize`:@@homeMetaDescription:TSEF is the AI-ready TypeScript Enterprise Framework. Easily build, deploy, and scale modern enterprise applications with best practices, advanced tooling, and AI capabilities out of the box.`,
+      },
+      {
+        name: 'keywords',
+        content: $localize`:@@homeMetaKeywords:TSEF, TypeScript, Enterprise Framework, AI-ready, Angular, web development, scalable, application framework, cloud, modern apps, enterprise solutions, software tools, best practices`,
+      },
     ]);
   }
 }

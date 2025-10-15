@@ -134,14 +134,6 @@
         <source> Create your first TSEF workspace in under 2 minutes. </source>
         <target> Erstellen Sie Ihren ersten TSEF-Workspace in unter 2 Minuten. </target>
       </trans-unit>
-      <trans-unit id="getStartedDocumentation" datatype="html">
-        <source>Documentation</source>
-        <target>Dokumentation</target>
-      </trans-unit>
-      <trans-unit id="getStartedRulesAndGuidelines" datatype="html">
-        <source>Rules and Guidelines</source>
-        <target>Regeln und Richtlinien</target>
-      </trans-unit>
       <trans-unit id="getStartedViewOnGithub" datatype="html">
         <source>View on GitHub</source>
         <target>Auf GitHub ansehen</target>
@@ -167,8 +159,8 @@
         <target><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;text-highlight&quot;&gt;"/>Unternehmensreifer<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> Nx-Workflow mit KI-gestützten Entwicklungs-Agents und integrierter Compliance. </target>
       </trans-unit>
       <trans-unit id="heroBullet1" datatype="html">
-        <source><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>AI-powered agents<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> automate development workflows</source>
-        <target><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>KI-gestützte Agents<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> automatisieren Entwicklungs-Workflows</target>
+        <source><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>AI-powered agents<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> for automated development workflows</source>
+        <target><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>KI-gestützte Agents<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> für automatisierte Entwicklungs-Workflows</target>
       </trans-unit>
       <trans-unit id="heroBullet2" datatype="html">
         <source><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>80%+ test coverage<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> enforced automatically</source>
@@ -205,6 +197,14 @@
       <trans-unit id="heroCtaViewOnGithub" datatype="html">
         <source>View on GitHub</source>
         <target>Auf GitHub ansehen</target>
+      </trans-unit>
+      <trans-unit id="homeMetaDescription" datatype="html">
+        <source>TSEF is the AI-ready TypeScript Enterprise Framework. Easily build, deploy, and scale modern enterprise applications with best practices, advanced tooling, and AI capabilities out of the box.</source>
+        <target>TSEF ist das KI-bereite TypeScript Enterprise Framework. Erstellen, deployen und skalieren Sie mühelos moderne Enterprise-Anwendungen mit Best Practices, fortschrittlichen Tools und KI-Funktionen out-of-the-box.</target>
+      </trans-unit>
+      <trans-unit id="homeMetaKeywords" datatype="html">
+        <source>TSEF, TypeScript, Enterprise Framework, AI-ready, Angular, web development, scalable, application framework, cloud, modern apps, enterprise solutions, software tools, best practices</source>
+        <target>TSEF, TypeScript, Enterprise Framework, KI-bereit, Angular, Webentwicklung, skalierbar, Anwendungsframework, Cloud, moderne Apps, Enterprise-Lösungen, Software-Tools, Best Practices</target>
       </trans-unit>
       <trans-unit id="hiwTitle" datatype="html">
         <source>How It Works</source>
