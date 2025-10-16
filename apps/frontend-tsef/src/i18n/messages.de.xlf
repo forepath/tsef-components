@@ -2,6 +2,170 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
   <file source-language="en" datatype="plaintext" original="ng2.template" target-language="de">
     <body>
+      <trans-unit id="gsNextTitle" datatype="html">
+        <source>Next Steps</source>
+        <target>Nächste Schritte</target>
+      </trans-unit>
+      <trans-unit id="gsNextIntro" datatype="html">
+        <source> Ready to go deeper? Explore the <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;text-highlight&quot;&gt;"/>documentation<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/>, join the <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;text-highlight&quot;&gt;"/>community<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/>, or reach out for <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;text-highlight&quot;&gt;"/>support<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/>. </source>
+        <target> Bereit für mehr? Entdecken Sie die <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;text-highlight&quot;&gt;"/>Dokumentation<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/>, treten Sie der <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;text-highlight&quot;&gt;"/>Community<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> bei oder wenden Sie sich an den <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;text-highlight&quot;&gt;"/>Support<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/>. </target>
+      </trans-unit>
+      <trans-unit id="gsNextDocs" datatype="html">
+        <source>Documentation</source>
+        <target>Dokumentation</target>
+      </trans-unit>
+      <trans-unit id="gsNextDocsText" datatype="html">
+        <source>Read guides, patterns, and reference materials.</source>
+        <target>Lesen Sie Anleitungen, Patterns und Referenzen.</target>
+      </trans-unit>
+      <trans-unit id="gsNextDocsCta" datatype="html">
+        <source>Browse docs</source>
+        <target>Dokumentation ansehen</target>
+      </trans-unit>
+      <trans-unit id="gsNextCommunity" datatype="html">
+        <source>Community</source>
+        <target>Community</target>
+      </trans-unit>
+      <trans-unit id="gsNextCommunityText" datatype="html">
+        <source>Get help, share ideas, and stay up to date.</source>
+        <target>Hilfe erhalten, Ideen teilen und auf dem Laufenden bleiben.</target>
+      </trans-unit>
+      <trans-unit id="gsNextCommunityCta" datatype="html">
+        <source>Join Discord</source>
+        <target>Discord beitreten</target>
+      </trans-unit>
+      <trans-unit id="gsNextSupport" datatype="html">
+        <source>Support</source>
+        <target>Support</target>
+      </trans-unit>
+      <trans-unit id="gsNextSupportText" datatype="html">
+        <source>Need help with onboarding or migration?</source>
+        <target>Benötigen Sie Hilfe beim Onboarding oder bei der Migration?</target>
+      </trans-unit>
+      <trans-unit id="gsNextSupportCta" datatype="html">
+        <source>Contact support</source>
+        <target>Support kontaktieren</target>
+      </trans-unit>
+      <trans-unit id="gsPrereqTitle" datatype="html">
+        <source>Prerequisites</source>
+        <target>Voraussetzungen</target>
+      </trans-unit>
+      <trans-unit id="gsTourTitle" datatype="html">
+        <source>Workspace Tour</source>
+        <target>Workspace-Tour</target>
+      </trans-unit>
+      <trans-unit id="gsCommandsTitle" datatype="html">
+        <source>Essential Nx Commands</source>
+        <target>Wichtige Nx-Befehle</target>
+      </trans-unit>
+      <trans-unit id="gsPrereqNodeTitle" datatype="html">
+        <source>Node.js &amp; npm</source>
+        <target>Node.js &amp; npm</target>
+      </trans-unit>
+      <trans-unit id="gsPrereqNodeText" datatype="html">
+        <source>Install the latest LTS release for best stability.</source>
+        <target>Installieren Sie die neueste LTS-Version für maximale Stabilität.</target>
+      </trans-unit>
+      <trans-unit id="gsPrereqGitTitle" datatype="html">
+        <source>Git</source>
+        <target>Git</target>
+      </trans-unit>
+      <trans-unit id="gsPrereqGitText" datatype="html">
+        <source>Version control and project checkout.</source>
+        <target>Versionsverwaltung und Projekt-Checkout.</target>
+      </trans-unit>
+      <trans-unit id="gsPrereqNxTitle" datatype="html">
+        <source>Nx CLI (optional)</source>
+        <target>Nx CLI (optional)</target>
+      </trans-unit>
+      <trans-unit id="gsPrereqNxText" datatype="html">
+        <source>Global convenience: <x id="START_TAG_CODE" ctype="x-code" equiv-text="&lt;code&gt;"/>npm i -g nx<x id="CLOSE_TAG_CODE" ctype="x-code" equiv-text="&lt;/code&gt;"/></source>
+        <target>Globaler Komfort: <x id="START_TAG_CODE" ctype="x-code" equiv-text="&lt;code&gt;"/>npm i -g nx<x id="CLOSE_TAG_CODE" ctype="x-code" equiv-text="&lt;/code&gt;"/></target>
+      </trans-unit>
+      <trans-unit id="gsPrereqDockerTitle" datatype="html">
+        <source>Docker (optional)</source>
+        <target>Docker (optional)</target>
+      </trans-unit>
+      <trans-unit id="gsPrereqDockerText" datatype="html">
+        <source>For containerized local development and CI.</source>
+        <target>Für containerisierte lokale Entwicklung und CI.</target>
+      </trans-unit>
+      <trans-unit id="gsTourApps" datatype="html">
+        <source>apps</source>
+        <target>apps</target>
+      </trans-unit>
+      <trans-unit id="gsTourAppsText" datatype="html">
+        <source> Application containers (frontend, backend, native, keycloak-theme). </source>
+        <target> Anwendungshüllen (Frontend, Backend, Native, Keycloak-Theme). </target>
+      </trans-unit>
+      <trans-unit id="gsTourLibs" datatype="html">
+        <source>libs</source>
+        <target>libs</target>
+      </trans-unit>
+      <trans-unit id="gsTourLibsText" datatype="html">
+        <source>Domain libraries: feature, data-access, ui, util.</source>
+        <target>Domänen-Libraries: feature, data-access, ui, util.</target>
+      </trans-unit>
+      <trans-unit id="gsTourTools" datatype="html">
+        <source>tools</source>
+        <target>tools</target>
+      </trans-unit>
+      <trans-unit id="gsTourToolsText" datatype="html">
+        <source>Workspace scripts and custom executors.</source>
+        <target>Workspace-Skripte und Custom Executors.</target>
+      </trans-unit>
+      <trans-unit id="gsTourE2E" datatype="html">
+        <source>e2e</source>
+        <target>e2e</target>
+      </trans-unit>
+      <trans-unit id="gsTourE2EText" datatype="html">
+        <source>End-to-end tests and configuration.</source>
+        <target>End-to-End-Tests und Konfiguration.</target>
+      </trans-unit>
+      <trans-unit id="gsCommandsGraph" datatype="html">
+        <source>Project Graph</source>
+        <target>Project Graph</target>
+      </trans-unit>
+      <trans-unit id="gsCommandsGraphText" datatype="html">
+        <source>Visualize dependencies across apps and libraries.</source>
+        <target>Visualisieren Sie Abhängigkeiten über Apps und Libraries.</target>
+      </trans-unit>
+      <trans-unit id="gsCommandsAffected" datatype="html">
+        <source>Affected</source>
+        <target>Affected</target>
+      </trans-unit>
+      <trans-unit id="gsCommandsAffectedText" datatype="html">
+        <source>Run tasks only where changes matter.</source>
+        <target>Führen Sie Tasks nur dort aus, wo Änderungen relevant sind.</target>
+      </trans-unit>
+      <trans-unit id="gsCommandsRunMany" datatype="html">
+        <source>Run Many</source>
+        <target>Run Many</target>
+      </trans-unit>
+      <trans-unit id="gsCommandsRunManyText" datatype="html">
+        <source>Execute a target across multiple projects.</source>
+        <target>Führen Sie ein Target über mehrere Projekte aus.</target>
+      </trans-unit>
+      <trans-unit id="gsPrereqIntro" datatype="html">
+        <source> The installer scripts set up most tooling automatically. For a <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;text-highlight&quot;&gt;"/>smooth onboarding<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> and consistent builds, ensure these fundamentals are available on your machine before you start. </source>
+        <target> Die Installationsskripte richten die meisten Tools automatisch ein. Für ein <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;text-highlight&quot;&gt;"/>reibungsloses Onboarding<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> und konsistente Builds stellen Sie sicher, dass diese Grundlagen auf Ihrem Rechner vorhanden sind, bevor Sie starten. </target>
+      </trans-unit>
+      <trans-unit id="gsTourIntro" datatype="html">
+        <source> Learn how your workspace is organized so new code lands in the <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;text-highlight&quot;&gt;"/>right place<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> every time. Keep applications lean and reusable logic inside libraries for a maintainable monorepo. </source>
+        <target> Erfahren Sie, wie Ihr Workspace organisiert ist, damit neuer Code jedes Mal am <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;text-highlight&quot;&gt;"/>richtigen Ort<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> landet. Halten Sie Anwendungen schlank und platzieren Sie wiederverwendbare Logik in Libraries für ein gut wartbares Monorepo. </target>
+      </trans-unit>
+      <trans-unit id="gsCommandsIntro" datatype="html">
+        <source> Your daily toolbox for fast feedback and reproducible results. Leverage Nx’s <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;text-highlight&quot;&gt;"/>smart task execution<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> to visualize dependencies, run only what changed, and scale confidently across projects. </source>
+        <target> Ihr täglicher Werkzeugkasten für schnelles Feedback und reproduzierbare Ergebnisse. Nutzen Sie die <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;text-highlight&quot;&gt;"/>intelligente Aufgabenausführung<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> von Nx, um Abhängigkeiten zu visualisieren, nur geänderte Teile auszuführen und sicher über Projekte hinweg zu skalieren. </target>
+      </trans-unit>
+      <trans-unit id="gettingStartedHeroTitle" datatype="html">
+        <source> The fastest way to an <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;text-highlight&quot;&gt;"/>AI-ready<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> Nx workspace </source>
+        <target> Der schnellste Weg zu einem <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;text-highlight&quot;&gt;"/>KI-bereiten<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> Nx-Workspace </target>
+      </trans-unit>
+      <trans-unit id="gettingStartedHeroSubtitle" datatype="html">
+        <source><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;text-highlight&quot;&gt;"/>Enterprise-grade<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> TypeScript stack with smart Nx workflows, agent-powered tooling, and built-in compliance. </source>
+        <target><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;text-highlight&quot;&gt;"/>Unternehmensreifer<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> TypeScript-Stack mit smarten Nx-Workflows, agentengestützten Tools und integrierter Compliance. </target>
+      </trans-unit>
       <trans-unit id="cmpTitle" datatype="html">
         <source><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;text-highlight&quot;&gt;"/>TSEF<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> vs Alternatives</source>
         <target><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;text-highlight&quot;&gt;"/>TSEF<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> vs Alternativen</target>
@@ -130,9 +294,21 @@
         <source>Quick Start</source>
         <target>Schnellstart</target>
       </trans-unit>
+      <trans-unit id="getStartedLearnMoreWorkspace" datatype="html">
+        <source> Learn more about installing, updating and using TSEF in the <x id="START_LINK" ctype="x-a" equiv-text="&lt;a routerLink=&quot;/getting-started&quot;&gt;"/>getting started<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/> guide. </source>
+        <target> Erfahren Sie mehr über Installation, Updates und die Nutzung von TSEF im <x id="START_LINK" ctype="x-a" equiv-text="&lt;a routerLink=&quot;/getting-started&quot;&gt;"/>Getting-Started<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>-Leitfaden. </target>
+      </trans-unit>
       <trans-unit id="getStartedCreateWorkspace" datatype="html">
         <source> Create your first TSEF workspace in under 2 minutes. </source>
         <target> Erstellen Sie Ihren ersten TSEF-Workspace in unter 2 Minuten. </target>
+      </trans-unit>
+      <trans-unit id="getStartedInstall" datatype="html">
+        <source>Install</source>
+        <target>Installieren</target>
+      </trans-unit>
+      <trans-unit id="getStartedUpdate" datatype="html">
+        <source>Update</source>
+        <target>Aktualisieren</target>
       </trans-unit>
       <trans-unit id="getStartedViewOnGithub" datatype="html">
         <source>View on GitHub</source>
