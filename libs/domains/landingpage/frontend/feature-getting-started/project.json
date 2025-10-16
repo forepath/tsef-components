@@ -1,0 +1,21 @@
+{
+  "name": "landingpage-frontend-feature-getting-started",
+  "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/domains/landingpage/frontend/feature-getting-started/src",
+  "prefix": "landingpage",
+  "projectType": "library",
+  "tags": ["domain:landingpage", "scope:frontend", "type:feature"],
+  "targets": {
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "libs/domains/landingpage/frontend/feature-getting-started/jest.config.ts",
+        "tsConfig": "libs/domains/landingpage/frontend/feature-getting-started/tsconfig.spec.json"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint"
+    }
+  }
+}

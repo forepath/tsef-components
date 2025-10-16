@@ -1,33 +1,23 @@
 import { Component, inject } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
-import { ComparisonComponent } from './comparison/comparison.component';
-import { FaqComponent } from './faq/faq.component';
-import { GetStartedComponent } from './get-started/get-started.component';
+import { EssentialCommandsComponent } from './essential-commands/essential-commands.component';
 import { HeroComponent } from './hero/hero.component';
-import { HowItWorksComponent } from './how-it-works/how-it-works.component';
-import { ProofComponent } from './proof/proof.component';
-import { TechnologyComponent } from './technology/technology.component';
-import { WhatYouGetComponent } from './what-you-get/what-you-get.component';
-import { WhoBenefitsComponent } from './who-benefits/who-benefits.component';
-import { WhyTsefComponent } from './why-tsef/why-tsef.component';
+import { NextStepsComponent } from './next-steps/next-steps.component';
+import { PrerequisitesComponent } from './prerequisites/prerequisites.component';
+import { WorkspaceTourComponent } from './workspace-tour/workspace-tour.component';
 
 @Component({
-  selector: 'landingpage-frontend-feature-home',
+  selector: 'landingpage-frontend-feature-getting-started',
   imports: [
-    ComparisonComponent,
-    HowItWorksComponent,
-    ProofComponent,
-    WhatYouGetComponent,
-    WhoBenefitsComponent,
-    WhyTsefComponent,
     HeroComponent,
-    TechnologyComponent,
-    FaqComponent,
-    GetStartedComponent,
+    PrerequisitesComponent,
+    WorkspaceTourComponent,
+    EssentialCommandsComponent,
+    NextStepsComponent,
   ],
-  templateUrl: './home.component.html',
+  templateUrl: './getting-started.component.html',
 })
-export class HomeComponent {
+export class GettingStartedComponent {
   titleService = inject(Title);
   metaService = inject(Meta);
 

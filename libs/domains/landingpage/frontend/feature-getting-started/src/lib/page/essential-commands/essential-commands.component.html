@@ -1,0 +1,55 @@
+<section class="essential-commands py-10">
+  <div class="container">
+    <div class="row mb-5">
+      <div class="col-md-12 text-center">
+        <h2 class="text-primary mb-4" i18n="@@gsCommandsTitle">Essential Nx Commands</h2>
+        <p class="fs-5 text-muted" i18n="@@gsCommandsIntro">
+          Your daily toolbox for fast feedback and reproducible results. Leverage Nx’s
+          <span class="text-highlight">smart task execution</span> to visualize dependencies, run only what changed, and
+          scale confidently across projects.
+        </p>
+      </div>
+    </div>
+
+    <div class="row row-gap-4">
+      <div class="col-md-4">
+        <div class="card h-100">
+          <div class="card-body text-center">
+            <i class="bi bi-diagram-3 fs-2 text-primary mb-3"></i>
+            <h5 class="card-title text-primary mb-2" i18n="@@gsCommandsGraph">Project Graph</h5>
+            <p class="text-muted" i18n="@@gsCommandsGraphText">Visualize dependencies across apps and libraries.</p>
+            <div class="bg-dark text-light p-3 rounded">
+              <code class="text-white"><span class="text-highlight">npx</span> nx graph</code>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100">
+          <div class="card-body text-center">
+            <i class="bi bi-lightning fs-2 text-primary mb-3"></i>
+            <h5 class="card-title text-primary mb-2" i18n="@@gsCommandsAffected">Affected</h5>
+            <p class="text-muted" i18n="@@gsCommandsAffectedText">Run tasks only where changes matter.</p>
+            <div class="bg-dark text-light p-3 rounded">
+              <code class="text-white"><span class="text-highlight">npx</span> nx affected -t build,test,lint</code>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100">
+          <div class="card-body text-center">
+            <i class="bi bi-collection-play fs-2 text-primary mb-3"></i>
+            <h5 class="card-title text-primary mb-2" i18n="@@gsCommandsRunMany">Run Many</h5>
+            <p class="text-muted" i18n="@@gsCommandsRunManyText">Execute a target across multiple projects.</p>
+            <div class="bg-dark text-light p-3 rounded">
+              <code class="text-white"
+                ><span class="text-highlight">npx</span> nx run-many -t test -p PROJECT_NAME</code
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
