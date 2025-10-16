@@ -46,6 +46,10 @@
         <source>Contact support</source>
         <target>Support kontaktieren</target>
       </trans-unit>
+      <trans-unit id="headerGettingStarted" datatype="html">
+        <source>Getting Started</source>
+        <target>Erste Schritte</target>
+      </trans-unit>
       <trans-unit id="gsPrereqTitle" datatype="html">
         <source>Prerequisites</source>
         <target>Voraussetzungen</target>

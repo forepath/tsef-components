@@ -2,139 +2,6 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
   <file source-language="en" datatype="plaintext" original="ng2.template">
     <body>
-      <trans-unit id="gsPrereqIntro" datatype="html">
-        <source> The installer scripts set up most tooling automatically. For a <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;text-highlight&quot;&gt;"/>smooth onboarding<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> and consistent builds, ensure these fundamentals are available on your machine before you start. </source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-getting-started/src/lib/page/prerequisites/prerequisites.component.html</context>
-          <context context-type="linenumber">6,9</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="gsPrereqTitle" datatype="html">
-        <source>Prerequisites</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-getting-started/src/lib/page/prerequisites/prerequisites.component.html</context>
-          <context context-type="linenumber">5,6</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="gsPrereqNodeTitle" datatype="html">
-        <source>Node.js &amp; npm</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-getting-started/src/lib/page/prerequisites/prerequisites.component.html</context>
-          <context context-type="linenumber">18,19</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="gsPrereqNodeText" datatype="html">
-        <source>Install the latest LTS release for best stability.</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-getting-started/src/lib/page/prerequisites/prerequisites.component.html</context>
-          <context context-type="linenumber">19,20</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="gsPrereqGitTitle" datatype="html">
-        <source>Git</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-getting-started/src/lib/page/prerequisites/prerequisites.component.html</context>
-          <context context-type="linenumber">27,28</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="gsPrereqGitText" datatype="html">
-        <source>Version control and project checkout.</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-getting-started/src/lib/page/prerequisites/prerequisites.component.html</context>
-          <context context-type="linenumber">28,29</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="gsPrereqNxTitle" datatype="html">
-        <source>Nx CLI (optional)</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-getting-started/src/lib/page/prerequisites/prerequisites.component.html</context>
-          <context context-type="linenumber">36,37</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="gsPrereqNxText" datatype="html">
-        <source>Global convenience: <x id="START_TAG_CODE" ctype="x-code" equiv-text="&lt;code&gt;"/>npm i -g nx<x id="CLOSE_TAG_CODE" ctype="x-code" equiv-text="&lt;/code&gt;"/></source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-getting-started/src/lib/page/prerequisites/prerequisites.component.html</context>
-          <context context-type="linenumber">37,38</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="gsPrereqDockerTitle" datatype="html">
-        <source>Docker (optional)</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-getting-started/src/lib/page/prerequisites/prerequisites.component.html</context>
-          <context context-type="linenumber">45,46</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="gsPrereqDockerText" datatype="html">
-        <source>For containerized local development and CI.</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-getting-started/src/lib/page/prerequisites/prerequisites.component.html</context>
-          <context context-type="linenumber">46,47</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="gsTourTitle" datatype="html">
-        <source>Workspace Tour</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-getting-started/src/lib/page/workspace-tour/workspace-tour.component.html</context>
-          <context context-type="linenumber">5,6</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="gsTourApps" datatype="html">
-        <source>apps</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-getting-started/src/lib/page/workspace-tour/workspace-tour.component.html</context>
-          <context context-type="linenumber">17,18</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="gsTourAppsText" datatype="html">
-        <source> Application containers (frontend, backend, native, keycloak-theme). </source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-getting-started/src/lib/page/workspace-tour/workspace-tour.component.html</context>
-          <context context-type="linenumber">18,21</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="gsTourLibs" datatype="html">
-        <source>libs</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-getting-started/src/lib/page/workspace-tour/workspace-tour.component.html</context>
-          <context context-type="linenumber">28,29</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="gsTourLibsText" datatype="html">
-        <source>Domain libraries: feature, data-access, ui, util.</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-getting-started/src/lib/page/workspace-tour/workspace-tour.component.html</context>
-          <context context-type="linenumber">29,30</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="gsTourTools" datatype="html">
-        <source>tools</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-getting-started/src/lib/page/workspace-tour/workspace-tour.component.html</context>
-          <context context-type="linenumber">36,37</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="gsTourToolsText" datatype="html">
-        <source>Workspace scripts and custom executors.</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-getting-started/src/lib/page/workspace-tour/workspace-tour.component.html</context>
-          <context context-type="linenumber">37,38</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="gsTourE2E" datatype="html">
-        <source>e2e</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-getting-started/src/lib/page/workspace-tour/workspace-tour.component.html</context>
-          <context context-type="linenumber">46,47</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="gsTourE2EText" datatype="html">
-        <source>End-to-end tests and configuration.</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-getting-started/src/lib/page/workspace-tour/workspace-tour.component.html</context>
-          <context context-type="linenumber">47,48</context>
-        </context-group>
-      </trans-unit>
       <trans-unit id="gsCommandsTitle" datatype="html">
         <source>Essential Nx Commands</source>
         <context-group purpose="location">
@@ -142,144 +9,60 @@
           <context context-type="linenumber">5,6</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="gsCommandsIntro" datatype="html">
+        <source> Your daily toolbox for fast feedback and reproducible results. Leverage Nx’s <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;text-highlight&quot;&gt;"/>smart task execution<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> to visualize dependencies, run only what changed, and scale confidently across projects. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-getting-started/src/lib/page/essential-commands/essential-commands.component.html</context>
+          <context context-type="linenumber">7,10</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="gsCommandsGraph" datatype="html">
         <source>Project Graph</source>
         <context-group purpose="location">
           <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-getting-started/src/lib/page/essential-commands/essential-commands.component.html</context>
-          <context context-type="linenumber">15,16</context>
+          <context context-type="linenumber">19,20</context>
         </context-group>
       </trans-unit>
       <trans-unit id="gsCommandsGraphText" datatype="html">
         <source>Visualize dependencies across apps and libraries.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-getting-started/src/lib/page/essential-commands/essential-commands.component.html</context>
-          <context context-type="linenumber">16,17</context>
+          <context context-type="linenumber">20,21</context>
         </context-group>
       </trans-unit>
       <trans-unit id="gsCommandsAffected" datatype="html">
         <source>Affected</source>
         <context-group purpose="location">
           <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-getting-started/src/lib/page/essential-commands/essential-commands.component.html</context>
-          <context context-type="linenumber">25,26</context>
+          <context context-type="linenumber">31,32</context>
         </context-group>
       </trans-unit>
       <trans-unit id="gsCommandsAffectedText" datatype="html">
         <source>Run tasks only where changes matter.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-getting-started/src/lib/page/essential-commands/essential-commands.component.html</context>
-          <context context-type="linenumber">26,27</context>
+          <context context-type="linenumber">32,33</context>
         </context-group>
       </trans-unit>
       <trans-unit id="gsCommandsRunMany" datatype="html">
         <source>Run Many</source>
         <context-group purpose="location">
           <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-getting-started/src/lib/page/essential-commands/essential-commands.component.html</context>
-          <context context-type="linenumber">37,38</context>
+          <context context-type="linenumber">43,44</context>
         </context-group>
       </trans-unit>
       <trans-unit id="gsCommandsRunManyText" datatype="html">
         <source>Execute a target across multiple projects.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-getting-started/src/lib/page/essential-commands/essential-commands.component.html</context>
-          <context context-type="linenumber">38,39</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="gsNextTitle" datatype="html">
-        <source>Next Steps</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-getting-started/src/lib/page/next-steps/next-steps.component.html</context>
-          <context context-type="linenumber">5,6</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="gsNextIntro" datatype="html">
-        <source> Ready to go deeper? Explore the <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;text-highlight&quot;&gt;"/>documentation<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/>, join the <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;text-highlight&quot;&gt;"/>community<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/>, or reach out for <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;text-highlight&quot;&gt;"/>support<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/>. </source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-getting-started/src/lib/page/next-steps/next-steps.component.html</context>
-          <context context-type="linenumber">6,9</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="gsNextDocs" datatype="html">
-        <source>Documentation</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-getting-started/src/lib/page/next-steps/next-steps.component.html</context>
-          <context context-type="linenumber">13,16</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="gsNextDocsText" datatype="html">
-        <source>Read guides, patterns, and reference materials.</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-getting-started/src/lib/page/next-steps/next-steps.component.html</context>
-          <context context-type="linenumber">16,17</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="gsNextDocsCta" datatype="html">
-        <source>Browse docs</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-getting-started/src/lib/page/next-steps/next-steps.component.html</context>
-          <context context-type="linenumber">17,18</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="gsNextCommunity" datatype="html">
-        <source>Community</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-getting-started/src/lib/page/next-steps/next-steps.component.html</context>
-          <context context-type="linenumber">21,24</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="gsNextCommunityText" datatype="html">
-        <source>Get help, share ideas, and stay up to date.</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-getting-started/src/lib/page/next-steps/next-steps.component.html</context>
-          <context context-type="linenumber">24,25</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="gsNextCommunityCta" datatype="html">
-        <source>Join Discord</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-getting-started/src/lib/page/next-steps/next-steps.component.html</context>
-          <context context-type="linenumber">25,26</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="gsNextSupport" datatype="html">
-        <source>Support</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-getting-started/src/lib/page/next-steps/next-steps.component.html</context>
-          <context context-type="linenumber">29,32</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="gsNextSupportText" datatype="html">
-        <source>Need help with onboarding or migration?</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-getting-started/src/lib/page/next-steps/next-steps.component.html</context>
-          <context context-type="linenumber">32,33</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="gsNextSupportCta" datatype="html">
-        <source>Contact support</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-getting-started/src/lib/page/next-steps/next-steps.component.html</context>
-          <context context-type="linenumber">33,34</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="gsTourIntro" datatype="html">
-        <source> Learn how your workspace is organized so new code lands in the <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;text-highlight&quot;&gt;"/>right place<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> every time. Keep applications lean and reusable logic inside libraries for a maintainable monorepo. </source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-getting-started/src/lib/page/workspace-tour/workspace-tour.component.html</context>
-          <context context-type="linenumber">6,8</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="gsCommandsIntro" datatype="html">
-        <source> Your daily toolbox for fast feedback and reproducible results. Leverage Nx’s <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;text-highlight&quot;&gt;"/>smart task execution<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> to visualize dependencies, run only what changed, and scale confidently across projects. </source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-getting-started/src/lib/page/essential-commands/essential-commands.component.html</context>
-          <context context-type="linenumber">5,8</context>
+          <context context-type="linenumber">44,45</context>
         </context-group>
       </trans-unit>
       <trans-unit id="homeMetaDescription" datatype="html">
         <source>TSEF is the AI-ready TypeScript Enterprise Framework. Easily build, deploy, and scale modern enterprise applications with best practices, advanced tooling, and AI capabilities out of the box.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-getting-started/src/lib/page/getting-started.component.ts</context>
-          <context context-type="linenumber">19</context>
+          <context context-type="linenumber">29</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-home/src/lib/page/home.component.ts</context>
@@ -290,7 +73,7 @@
         <source>TSEF, TypeScript, Enterprise Framework, AI-ready, Angular, web development, scalable, application framework, cloud, modern apps, enterprise solutions, software tools, best practices</source>
         <context-group purpose="location">
           <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-getting-started/src/lib/page/getting-started.component.ts</context>
-          <context context-type="linenumber">23</context>
+          <context context-type="linenumber">33</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-home/src/lib/page/home.component.ts</context>
@@ -338,6 +121,223 @@
         <context-group purpose="location">
           <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-getting-started/src/lib/page/hero/hero.component.html</context>
           <context context-type="linenumber">42,44</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="gsNextTitle" datatype="html">
+        <source>Next Steps</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-getting-started/src/lib/page/next-steps/next-steps.component.html</context>
+          <context context-type="linenumber">5,6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="gsNextIntro" datatype="html">
+        <source> Ready to go deeper? Explore the <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;text-highlight&quot;&gt;"/>documentation<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/>, join the <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;text-highlight&quot;&gt;"/>community<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/>, or reach out for <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;text-highlight&quot;&gt;"/>support<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/>. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-getting-started/src/lib/page/next-steps/next-steps.component.html</context>
+          <context context-type="linenumber">7,10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="gsNextDocs" datatype="html">
+        <source>Documentation</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-getting-started/src/lib/page/next-steps/next-steps.component.html</context>
+          <context context-type="linenumber">18,19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="gsNextDocsText" datatype="html">
+        <source>Read guides, patterns, and reference materials.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-getting-started/src/lib/page/next-steps/next-steps.component.html</context>
+          <context context-type="linenumber">19,21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="gsNextDocsCta" datatype="html">
+        <source>Browse docs</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-getting-started/src/lib/page/next-steps/next-steps.component.html</context>
+          <context context-type="linenumber">25,27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="gsNextCommunity" datatype="html">
+        <source>Community</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-getting-started/src/lib/page/next-steps/next-steps.component.html</context>
+          <context context-type="linenumber">34,35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="gsNextCommunityText" datatype="html">
+        <source>Get help, share ideas, and stay up to date.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-getting-started/src/lib/page/next-steps/next-steps.component.html</context>
+          <context context-type="linenumber">35,37</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="gsNextCommunityCta" datatype="html">
+        <source>Join Discord</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-getting-started/src/lib/page/next-steps/next-steps.component.html</context>
+          <context context-type="linenumber">41,43</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="gsNextSupport" datatype="html">
+        <source>Support</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-getting-started/src/lib/page/next-steps/next-steps.component.html</context>
+          <context context-type="linenumber">50,51</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="gsNextSupportText" datatype="html">
+        <source>Need help with onboarding or migration?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-getting-started/src/lib/page/next-steps/next-steps.component.html</context>
+          <context context-type="linenumber">51,52</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="gsNextSupportCta" datatype="html">
+        <source>Contact support</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-getting-started/src/lib/page/next-steps/next-steps.component.html</context>
+          <context context-type="linenumber">53,55</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="gsPrereqTitle" datatype="html">
+        <source>Prerequisites</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-getting-started/src/lib/page/prerequisites/prerequisites.component.html</context>
+          <context context-type="linenumber">5,6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="gsPrereqIntro" datatype="html">
+        <source> The installer scripts set up most tooling automatically. For a <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;text-highlight&quot;&gt;"/>smooth onboarding<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> and consistent builds, ensure these fundamentals are available on your machine before you start. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-getting-started/src/lib/page/prerequisites/prerequisites.component.html</context>
+          <context context-type="linenumber">7,10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="gsPrereqNodeTitle" datatype="html">
+        <source>Node.js &amp; npm</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-getting-started/src/lib/page/prerequisites/prerequisites.component.html</context>
+          <context context-type="linenumber">19,20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="gsPrereqNodeText" datatype="html">
+        <source>Install the latest LTS release for best stability.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-getting-started/src/lib/page/prerequisites/prerequisites.component.html</context>
+          <context context-type="linenumber">20,22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="gsPrereqGitTitle" datatype="html">
+        <source>Git</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-getting-started/src/lib/page/prerequisites/prerequisites.component.html</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="gsPrereqGitText" datatype="html">
+        <source>Version control and project checkout.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-getting-started/src/lib/page/prerequisites/prerequisites.component.html</context>
+          <context context-type="linenumber">29,31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="gsPrereqNxTitle" datatype="html">
+        <source>Nx CLI (optional)</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-getting-started/src/lib/page/prerequisites/prerequisites.component.html</context>
+          <context context-type="linenumber">37,38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="gsPrereqNxText" datatype="html">
+        <source>Global convenience: <x id="START_TAG_CODE" ctype="x-code" equiv-text="&lt;code&gt;"/>npm i -g nx<x id="CLOSE_TAG_CODE" ctype="x-code" equiv-text="&lt;/code&gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-getting-started/src/lib/page/prerequisites/prerequisites.component.html</context>
+          <context context-type="linenumber">38,39</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="gsPrereqDockerTitle" datatype="html">
+        <source>Docker (optional)</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-getting-started/src/lib/page/prerequisites/prerequisites.component.html</context>
+          <context context-type="linenumber">46,47</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="gsPrereqDockerText" datatype="html">
+        <source>For containerized local development and CI.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-getting-started/src/lib/page/prerequisites/prerequisites.component.html</context>
+          <context context-type="linenumber">47,49</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="gsTourTitle" datatype="html">
+        <source>Workspace Tour</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-getting-started/src/lib/page/workspace-tour/workspace-tour.component.html</context>
+          <context context-type="linenumber">5,6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="gsTourIntro" datatype="html">
+        <source> Learn how your workspace is organized so new code lands in the <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;text-highlight&quot;&gt;"/>right place<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> every time. Keep applications lean and reusable logic inside libraries for a maintainable monorepo. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-getting-started/src/lib/page/workspace-tour/workspace-tour.component.html</context>
+          <context context-type="linenumber">7,10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="gsTourApps" datatype="html">
+        <source>apps</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-getting-started/src/lib/page/workspace-tour/workspace-tour.component.html</context>
+          <context context-type="linenumber">19,20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="gsTourAppsText" datatype="html">
+        <source> Application containers (frontend, backend, native, keycloak-theme). </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-getting-started/src/lib/page/workspace-tour/workspace-tour.component.html</context>
+          <context context-type="linenumber">21,22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="gsTourLibs" datatype="html">
+        <source>libs</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-getting-started/src/lib/page/workspace-tour/workspace-tour.component.html</context>
+          <context context-type="linenumber">30,31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="gsTourLibsText" datatype="html">
+        <source>Domain libraries: feature, data-access, ui, util.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-getting-started/src/lib/page/workspace-tour/workspace-tour.component.html</context>
+          <context context-type="linenumber">31,33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="gsTourTools" datatype="html">
+        <source>tools</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-getting-started/src/lib/page/workspace-tour/workspace-tour.component.html</context>
+          <context context-type="linenumber">39,40</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="gsTourToolsText" datatype="html">
+        <source>Workspace scripts and custom executors.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-getting-started/src/lib/page/workspace-tour/workspace-tour.component.html</context>
+          <context context-type="linenumber">40,42</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="gsTourE2E" datatype="html">
+        <source>e2e</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-getting-started/src/lib/page/workspace-tour/workspace-tour.component.html</context>
+          <context context-type="linenumber">49</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="gsTourE2EText" datatype="html">
+        <source>End-to-end tests and configuration.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-getting-started/src/lib/page/workspace-tour/workspace-tour.component.html</context>
+          <context context-type="linenumber">49,51</context>
         </context-group>
       </trans-unit>
       <trans-unit id="cmpTitle" datatype="html">
@@ -1236,11 +1236,18 @@
           <context context-type="linenumber">24,27</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="headerGettingStarted" datatype="html">
+        <source>Getting Started</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/domains/landingpage/frontend/ui-components/src/lib/header/header.component.html</context>
+          <context context-type="linenumber">32,34</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="headerDocs" datatype="html">
         <source>Documentation</source>
         <context-group purpose="location">
           <context context-type="sourcefile">libs/domains/landingpage/frontend/ui-components/src/lib/header/header.component.html</context>
-          <context context-type="linenumber">39,40</context>
+          <context context-type="linenumber">41,42</context>
         </context-group>
       </trans-unit>
     </body>
