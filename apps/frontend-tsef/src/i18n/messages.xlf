@@ -2,6 +2,76 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
   <file source-language="en" datatype="plaintext" original="ng2.template">
     <body>
+      <trans-unit id="rulesMetaDescription" datatype="html">
+        <source>Comprehensive framework rules and guidelines for TSEF. Learn about agent guidelines, application structure, domain organization, testing strategies, security practices, and development principles.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-framework/src/lib/page/framework.component.ts</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="rulesMetaKeywords" datatype="html">
+        <source>TSEF rules, framework guidelines, development standards, coding practices, testing guidelines, security rules, domain architecture, application structure, best practices</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-framework/src/lib/page/framework.component.ts</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="frameworkHeroTitle" datatype="html">
+        <source> Framework <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;text-highlight&quot;&gt;"/>Rules &amp; Guidelines<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-framework/src/lib/page/hero/hero.component.html</context>
+          <context context-type="linenumber">6,8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="frameworkHeroSubtitle" datatype="html">
+        <source> Comprehensive <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;text-highlight&quot;&gt;"/>standards and best practices<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> that ensure consistency, reliability, and maintainability across all development activities in your enterprise application. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-framework/src/lib/page/hero/hero.component.html</context>
+          <context context-type="linenumber">9,11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="rulesTitle" datatype="html">
+        <source>Framework Rules &amp; Guidelines</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-framework/src/lib/page/rules/rules.component.html</context>
+          <context context-type="linenumber">5,6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="rulesIntro" datatype="html">
+        <source> TSEF comes with <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;text-highlight&quot;&gt;"/>comprehensive rules and guidelines<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> that ensure <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;text-highlight&quot;&gt;"/>consistency, reliability, and maintainability<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> across all development activities. These rules are automatically enforced and guide every aspect of your enterprise application development. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-framework/src/lib/page/rules/rules.component.html</context>
+          <context context-type="linenumber">7,10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="rulesRFC2119Title" datatype="html">
+        <source>RFC 2119 Terminology</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-framework/src/lib/page/rules/rules.component.html</context>
+          <context context-type="linenumber">21,23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="rulesRFC2119Text" datatype="html">
+        <source> The key words &quot;MUST&quot;, &quot;MUST NOT&quot;, &quot;REQUIRED&quot;, &quot;SHALL&quot;, &quot;SHALL NOT&quot;, &quot;SHOULD&quot;, &quot;SHOULD&quot;, &quot;RECOMMENDED&quot;, &quot;MAY&quot;, and &quot;OPTIONAL&quot; in this document are to be interpreted as described in RFC 2119. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-framework/src/lib/page/rules/rules.component.html</context>
+          <context context-type="linenumber">24,26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="rulesNoteTitle" datatype="html">
+        <source>Note</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-framework/src/lib/page/rules/rules.component.html</context>
+          <context context-type="linenumber">2576,2578</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="rulesNoteText" datatype="html">
+        <source> These rules are automatically enforced by the framework tooling and guide every aspect of your enterprise application development. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-framework/src/lib/page/rules/rules.component.html</context>
+          <context context-type="linenumber">2579,2581</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="gsCommandsTitle" datatype="html">
         <source>Essential Nx Commands</source>
         <context-group purpose="location">
@@ -101,19 +171,11 @@
           <context context-type="linenumber">18,20</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="getStartedCreateWorkspace" datatype="html">
+      <trans-unit id="getStartedInstallDescription" datatype="html">
         <source> Create your first TSEF workspace in under 2 minutes. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-getting-started/src/lib/page/hero/hero.component.html</context>
           <context context-type="linenumber">21,23</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-getting-started/src/lib/page/hero/hero.component.html</context>
-          <context context-type="linenumber">45,47</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-home/src/lib/page/get-started/get-started.component.html</context>
-          <context context-type="linenumber">24,26</context>
         </context-group>
       </trans-unit>
       <trans-unit id="getStartedUpdate" datatype="html">
@@ -121,6 +183,13 @@
         <context-group purpose="location">
           <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-getting-started/src/lib/page/hero/hero.component.html</context>
           <context context-type="linenumber">42,44</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="getStartedUpdateDescription" datatype="html">
+        <source> Update your TSEF workspace to the latest version. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-getting-started/src/lib/page/hero/hero.component.html</context>
+          <context context-type="linenumber">45,47</context>
         </context-group>
       </trans-unit>
       <trans-unit id="gsNextTitle" datatype="html">
@@ -541,6 +610,13 @@
         <context-group purpose="location">
           <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-home/src/lib/page/get-started/get-started.component.html</context>
           <context context-type="linenumber">21,23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="getStartedQuickStartDescription" datatype="html">
+        <source> Create your first TSEF workspace in under 2 minutes. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-home/src/lib/page/get-started/get-started.component.html</context>
+          <context context-type="linenumber">24,26</context>
         </context-group>
       </trans-unit>
       <trans-unit id="getStartedLearnMoreWorkspace" datatype="html">
@@ -1241,6 +1317,13 @@
         <context-group purpose="location">
           <context context-type="sourcefile">libs/domains/landingpage/frontend/ui-components/src/lib/header/header.component.html</context>
           <context context-type="linenumber">32,34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="headerFramework" datatype="html">
+        <source>Rules &amp; Guidelines</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/domains/landingpage/frontend/ui-components/src/lib/header/header.component.html</context>
+          <context context-type="linenumber">36,37</context>
         </context-group>
       </trans-unit>
       <trans-unit id="headerDocs" datatype="html">
