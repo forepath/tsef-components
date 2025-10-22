@@ -2,6 +2,46 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
   <file source-language="en" datatype="plaintext" original="ng2.template" target-language="de">
     <body>
+      <trans-unit id="rulesMetaDescription" datatype="html">
+        <source>Comprehensive framework rules and guidelines for TSEF. Learn about agent guidelines, application structure, domain organization, testing strategies, security practices, and development principles.</source>
+        <target>Umfassende Framework-Regeln und -Richtlinien für TSEF. Erfahren Sie mehr über Agent-Richtlinien, Anwendungsstruktur, Domänenorganisation, Teststrategien, Sicherheitspraktiken und Entwicklungsprinzipien.</target>
+      </trans-unit>
+      <trans-unit id="rulesMetaKeywords" datatype="html">
+        <source>TSEF rules, framework guidelines, development standards, coding practices, testing guidelines, security rules, domain architecture, application structure, best practices</source>
+        <target>TSEF-Regeln, Framework-Richtlinien, Entwicklungsstandards, Coding-Praktiken, Testrichtlinien, Sicherheitsregeln, Domänenarchitektur, Anwendungsstruktur, Best Practices</target>
+      </trans-unit>
+      <trans-unit id="frameworkHeroTitle" datatype="html">
+        <source> Framework <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;text-highlight&quot;&gt;"/>Rules &amp; Guidelines<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></source>
+        <target> Framework <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;text-highlight&quot;&gt;"/>Regeln &amp; Richtlinien<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></target>
+      </trans-unit>
+      <trans-unit id="frameworkHeroSubtitle" datatype="html">
+        <source> Comprehensive <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;text-highlight&quot;&gt;"/>standards and best practices<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> that ensure consistency, reliability, and maintainability across all development activities in your enterprise application. </source>
+        <target> Umfassende <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;text-highlight&quot;&gt;"/>Standards und Best Practices<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/>, die Konsistenz, Zuverlässigkeit und Wartbarkeit in allen Entwicklungsaktivitäten Ihrer Enterprise-Anwendung gewährleisten. </target>
+      </trans-unit>
+      <trans-unit id="rulesTitle" datatype="html">
+        <source>Framework Rules &amp; Guidelines</source>
+        <target>Framework-Regeln &amp; Richtlinien</target>
+      </trans-unit>
+      <trans-unit id="rulesIntro" datatype="html">
+        <source> TSEF comes with <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;text-highlight&quot;&gt;"/>comprehensive rules and guidelines<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> that ensure <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;text-highlight&quot;&gt;"/>consistency, reliability, and maintainability<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> across all development activities. These rules are automatically enforced and guide every aspect of your enterprise application development. </source>
+        <target> TSEF kommt mit <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;text-highlight&quot;&gt;"/>umfassenden Regeln und Richtlinien<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/>, die <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;text-highlight&quot;&gt;"/>Konsistenz, Zuverlässigkeit und Wartbarkeit<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> in allen Entwicklungsaktivitäten gewährleisten. Diese Regeln werden automatisch durchgesetzt und leiten jeden Aspekt Ihrer Enterprise-Anwendungsentwicklung. </target>
+      </trans-unit>
+      <trans-unit id="rulesRFC2119Title" datatype="html">
+        <source>RFC 2119 Terminology</source>
+        <target>RFC 2119 Terminologie</target>
+      </trans-unit>
+      <trans-unit id="rulesRFC2119Text" datatype="html">
+        <source> The key words &quot;MUST&quot;, &quot;MUST NOT&quot;, &quot;REQUIRED&quot;, &quot;SHALL&quot;, &quot;SHALL NOT&quot;, &quot;SHOULD&quot;, &quot;SHOULD&quot;, &quot;RECOMMENDED&quot;, &quot;MAY&quot;, and &quot;OPTIONAL&quot; in this document are to be interpreted as described in RFC 2119. </source>
+        <target> Die Schlüsselwörter &quot;MUST&quot;, &quot;MUST NOT&quot;, &quot;REQUIRED&quot;, &quot;SHALL&quot;, &quot;SHALL NOT&quot;, &quot;SHOULD&quot;, &quot;SHOULD&quot;, &quot;RECOMMENDED&quot;, &quot;MAY&quot; und &quot;OPTIONAL&quot; in diesem Dokument sind wie in RFC 2119 beschrieben zu interpretieren. </target>
+      </trans-unit>
+      <trans-unit id="rulesNoteTitle" datatype="html">
+        <source>Note</source>
+        <target>Hinweis</target>
+      </trans-unit>
+      <trans-unit id="rulesNoteText" datatype="html">
+        <source> These rules are automatically enforced by the framework tooling and guide every aspect of your enterprise application development. </source>
+        <target> Diese Regeln werden automatisch durch die Framework-Tools durchgesetzt und leiten jeden Aspekt Ihrer Enterprise-Anwendungsentwicklung. </target>
+      </trans-unit>
       <trans-unit id="gsNextTitle" datatype="html">
         <source>Next Steps</source>
         <target>Nächste Schritte</target>
@@ -49,6 +89,10 @@
       <trans-unit id="headerGettingStarted" datatype="html">
         <source>Getting Started</source>
         <target>Erste Schritte</target>
+      </trans-unit>
+      <trans-unit id="headerFramework" datatype="html">
+        <source>Rules &amp; Guidelines</source>
+        <target>Regeln &amp; Richtlinien</target>
       </trans-unit>
       <trans-unit id="gsPrereqTitle" datatype="html">
         <source>Prerequisites</source>
@@ -302,17 +346,25 @@
         <source> Learn more about installing, updating and using TSEF in the <x id="START_LINK" ctype="x-a" equiv-text="&lt;a routerLink=&quot;/getting-started&quot;&gt;"/>getting started<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/> guide. </source>
         <target> Erfahren Sie mehr über Installation, Updates und die Nutzung von TSEF im <x id="START_LINK" ctype="x-a" equiv-text="&lt;a routerLink=&quot;/getting-started&quot;&gt;"/>Getting-Started<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>-Leitfaden. </target>
       </trans-unit>
-      <trans-unit id="getStartedCreateWorkspace" datatype="html">
-        <source> Create your first TSEF workspace in under 2 minutes. </source>
-        <target> Erstellen Sie Ihren ersten TSEF-Workspace in unter 2 Minuten. </target>
-      </trans-unit>
       <trans-unit id="getStartedInstall" datatype="html">
         <source>Install</source>
         <target>Installieren</target>
       </trans-unit>
+      <trans-unit id="getStartedInstallDescription" datatype="html">
+        <source> Create your first TSEF workspace in under 2 minutes. </source>
+        <target> Erstellen Sie Ihren ersten TSEF-Workspace in unter 2 Minuten. </target>
+      </trans-unit>
       <trans-unit id="getStartedUpdate" datatype="html">
         <source>Update</source>
         <target>Aktualisieren</target>
+      </trans-unit>
+      <trans-unit id="getStartedUpdateDescription" datatype="html">
+        <source> Update your TSEF workspace to the latest version. </source>
+        <target> Aktualisieren Sie Ihren TSEF-Workspace auf die neueste Version. </target>
+      </trans-unit>
+      <trans-unit id="getStartedQuickStartDescription" datatype="html">
+        <source> Create your first TSEF workspace in under 2 minutes. </source>
+        <target> Erstellen Sie Ihren ersten TSEF-Workspace in unter 2 Minuten. </target>
       </trans-unit>
       <trans-unit id="getStartedViewOnGithub" datatype="html">
         <source>View on GitHub</source>

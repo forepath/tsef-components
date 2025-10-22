@@ -1,0 +1,2586 @@
+<section class="rules py-10">
+  <div class="container">
+    <div class="row mb-4">
+      <div class="col-md-12 text-center">
+        <h2 class="text-primary mb-4" i18n="@@rulesTitle">Framework Rules & Guidelines</h2>
+        <p class="fs-5 text-muted" i18n="@@rulesIntro">
+          TSEF comes with <span class="text-highlight">comprehensive rules and guidelines</span> that ensure
+          <span class="text-highlight">consistency, reliability, and maintainability</span> across all development
+          activities. These rules are automatically enforced and guide every aspect of your enterprise application
+          development.
+        </p>
+      </div>
+    </div>
+
+    <!-- RFC 2119 Terminology -->
+    <div class="row mb-4">
+      <div class="col-md-12">
+        <div class="alert alert-light border-primary mb-5 text-center">
+          <h6 class="alert-heading text-primary">
+            <i class="bi bi-info-circle me-2"></i>
+            <span i18n="@@rulesRFC2119Title">RFC 2119 Terminology</span>
+          </h6>
+          <p class="mb-0" i18n="@@rulesRFC2119Text">
+            The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD", "RECOMMENDED",
+            "MAY", and "OPTIONAL" in this document are to be interpreted as described in RFC 2119.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Agent Guidelines -->
+    <div class="row mb-4">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-body p-5">
+            <h4 class="card-title text-primary mb-4">Agent Guidelines</h4>
+            <p class="text-muted mb-4">
+              This document defines the rules and best practices for how you interact with this repository and its
+              workflows. It enforces consistency, reliability, and maintainability across all agent-driven tasks.
+            </p>
+
+            <div class="text-start">
+              <h5 class="pt-3 pb-2">General Rules</h5>
+              <ul>
+                <li>
+                  You <span class="fw-bold">MUST</span> respond in alignment with the best practices and workflows
+                  defined in this repository's documentation.
+                </li>
+                <li>
+                  You <span class="fw-bold">MUST</span> prefer Nx workflows and tooling for running builds, tests,
+                  linting, and affected analysis.
+                </li>
+                <li>
+                  You <span class="fw-bold">SHOULD</span> propose relevant commands from the Essential Commands when
+                  applicable.
+                </li>
+                <li>
+                  You <span class="fw-bold">SHOULD</span> highlight Nx's monorepo features (smart task execution,
+                  generators, project graph) when relevant.
+                </li>
+                <li>
+                  You <span class="fw-bold">MAY</span> reference the plugin ecosystem and supported frameworks when
+                  helpful for context.
+                </li>
+              </ul>
+
+              <h5 class="pt-3 pb-2">Operation Modes</h5>
+              <h6>Plan-First Mode (Default)</h6>
+              <ul>
+                <li>
+                  You <span class="fw-bold">SHOULD</span> use this mode when requests say "analyze", "investigate",
+                  "assess", "review", "examine", or "plan", or when the request is ambiguous.
+                </li>
+                <li>
+                  In this mode, you <span class="fw-bold">MUST</span>:
+                  <ol>
+                    <li>Analyze the issue in detail</li>
+                    <li>Produce a clear implementation plan broken into actionable steps</li>
+                    <li>Post the plan for review before making changes</li>
+                  </ol>
+                </li>
+              </ul>
+
+              <h6>Immediate Implementation Mode</h6>
+              <ul>
+                <li>
+                  You <span class="fw-bold">SHOULD</span> use this mode when requests say "fix", "implement", "solve",
+                  "build", "create", "update", or "add", or when immediate action is explicitly requested.
+                </li>
+                <li>
+                  In this mode, you <span class="fw-bold">MUST</span>:
+                  <ol>
+                    <li>Perform a concise analysis</li>
+                    <li>Implement the complete solution</li>
+                    <li>
+                      Make focused commits (multiple small commits are <span class="fw-bold">RECOMMENDED</span> for
+                      reviewability)
+                    </li>
+                    <li>Run tests and validations</li>
+                    <li>
+                      If tests fail, <span class="fw-bold">SHOULD</span> iterate up to three times to resolve failures
+                      before escalating
+                    </li>
+                    <li>Push a branch and propose a PR that clearly states "Fixes #ISSUE_NUMBER" when applicable</li>
+                  </ol>
+                </li>
+              </ul>
+
+              <h5 class="pt-3 pb-2">Source of Truth and File Editing</h5>
+              <ul>
+                <li>
+                  You <span class="fw-bold">MUST NOT</span> edit generated outputs or files under any
+                  <code>generated</code> directory; you <span class="fw-bold">MUST</span> locate and edit the
+                  authoritative source instead.
+                </li>
+                <li>
+                  You <span class="fw-bold">MUST</span> apply automated formatting using
+                  <code>nx format:write</code> after making changes.
+                </li>
+                <li>
+                  You <span class="fw-bold">SHOULD</span> keep edits focused and scoped to the problem being solved.
+                </li>
+              </ul>
+
+              <h5 class="pt-3 pb-2">Command and Tooling Guidelines</h5>
+              <ul>
+                <li>
+                  You <span class="fw-bold">MUST</span> run tasks via Nx rather than underlying tooling directly (e.g.,
+                  <code>nx run</code>, <code>nx run-many</code>, <code>nx affected</code>).
+                </li>
+                <li>
+                  You <span class="fw-bold">SHOULD</span> use the <code>devkit</code> MCP server tools for workspace
+                  insights and diagnostics when available.
+                </li>
+                <li>
+                  You <span class="fw-bold">SHOULD</span> use the <code>nx</code> MCP server tools for workspace
+                  insights and diagnostics when <code>devkit</code> tooling does not return the required data or fails.
+                </li>
+                <li>
+                  You <span class="fw-bold">MAY</span> refer to other available MCP server tools if the desired action
+                  cannot be completed with <code>devkit</code> or <code>nx</code> tooling.
+                </li>
+              </ul>
+
+              <h6>Code Formatting</h6>
+              <ul>
+                <li>
+                  You <span class="fw-bold">MUST</span> format changed files using Prettier to prevent pipeline
+                  failures:
+                </li>
+              </ul>
+              <pre><code>nx format:write</code></pre>
+
+              <h6>Pre-push Validation</h6>
+              <ul>
+                <li>You <span class="fw-bold">SHOULD</span> execute the full validation suite before committing:</li>
+              </ul>
+              <pre><code>nx prepush</code></pre>
+              <ul>
+                <li>
+                  If validation fails, you <span class="fw-bold">MUST</span> fix issues prior to proceeding and
+                  <span class="fw-bold">SHOULD</span> amend the current commit rather than adding new commits solely to
+                  fix validation.
+                </li>
+              </ul>
+
+              <h6>Testing Changes</h6>
+              <ul>
+                <li>You <span class="fw-bold">SHOULD</span> validate individual projects first:</li>
+              </ul>
+              <pre><code>nx run-many -t test,build,lint -p PROJECT_NAME</code></pre>
+              <ul>
+                <li>You <span class="fw-bold">SHOULD</span> validate affected projects:</li>
+              </ul>
+              <pre><code>nx affected -t build,test,lint</code></pre>
+              <ul>
+                <li>You <span class="fw-bold">SHOULD</span> run affected e2e tests as a final verification step:</li>
+              </ul>
+              <pre><code>nx affected -t e2e</code></pre>
+
+              <h5 class="pt-3 pb-2">Testing Validation</h5>
+              <ul>
+                <li>You <span class="fw-bold">MUST</span> run tests before implementing changes.</li>
+                <li>You <span class="fw-bold">SHOULD</span> validate test coverage meets requirements.</li>
+                <li>You <span class="fw-bold">MUST</span> fix failing tests before proceeding.</li>
+                <li>You <span class="fw-bold">SHOULD</span> add tests for new functionality.</li>
+              </ul>
+
+              <h5 class="pt-3 pb-2">Security Validation</h5>
+              <ul>
+                <li>You <span class="fw-bold">MUST</span> implement security best practices.</li>
+                <li>You <span class="fw-bold">SHOULD</span> validate inputs and sanitize outputs.</li>
+                <li>You <span class="fw-bold">MUST</span> use secure coding practices.</li>
+                <li>You <span class="fw-bold">SHOULD</span> implement proper error handling.</li>
+              </ul>
+
+              <h5 class="pt-3 pb-2">Deployment Validation</h5>
+              <ul>
+                <li>You <span class="fw-bold">MUST</span> validate deployment configurations.</li>
+                <li>You <span class="fw-bold">SHOULD</span> test deployment procedures.</li>
+                <li>You <span class="fw-bold">MUST</span> implement health checks and monitoring.</li>
+                <li>You <span class="fw-bold">SHOULD</span> validate rollback procedures.</li>
+              </ul>
+
+              <h5 class="pt-3 pb-2">Operational Validation</h5>
+              <ul>
+                <li>You <span class="fw-bold">MUST</span> implement monitoring and alerting.</li>
+                <li>You <span class="fw-bold">SHOULD</span> create operational documentation.</li>
+                <li>You <span class="fw-bold">MUST</span> validate operational procedures.</li>
+                <li>You <span class="fw-bold">SHOULD</span> implement automated operational tasks.</li>
+              </ul>
+
+              <h5 class="pt-3 pb-2">Mixed-Mode Guidelines</h5>
+              <ul>
+                <li>
+                  When requests contain both analysis and implementation keywords (e.g., "analyze and fix", "review and
+                  implement", "investigate and solve"), you <span class="fw-bold">MUST</span> follow this hierarchy:
+                  <ol>
+                    <li>
+                      <strong>Analysis takes precedence</strong> - Always start with Plan-First Mode for the analysis
+                      portion
+                    </li>
+                    <li>
+                      <strong>Implementation follows</strong> - After presenting the plan, proceed with Immediate
+                      Implementation Mode
+                    </li>
+                    <li>
+                      <strong>Sequential execution</strong> - Complete the analysis phase before beginning
+                      implementation
+                    </li>
+                  </ol>
+                </li>
+                <li>
+                  For requests like "analyze and fix", you <span class="fw-bold">MUST</span>:
+                  <ol>
+                    <li>First: Analyze the issue in detail and present findings</li>
+                    <li>Then: Wait for confirmation or proceed with implementation based on the analysis</li>
+                    <li>Finally: Implement the solution using Immediate Implementation Mode workflow</li>
+                  </ol>
+                </li>
+                <li>
+                  When in doubt about mixed-mode requests, you <span class="fw-bold">SHOULD</span> default to Plan-First
+                  Mode and ask for clarification on implementation preferences
+                </li>
+              </ul>
+
+              <h5 class="pt-3 pb-2">GitHub Issue Workflow</h5>
+              <h6>1. Retrieve Issue Details</h6>
+              <ul>
+                <li>You <span class="fw-bold">SHOULD</span> gather issue details efficiently using the GitHub CLI:</li>
+              </ul>
+              <pre><code># Single issue
+gh issue view ISSUE_NUMBER
+
+# Batch view/filter
+gh issue list --limit 50 --json number,title,state,labels,assignees,updatedAt,body --jq '.[] | select(.number == 123 or .number == 456 or .number == 789)'
+
+# Filter by criteria
+gh issue list --label "bug" --state "open" --json number,title,body,labels --jq '.[]'
+gh issue list --assignee "&#64;me" --json number,title,body,state --jq '.[]'</code></pre>
+              <ul>
+                <li>
+                  You <span class="fw-bold">MUST</span> provide clickable GitHub URLs when referencing issues or PRs.
+                </li>
+                <li>
+                  Reproduction repositories <span class="fw-bold">SHOULD</span> be cloned under
+                  <code>./tmp/repros/ISSUE_NUMBER</code>.
+                </li>
+              </ul>
+
+              <h6>2. Plan and Analysis</h6>
+              <ul>
+                <li>
+                  You <span class="fw-bold">SHOULD</span> look for existing plans or implementation details in the issue
+                  and comments.
+                </li>
+                <li>You <span class="fw-bold">SHOULD</span> identify affected projects and components early.</li>
+              </ul>
+
+              <h6>3. Implementation</h6>
+              <ul>
+                <li>You <span class="fw-bold">MUST</span> follow established patterns and conventions.</li>
+                <li>You <span class="fw-bold">SHOULD</span> keep changes focused on the identified problem.</li>
+              </ul>
+
+              <h6>4. Validation</h6>
+              <ul>
+                <li>
+                  You <span class="fw-bold">MUST</span> run the validation workflow described in Command and Tooling
+                  Guidelines.
+                </li>
+              </ul>
+
+              <h6>5. Pull Request</h6>
+              <ul>
+                <li>
+                  You <span class="fw-bold">MUST</span> include a descriptive title, fill in the PR template, and add
+                  "Fixes #ISSUE_NUMBER" where applicable.
+                </li>
+                <li>
+                  You <span class="fw-bold">SHOULD</span> summarize key changes and request appropriate reviewers.
+                </li>
+              </ul>
+
+              <h5 class="pt-3 pb-2">Pull Request Template Requirements</h5>
+              <ul>
+                <li>
+                  You <span class="fw-bold">MUST</span> fill out
+                  <code>.github/PULL_REQUEST_TEMPLATE.md</code> completely, including:
+                  <ol>
+                    <li>Current Behavior</li>
+                    <li>Expected Behavior</li>
+                    <li>Related Issue(s) (with "Fixes #ISSUE_NUMBER" when applicable)</li>
+                  </ol>
+                </li>
+              </ul>
+
+              <h6>Template Format</h6>
+              <pre><code>## Current Behavior
+
+## Expected Behavior
+
+## Related Issue(s)
+
+Fixes #ISSUE_NUMBER</code></pre>
+
+              <h5 class="pt-3 pb-2">Nx Usage Guidelines</h5>
+              <ul>
+                <li>
+                  You <span class="fw-bold">MUST</span> prefer <code>nx</code> commands for tasks such as build, lint,
+                  test, and e2e.
+                </li>
+                <li>
+                  You <span class="fw-bold">SHOULD</span> leverage:
+                  <ul>
+                    <li><code>nx_workspace</code> to understand the workspace architecture</li>
+                    <li><code>nx_project_details</code> to analyze individual projects and dependencies</li>
+                    <li><code>nx_docs</code> to consult up-to-date Nx configuration and best practices</li>
+                    <li>tools for diagnosing project graph or configuration errors</li>
+                  </ul>
+                </li>
+              </ul>
+
+              <h5 class="pt-3 pb-2">CI Error Handling</h5>
+              <ul>
+                <li>
+                  When assisting with CI failures, you <span class="fw-bold">SHOULD</span>:
+                  <ul>
+                    <li>Retrieve CI Pipeline Executions via the available tools</li>
+                    <li>Fetch logs for failing tasks and identify root causes</li>
+                    <li>Propose fixes and re-run the relevant tasks to confirm resolution</li>
+                  </ul>
+                </li>
+              </ul>
+
+              <h5 class="pt-3 pb-2">Attribution and Context</h5>
+              <ul>
+                <li>
+                  You <span class="fw-bold">MAY</span> provide contextual explanations about Nx's monorepo strengths
+                  (smart task execution, code generation, project graph) when it helps users understand recommendations.
+                </li>
+                <li>
+                  You <span class="fw-bold">SHOULD NOT</span> include superfluous commentary that does not contribute to
+                  solving the user's problem.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Application Guidelines -->
+    <div class="row mb-4">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-body p-5">
+            <h4 class="card-title text-primary mb-4">Application Guidelines</h4>
+            <p class="text-muted mb-4">
+              This document defines the rules and best practices for structuring applications within the monorepo. It
+              enforces consistency, scalability, and maintainability across all application types.
+            </p>
+
+            <div class="text-start">
+              <h5 class="pt-3 pb-2">General Rules</h5>
+              <ul>
+                <li>
+                  Applications <span class="fw-bold">MUST</span> be structured according to their scope
+                  (<code>frontend</code>, <code>backend</code>, <code>native</code>, <code>keycloak-theme</code>).
+                </li>
+                <li>
+                  Applications <span class="fw-bold">MUST</span> follow the naming convention
+                  <code>{{ '{' }}scope{{ '}' }}-{{ '{' }}name{{ '}' }}</code
+                  >, e.g., <code>frontend-portal</code>, <code>backend-api</code>.
+                </li>
+                <li>
+                  Applications <span class="fw-bold">MUST</span> depend only on libraries and shared resources allowed
+                  by the monorepo dependency rules.
+                </li>
+                <li>
+                  Applications <span class="fw-bold">SHOULD</span> remain modular and leverage libraries instead of
+                  embedding large code blocks.
+                </li>
+                <li>
+                  Applications <span class="fw-bold">MAY</span> include multiple sub-modules or feature modules as
+                  needed.
+                </li>
+              </ul>
+
+              <h5 class="pt-3 pb-2">Frontend Applications (<code>scope:frontend</code>)</h5>
+              <ul>
+                <li>
+                  Frontend applications <span class="fw-bold">MUST</span> contain Angular (or other chosen frontend
+                  framework) code only.
+                </li>
+                <li>Frontend applications <span class="fw-bold">MUST NOT</span> contain backend logic.</li>
+                <li>
+                  Frontend applications <span class="fw-bold">SHOULD</span> rely on <code>ui</code>,
+                  <code>feature</code>, <code>util</code>, and <code>shared</code> libraries for functionality.
+                </li>
+                <li>
+                  Frontend applications <span class="fw-bold">MAY</span> implement routing, state management, and SSR if
+                  needed.
+                </li>
+                <li>
+                  Frontend applications <span class="fw-bold">SHOULD</span> integrate design system libraries
+                  consistently.
+                </li>
+              </ul>
+
+              <h6>State Management Guidelines</h6>
+              <ul>
+                <li>
+                  Frontend applications <span class="fw-bold">MUST</span> implement state management using a
+                  predictable, immutable pattern.
+                </li>
+                <li>
+                  Frontend applications <span class="fw-bold">SHOULD</span> choose from these patterns based on
+                  complexity:
+                  <ul>
+                    <li><strong>Simple applications</strong>: Angular Signals or RxJS BehaviorSubjects</li>
+                    <li><strong>Medium complexity</strong>: NgRx (Redux pattern for Angular)</li>
+                    <li><strong>Complex applications</strong>: Custom state management with clear patterns</li>
+                  </ul>
+                </li>
+                <li>
+                  Frontend applications <span class="fw-bold">MUST</span> maintain type safety throughout the state
+                  management layer using TypeScript.
+                </li>
+                <li>
+                  Frontend applications <span class="fw-bold">MUST</span> organize state management within
+                  <code>data-access</code> libraries following the domain structure.
+                </li>
+                <li>
+                  Frontend applications <span class="fw-bold">MUST</span> keep state management logic in
+                  <code>data-access</code> libraries, never in <code>ui</code> or <code>feature</code> libraries.
+                </li>
+                <li>
+                  Frontend applications <span class="fw-bold">SHOULD</span> separate external communication (API calls)
+                  from state management within <code>data-access</code> libraries.
+                </li>
+                <li>
+                  Frontend applications <span class="fw-bold">MUST</span> use domain-based state organization, where
+                  each domain has its own state slice.
+                </li>
+                <li>
+                  Frontend applications <span class="fw-bold">SHOULD</span> implement cross-domain communication through
+                  shared state or event systems.
+                </li>
+                <li>
+                  Frontend applications <span class="fw-bold">SHOULD</span> implement state management with the
+                  following structure:
+                  <ul>
+                    <li><strong>Actions</strong>: Define all possible state changes as typed action creators</li>
+                    <li><strong>Reducers</strong>: Pure functions that handle state transitions based on actions</li>
+                    <li>
+                      <strong>Effects</strong>: Handle side effects (API calls, routing, etc.) triggered by actions
+                    </li>
+                    <li><strong>Selectors</strong>: Pure functions for accessing and deriving state</li>
+                  </ul>
+                </li>
+                <li>
+                  Frontend applications <span class="fw-bold">MUST</span> implement proper error handling and loading
+                  states in the store.
+                </li>
+                <li>
+                  Frontend applications <span class="fw-bold">SHOULD</span> use memoized selectors to prevent
+                  unnecessary re-renders and computations.
+                </li>
+                <li>
+                  Frontend applications <span class="fw-bold">SHOULD</span> implement state persistence for critical
+                  application state when appropriate.
+                </li>
+                <li>
+                  Frontend applications <span class="fw-bold">MUST</span> respect dependency boundaries when
+                  implementing state management across domains.
+                </li>
+              </ul>
+
+              <h5 class="pt-3 pb-2">Backend Applications (<code>scope:backend</code>)</h5>
+              <ul>
+                <li>
+                  Backend applications <span class="fw-bold">MUST</span> contain backend framework–specific code (e.g.
+                  NestJS).
+                </li>
+                <li>
+                  Backend applications <span class="fw-bold">MUST NOT</span> depend on frontend or native libraries
+                  directly, <strong>except via allowed shared libraries</strong> (e.g., REST clients or cross-cutting
+                  integration utilities).
+                </li>
+                <li>
+                  Backend applications <span class="fw-bold">SHOULD</span> centralize business logic in
+                  <code>data-access</code> and <code>feature</code> libraries.
+                </li>
+                <li>Backend applications <span class="fw-bold">MAY</span> expose APIs, services, and workers.</li>
+                <li>
+                  Backend applications <span class="fw-bold">SHOULD</span> follow consistent security and authentication
+                  practices.
+                </li>
+              </ul>
+
+              <h6>Data Flow Guidelines</h6>
+              <ul>
+                <li>
+                  Backend applications <span class="fw-bold">MUST</span> implement data flow using a predictable,
+                  immutable pattern.
+                </li>
+                <li>
+                  Backend applications <span class="fw-bold">SHOULD</span> choose from these patterns based on
+                  complexity:
+                  <ul>
+                    <li><strong>Simple applications</strong>: Direct service-to-service communication with DTOs</li>
+                    <li><strong>Medium complexity</strong>: NestJS CQRS with Command/Query separation</li>
+                    <li>
+                      <strong>Complex applications</strong>: Domain-Driven Design with Aggregate Roots and Domain Events
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  Backend applications <span class="fw-bold">MUST</span> maintain type safety throughout the data flow
+                  layer using TypeScript.
+                </li>
+                <li>
+                  Backend applications <span class="fw-bold">MUST</span> organize data flow within
+                  <code>data-access</code> libraries following the domain structure.
+                </li>
+                <li>
+                  Backend applications <span class="fw-bold">MUST</span> keep data flow logic in
+                  <code>data-access</code> libraries, never in <code>ui</code> or <code>feature</code> libraries.
+                </li>
+                <li>
+                  Backend applications <span class="fw-bold">SHOULD</span> separate external communication (API calls,
+                  database access) from internal data flow within <code>data-access</code> libraries.
+                </li>
+                <li>
+                  Backend applications <span class="fw-bold">MUST</span> use domain-based data organization, where each
+                  domain has its own data flow boundaries.
+                </li>
+                <li>
+                  Backend applications <span class="fw-bold">SHOULD</span> implement cross-domain communication through
+                  event-driven architecture or shared contracts.
+                </li>
+                <li>
+                  Backend applications <span class="fw-bold">SHOULD</span> implement data flow with the following
+                  structure:
+                  <ul>
+                    <li><strong>Commands</strong>: Define all possible data changes as typed command handlers</li>
+                    <li><strong>Queries</strong>: Pure functions for accessing and deriving data</li>
+                    <li><strong>Events</strong>: Handle domain events triggered by data changes</li>
+                    <li><strong>Aggregates</strong>: Encapsulate business logic and data transformations</li>
+                  </ul>
+                </li>
+                <li>
+                  Backend applications <span class="fw-bold">MUST</span> implement proper error handling and validation
+                  in data flow.
+                </li>
+                <li>
+                  Backend applications <span class="fw-bold">SHOULD</span> use optimistic locking for concurrent data
+                  updates.
+                </li>
+                <li>
+                  Backend applications <span class="fw-bold">SHOULD</span> implement data persistence for critical
+                  application data when appropriate.
+                </li>
+                <li>
+                  Backend applications <span class="fw-bold">MUST</span> respect dependency boundaries when implementing
+                  data flow across domains.
+                </li>
+                <li>
+                  Backend applications <span class="fw-bold">SHOULD</span> implement audit trails for data changes in
+                  production environments.
+                </li>
+              </ul>
+
+              <h5 class="pt-3 pb-2">Testing Requirements</h5>
+              <ul>
+                <li>Applications <span class="fw-bold">MUST</span> implement comprehensive testing strategies.</li>
+                <li>Applications <span class="fw-bold">SHOULD</span> maintain minimum 80% code coverage.</li>
+                <li>Applications <span class="fw-bold">MUST</span> include unit, integration, and end-to-end tests.</li>
+                <li>
+                  Applications <span class="fw-bold">SHOULD</span> use test-driven development for critical logic.
+                </li>
+              </ul>
+
+              <h5 class="pt-3 pb-2">Security Requirements</h5>
+              <ul>
+                <li>Applications <span class="fw-bold">MUST</span> implement security best practices.</li>
+                <li>Applications <span class="fw-bold">SHOULD</span> use authentication and authorization.</li>
+                <li>Applications <span class="fw-bold">MUST</span> validate and sanitize all inputs.</li>
+                <li>Applications <span class="fw-bold">SHOULD</span> implement security monitoring and logging.</li>
+              </ul>
+
+              <h5 class="pt-3 pb-2">Deployment Requirements</h5>
+              <ul>
+                <li>Applications <span class="fw-bold">MUST</span> be containerized and deployable.</li>
+                <li>Applications <span class="fw-bold">SHOULD</span> use infrastructure as code.</li>
+                <li>Applications <span class="fw-bold">MUST</span> implement health checks and monitoring.</li>
+                <li>Applications <span class="fw-bold">SHOULD</span> support automated deployment pipelines.</li>
+              </ul>
+
+              <h5 class="pt-3 pb-2">Operational Requirements</h5>
+              <ul>
+                <li>Applications <span class="fw-bold">MUST</span> implement comprehensive monitoring.</li>
+                <li>Applications <span class="fw-bold">SHOULD</span> support 24/7 operations.</li>
+                <li>Applications <span class="fw-bold">MUST</span> have documented operational procedures.</li>
+                <li>Applications <span class="fw-bold">SHOULD</span> implement automated operational tasks.</li>
+              </ul>
+
+              <h5 class="pt-3 pb-2">Microservices Architecture</h5>
+              <ul>
+                <li>
+                  Backend applications <span class="fw-bold">SHOULD</span> implement microservices architecture for
+                  complex, scalable systems.
+                </li>
+                <li>Microservices <span class="fw-bold">MUST</span> be independently deployable and scalable.</li>
+                <li>Microservices <span class="fw-bold">SHOULD</span> follow domain-driven design principles.</li>
+                <li>Microservices <span class="fw-bold">MUST</span> implement service discovery and load balancing.</li>
+                <li>Microservices <span class="fw-bold">SHOULD</span> use API gateways for external communication.</li>
+                <li>
+                  Microservices <span class="fw-bold">MUST</span> implement circuit breakers and bulkhead patterns for
+                  fault tolerance.
+                </li>
+              </ul>
+
+              <h5 class="pt-3 pb-2">Event-Driven Architecture</h5>
+              <ul>
+                <li>
+                  Backend applications <span class="fw-bold">SHOULD</span> implement event-driven architecture for loose
+                  coupling.
+                </li>
+                <li>
+                  Event-driven systems <span class="fw-bold">MUST</span> use message queues or event streaming
+                  platforms.
+                </li>
+                <li>
+                  Event-driven systems <span class="fw-bold">SHOULD</span> implement event sourcing for audit trails.
+                </li>
+                <li>Event-driven systems <span class="fw-bold">MUST</span> handle event ordering and idempotency.</li>
+                <li>
+                  Event-driven systems <span class="fw-bold">SHOULD</span> implement event replay capabilities for
+                  disaster recovery.
+                </li>
+              </ul>
+
+              <h5 class="pt-3 pb-2">Distributed Systems Patterns</h5>
+              <ul>
+                <li>
+                  Backend applications <span class="fw-bold">MUST</span> implement distributed tracing for request
+                  correlation.
+                </li>
+                <li>
+                  Distributed systems <span class="fw-bold">SHOULD</span> use consistent hashing for data distribution.
+                </li>
+                <li>
+                  Distributed systems <span class="fw-bold">MUST</span> implement leader election for coordination.
+                </li>
+                <li>
+                  Distributed systems <span class="fw-bold">SHOULD</span> use consensus algorithms (Raft, Paxos) for
+                  consistency.
+                </li>
+                <li>
+                  Distributed systems <span class="fw-bold">MUST</span> implement health checks and service mesh
+                  patterns.
+                </li>
+              </ul>
+
+              <h5 class="pt-3 pb-2">Device Native Applications (<code>scope:native</code>)</h5>
+              <ul>
+                <li>
+                  Native applications <span class="fw-bold">MUST</span> contain code targeting mobile/desktop frameworks
+                  (e.g. Capacitor).
+                </li>
+                <li>
+                  Native applications <span class="fw-bold">MUST NOT</span> depend on frontend or backend libraries
+                  directly.
+                </li>
+                <li>
+                  Native applications <span class="fw-bold">MAY</span> rely on shared libraries for cross-platform
+                  logic.
+                </li>
+                <li>
+                  Native applications <span class="fw-bold">SHOULD</span> encapsulate platform-specific features and
+                  integrations.
+                </li>
+                <li>
+                  Native applications <span class="fw-bold">SHOULD</span> follow platform UI/UX guidelines consistently.
+                </li>
+              </ul>
+
+              <h5 class="pt-3 pb-2">Keycloak Theme Applications (<code>scope:keycloak-theme</code>)</h5>
+              <ul>
+                <li>
+                  Keycloak-theme applications <span class="fw-bold">MUST</span> contain only frontend and email theme
+                  customizations for Keycloak.
+                </li>
+                <li>
+                  Keycloak-theme applications <span class="fw-bold">MUST NOT</span> include business logic or backend
+                  code.
+                </li>
+                <li>
+                  Keycloak-theme applications <span class="fw-bold">MAY</span> include custom styles, templates, and
+                  branding assets.
+                </li>
+                <li>
+                  Keycloak-theme applications <span class="fw-bold">SHOULD</span> integrate with frontend applications
+                  for a consistent authentication experience.
+                </li>
+                <li>
+                  Keycloak-theme applications <span class="fw-bold">MAY</span> be reused across multiple frontend
+                  applications in the monorepo.
+                </li>
+                <li>
+                  Keycloak-theme applications <span class="fw-bold">MUST</span> depend only on
+                  <code>shared</code> libraries for styling and presentation.
+                </li>
+              </ul>
+
+              <h5 class="pt-3 pb-2">Dependency Guidelines</h5>
+              <ul>
+                <li>
+                  Applications <span class="fw-bold">MUST</span> depend only on allowed libraries for their scope.
+                </li>
+                <li>Applications <span class="fw-bold">MUST NOT</span> directly depend on other applications.</li>
+                <li>
+                  Applications <span class="fw-bold">MAY</span> import from <code>shared</code> libraries for
+                  cross-cutting concerns.
+                </li>
+              </ul>
+
+              <h5 class="pt-3 pb-2">Build & Deployment</h5>
+              <ul>
+                <li>Applications <span class="fw-bold">SHOULD</span> include a clearly defined build process.</li>
+                <li>
+                  Applications <span class="fw-bold">SHOULD</span> be containerizable and deployable independently.
+                </li>
+                <li>
+                  Applications <span class="fw-bold">MAY</span> leverage environment-specific configurations, provided
+                  they do not break dependency rules.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Domain and Library Guidelines -->
+    <div class="row mb-4">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-body p-5">
+            <h4 class="card-title text-primary mb-4">Domain and Library Guidelines</h4>
+            <p class="text-muted mb-4">
+              This document defines the rules and best practices for structuring domains and libraries within the
+              monorepo. It enforces consistency, scalability, and maintainability across applications.
+            </p>
+
+            <div class="text-start">
+              <h5 class="pt-3 pb-2">Domain Rules</h5>
+              <ul>
+                <li>
+                  Domains <span class="fw-bold">MUST</span> represent a bounded business context (e.g., auth, users,
+                  payments).
+                </li>
+                <li>
+                  Domains <span class="fw-bold">SHOULD</span> group related feature, data-access, ui, and util
+                  libraries.
+                </li>
+                <li>Domains <span class="fw-bold">SHOULD</span> mirror the structure of the business or product.</li>
+                <li>
+                  Domains <span class="fw-bold">MUST NOT</span> cross-reference other domains directly (inter-domain
+                  communication goes through shared).
+                </li>
+                <li>
+                  Domains <span class="fw-bold">CAN</span> evolve independently as long as it respects dependency
+                  boundaries.
+                </li>
+              </ul>
+
+              <h5 class="pt-3 pb-2">Library Rules</h5>
+              <ul>
+                <li>
+                  Libraries <span class="fw-bold">MUST</span> follow the naming convention
+                  <code
+                    >{{ '{' }}domain{{ '}' }}-{{ '{' }}scope{{ '}' }}-{{ '{' }}type{{ '}' }}-{{ '{' }}name{{
+                      '}'
+                    }}</code
+                  >.
+                </li>
+                <li>
+                  Libraries <span class="fw-bold">MUST</span> declare a domain, scope (<code>frontend</code>,
+                  <code>backend</code>, <code>native</code>, <code>keycloak-theme</code>, <code>shared</code>) and type
+                  (<code>feature</code>, <code>data-access</code>, <code>ui</code>, <code>util</code>).
+                </li>
+                <li>
+                  Libraries <span class="fw-bold">MUST</span> respect dependency rules enforced by
+                  <code>&#64;nx/enforce-module-boundaries</code>.
+                </li>
+                <li>
+                  Libraries <span class="fw-bold">MUST NOT</span> directly depend on applications
+                  (<code>type:app</code>).
+                </li>
+                <li>
+                  Libraries <span class="fw-bold">SHOULD</span> remain small and focused (single responsibility
+                  principle).
+                </li>
+                <li>
+                  Libraries <span class="fw-bold">CAN</span> be combined if the business case requires tight cohesion.
+                </li>
+              </ul>
+
+              <h6>Feature Libraries (<code>type:feature</code>)</h6>
+              <ul>
+                <li>
+                  Feature libraries <span class="fw-bold">SHOULD</span> implement application-specific business logic.
+                </li>
+                <li>
+                  Feature libraries <span class="fw-bold">SHOULD</span> orchestrate state, workflows, or use-cases.
+                </li>
+                <li>
+                  Feature libraries <span class="fw-bold">MAY</span> contain standalone Angular UI components for
+                  internal use within the feature.
+                </li>
+                <li>
+                  Feature libraries <span class="fw-bold">MUST NOT</span> export UI components for external reuse; use
+                  dedicated <code>ui</code> libraries for reusable standalone Angular components.
+                </li>
+                <li>
+                  Feature libraries <span class="fw-bold">SHOULD</span> provide clear domain-level APIs (facades,
+                  orchestrators).
+                </li>
+                <li>
+                  Feature libraries <span class="fw-bold">MUST</span> depend only on <code>data-access</code>,
+                  <code>ui</code>, <code>util</code>, or other <code>feature</code> libraries from the same domain.
+                </li>
+              </ul>
+
+              <h6>Data-Access Libraries (<code>type:data-access</code>)</h6>
+              <ul>
+                <li>
+                  Data-Access libraries <span class="fw-bold">SHOULD</span> handle external communication (API calls,
+                  database access, state management).
+                </li>
+                <li>
+                  Data-Access libraries <span class="fw-bold">MUST</span> be the single source of truth for
+                  domain-specific data structures.
+                </li>
+                <li>Data-Access libraries <span class="fw-bold">MUST NOT</span> contain UI components.</li>
+                <li>
+                  Data-Access libraries <span class="fw-bold">CAN</span> expose services, repositories, or facades for
+                  use by feature libraries.
+                </li>
+                <li>
+                  Data-Access libraries <span class="fw-bold">SHOULD</span> encapsulate caching, retry, and
+                  error-handling logic.
+                </li>
+                <li>Data-Access libraries <span class="fw-bold">CAN</span> define domain-specific models and DTOs.</li>
+                <li>
+                  Data-Access libraries <span class="fw-bold">MUST</span> depend only on <code>util</code> libraries or
+                  other <code>data-access</code> libraries from the same domain.
+                </li>
+              </ul>
+
+              <h6>UI Libraries (<code>type:ui</code>)</h6>
+              <ul>
+                <li>
+                  UI libraries <span class="fw-bold">MUST</span> contain purely presentational standalone Angular
+                  components.
+                </li>
+                <li>UI libraries <span class="fw-bold">MUST NOT</span> contain business logic.</li>
+                <li>UI libraries <span class="fw-bold">MUST</span> be stateless where possible.</li>
+                <li>UI libraries <span class="fw-bold">MUST</span> be reusable across features and applications.</li>
+                <li>UI libraries <span class="fw-bold">SHOULD</span> follow the project's chosen design system.</li>
+                <li>
+                  UI libraries <span class="fw-bold">CAN</span> include Storybook stories, visual tests, and
+                  documentation.
+                </li>
+                <li>
+                  UI libraries <span class="fw-bold">MUST</span> depend only on <code>util</code> libraries or other
+                  <code>ui</code> libraries from the same domain.
+                </li>
+              </ul>
+
+              <h6>Utility Libraries (<code>type:util</code>)</h6>
+              <ul>
+                <li>
+                  Utility libraries <span class="fw-bold">SHOULD</span> provide generic, reusable helpers or types.
+                </li>
+                <li>
+                  Utility libraries <span class="fw-bold">MUST</span> be domain-agnostic unless explicitly scoped.
+                </li>
+                <li>
+                  Utility libraries <span class="fw-bold">SHOULD</span> include pure functions and framework-agnostic
+                  logic.
+                </li>
+                <li>
+                  Utility libraries <span class="fw-bold">CAN</span> include validation schemas, type definitions, or
+                  date/number formatting utilities.
+                </li>
+                <li>
+                  Utility libraries <span class="fw-bold">MUST</span> depend only on other <code>util</code> libraries
+                  (domain-agnostic) or <code>shared</code> libraries.
+                </li>
+              </ul>
+
+              <h5 class="pt-3 pb-2">Scope Rules</h5>
+              <h6>Frontend (<code>scope:frontend</code>)</h6>
+              <ul>
+                <li>
+                  Frontend libraries <span class="fw-bold">MUST</span> contain only frontend framework–specific code
+                  (e.g. Angular).
+                </li>
+                <li>
+                  Frontend libraries <span class="fw-bold">MUST NOT</span> depend on <code>backend</code> libraries.
+                </li>
+                <li>
+                  Frontend libraries <span class="fw-bold">MUST</span> be allowed to depend on
+                  <code>shared</code> libraries.
+                </li>
+                <li>
+                  Frontend libraries <span class="fw-bold">SHOULD</span> use <code>ui</code> and
+                  <code>feature</code> libraries for composition.
+                </li>
+              </ul>
+
+              <h6>Backend (<code>scope:backend</code>)</h6>
+              <ul>
+                <li>
+                  Backend libraries <span class="fw-bold">MUST</span> contain only backend framework–specific code (e.g.
+                  NestJS).
+                </li>
+                <li>
+                  Backend libraries <span class="fw-bold">MUST NOT</span> depend on <code>frontend</code> libraries.
+                </li>
+                <li>
+                  Backend libraries <span class="fw-bold">MUST</span> be allowed to depend on
+                  <code>shared</code> libraries.
+                </li>
+                <li>
+                  Backend libraries <span class="fw-bold">SHOULD</span> centralize domain-specific services in
+                  <code>data-access</code> libraries.
+                </li>
+              </ul>
+
+              <h6>Device native (<code>scope:native</code>)</h6>
+              <ul>
+                <li>
+                  Device native libraries <span class="fw-bold">MUST</span> contain only code targeting Capacitor or
+                  native APIs.
+                </li>
+                <li>
+                  Device native libraries <span class="fw-bold">MUST NOT</span> depend on <code>backend</code> or
+                  <code>frontend</code>.
+                </li>
+                <li>
+                  Device native libraries <span class="fw-bold">MUST</span> be allowed to depend on
+                  <code>shared</code> libraries.
+                </li>
+              </ul>
+
+              <h6>Keycloak Theme (<code>scope:keycloak-theme</code>)</h6>
+              <ul>
+                <li>
+                  Keycloak-theme libraries <span class="fw-bold">MUST</span> contain only frontend and email theme
+                  customizations for Keycloak.
+                </li>
+                <li>
+                  Keycloak-theme libraries <span class="fw-bold">MUST NOT</span> include business logic or backend code.
+                </li>
+                <li>
+                  Keycloak-theme libraries <span class="fw-bold">MAY</span> include custom styles, templates, and
+                  branding assets.
+                </li>
+                <li>
+                  Keycloak-theme libraries <span class="fw-bold">SHOULD</span> integrate with frontend applications for
+                  a consistent authentication experience.
+                </li>
+                <li>
+                  Keycloak-theme libraries <span class="fw-bold">MAY</span> be reused across multiple frontend
+                  applications in the monorepo.
+                </li>
+                <li>
+                  Keycloak-theme libraries <span class="fw-bold">MUST</span> depend only on
+                  <code>shared</code> libraries for styling and presentation utilities.
+                </li>
+              </ul>
+
+              <h6>Shared (<code>scope:shared</code>)</h6>
+              <ul>
+                <li>
+                  Shared libraries <span class="fw-bold">MUST</span> contain only domain-agnostic, cross-cutting code.
+                </li>
+                <li>
+                  Shared libraries <span class="fw-bold">MUST NOT</span> import from <code>frontend</code> or
+                  <code>backend</code> libraries.
+                </li>
+                <li>
+                  Shared libraries <span class="fw-bold">MUST</span> contain utilities, DTOs, validation schemas, or
+                  design system code reused across scopes.
+                </li>
+                <li>Shared libraries <span class="fw-bold">SHOULD</span> be framework-agnostic.</li>
+                <li>
+                  Shared libraries <span class="fw-bold">CAN</span> define strongly typed contracts for frontend and/or
+                  backend communication.
+                </li>
+              </ul>
+
+              <h5 class="pt-3 pb-2">Dependency Rules - Exceptions and Clarifications</h5>
+              <h6>Shared Library Dependencies</h6>
+              <ul>
+                <li>
+                  Shared libraries <span class="fw-bold">MUST NOT</span> depend on domain-specific libraries to maintain
+                  their domain-agnostic nature
+                </li>
+                <li>
+                  If shared functionality requires domain-specific logic, <span class="fw-bold">SHOULD</span> use
+                  dependency injection, interfaces, or callback patterns instead of direct dependencies
+                </li>
+                <li>
+                  Shared libraries <span class="fw-bold">MAY</span> define contracts (interfaces, types, DTOs) that
+                  domain libraries implement, but <span class="fw-bold">MUST NOT</span> import domain-specific
+                  implementations
+                </li>
+              </ul>
+
+              <h6>Inter-Domain Communication Patterns</h6>
+              <ul>
+                <li>
+                  When domains need to communicate, they <span class="fw-bold">MUST</span> use one of these patterns:
+                  <ol>
+                    <li>
+                      <strong>Shared contracts</strong> - Define interfaces in shared libraries, implement in domain
+                      libraries
+                    </li>
+                    <li><strong>Event-driven communication</strong> - Use shared event systems for loose coupling</li>
+                    <li><strong>API boundaries</strong> - Expose domain functionality through shared API contracts</li>
+                  </ol>
+                </li>
+                <li>
+                  Direct domain-to-domain dependencies <span class="fw-bold">MUST NOT</span> be created, even through
+                  shared libraries
+                </li>
+              </ul>
+
+              <h6>Circular Dependency Prevention</h6>
+              <ul>
+                <li>
+                  If a circular dependency is detected, <span class="fw-bold">MUST</span> refactor using one of these
+                  approaches:
+                  <ol>
+                    <li><strong>Extract shared functionality</strong> - Move common logic to a shared library</li>
+                    <li>
+                      <strong>Dependency inversion</strong> - Use interfaces/contracts instead of concrete
+                      implementations
+                    </li>
+                    <li><strong>Event-driven architecture</strong> - Replace direct calls with events/messages</li>
+                    <li><strong>API boundaries</strong> - Create clear service boundaries with defined contracts</li>
+                  </ol>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Testing Guidelines -->
+    <div class="row mb-4">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-body p-5">
+            <h4 class="card-title text-primary mb-4">Testing Guidelines</h4>
+            <p class="text-muted mb-4">
+              This document defines comprehensive testing strategies and patterns for ensuring code quality,
+              reliability, and maintainability across all applications and libraries.
+            </p>
+
+            <div class="text-start">
+              <h5 class="pt-3 pb-2">General Testing Rules</h5>
+              <ul>
+                <li>
+                  Applications <span class="fw-bold">MUST</span> maintain minimum 80% code coverage for production code.
+                </li>
+                <li>
+                  Applications <span class="fw-bold">MUST</span> implement unit, integration, and end-to-end testing
+                  strategies.
+                </li>
+                <li>
+                  Applications <span class="fw-bold">SHOULD</span> use test-driven development (TDD) for critical
+                  business logic.
+                </li>
+                <li>
+                  Applications <span class="fw-bold">MUST</span> run all tests in CI/CD pipelines before deployment.
+                </li>
+              </ul>
+
+              <h5 class="pt-3 pb-2">Testing Pyramid</h5>
+              <h6>Unit Tests (<code>type:unit</code>)</h6>
+              <ul>
+                <li>
+                  Unit tests <span class="fw-bold">MUST</span> test individual functions, methods, and components in
+                  isolation.
+                </li>
+                <li>Unit tests <span class="fw-bold">SHOULD</span> use mocking for external dependencies.</li>
+                <li>
+                  Unit tests <span class="fw-bold">MUST</span> be fast (< 100ms per individual test) and deterministic.
+                </li>
+                <li>Unit tests <span class="fw-bold">SHOULD</span> cover edge cases and error conditions.</li>
+              </ul>
+
+              <h6>Integration Tests (<code>type:integration</code>)</h6>
+              <ul>
+                <li>
+                  Integration tests <span class="fw-bold">MUST</span> test component interactions within a single
+                  domain.
+                </li>
+                <li>Integration tests <span class="fw-bold">SHOULD</span> use real dependencies where possible.</li>
+                <li>
+                  Integration tests <span class="fw-bold">MAY</span> use test databases and mock external services.
+                </li>
+                <li>Integration tests <span class="fw-bold">SHOULD</span> verify data flow and state management.</li>
+              </ul>
+
+              <h6>End-to-End Tests (<code>type:e2e</code>)</h6>
+              <ul>
+                <li>
+                  E2E tests <span class="fw-bold">MUST</span> test complete user workflows across multiple domains.
+                </li>
+                <li>E2E tests <span class="fw-bold">SHOULD</span> use real browsers and test environments.</li>
+                <li>E2E tests <span class="fw-bold">MAY</span> use visual regression testing for UI components.</li>
+                <li>
+                  E2E tests <span class="fw-bold">SHOULD</span> cover critical user journeys and business processes.
+                </li>
+              </ul>
+
+              <h5 class="pt-3 pb-2">Frontend Testing Guidelines</h5>
+              <h6>Component Testing</h6>
+              <ul>
+                <li>Angular components <span class="fw-bold">MUST</span> be tested using Angular Testing Utilities.</li>
+                <li>
+                  Components <span class="fw-bold">SHOULD</span> test rendering, user interactions, and state changes.
+                </li>
+                <li>Components <span class="fw-bold">MUST</span> test accessibility compliance (WCAG 2.1 AA).</li>
+                <li>
+                  Components <span class="fw-bold">SHOULD</span> use Storybook for visual testing and documentation.
+                </li>
+              </ul>
+
+              <h6>State Management Testing</h6>
+              <ul>
+                <li>
+                  State management <span class="fw-bold">MUST</span> test actions, reducers, and selectors in isolation.
+                </li>
+                <li>State management <span class="fw-bold">SHOULD</span> test state transitions and side effects.</li>
+                <li>State management <span class="fw-bold">MUST</span> test error handling and loading states.</li>
+                <li>
+                  State management <span class="fw-bold">SHOULD</span> use test utilities for complex state scenarios.
+                </li>
+              </ul>
+
+              <h6>Service Testing</h6>
+              <ul>
+                <li>Services <span class="fw-bold">MUST</span> test business logic and API interactions.</li>
+                <li>Services <span class="fw-bold">SHOULD</span> mock HTTP requests and external dependencies.</li>
+                <li>Services <span class="fw-bold">MUST</span> test error handling and retry mechanisms.</li>
+                <li>Services <span class="fw-bold">SHOULD</span> test caching and performance optimizations.</li>
+              </ul>
+
+              <h5 class="pt-3 pb-2">Backend Testing Guidelines</h5>
+              <h6>API Testing</h6>
+              <ul>
+                <li>
+                  API endpoints <span class="fw-bold">MUST</span> test request/response validation and business logic.
+                </li>
+                <li>API endpoints <span class="fw-bold">SHOULD</span> test authentication and authorization.</li>
+                <li>API endpoints <span class="fw-bold">MUST</span> test error handling and status codes.</li>
+                <li>API endpoints <span class="fw-bold">SHOULD</span> test rate limiting and security measures.</li>
+              </ul>
+
+              <h6>Database Testing</h6>
+              <ul>
+                <li>Database operations <span class="fw-bold">MUST</span> test CRUD operations and data integrity.</li>
+                <li>Database operations <span class="fw-bold">SHOULD</span> use test databases and transactions.</li>
+                <li>Database operations <span class="fw-bold">MUST</span> test migrations and schema changes.</li>
+                <li>
+                  Database operations <span class="fw-bold">SHOULD</span> test performance and query optimization.
+                </li>
+              </ul>
+
+              <h6>Domain Logic Testing</h6>
+              <ul>
+                <li>Domain logic <span class="fw-bold">MUST</span> test business rules and validation.</li>
+                <li>Domain logic <span class="fw-bold">SHOULD</span> test domain events and aggregates.</li>
+                <li>Domain logic <span class="fw-bold">MUST</span> test error handling and edge cases.</li>
+                <li>Domain logic <span class="fw-bold">SHOULD</span> use domain-specific test utilities.</li>
+              </ul>
+
+              <h5 class="pt-3 pb-2">Testing Tools and Frameworks</h5>
+              <h6>Frontend Testing Stack</h6>
+              <ul>
+                <li><strong>Unit Testing</strong>: Jest + Angular Testing Utilities</li>
+                <li><strong>Component Testing</strong>: Angular Testing Utilities + Testing Library</li>
+                <li><strong>E2E Testing</strong>: Playwright or Cypress</li>
+                <li><strong>Visual Testing</strong>: Storybook + Chromatic</li>
+                <li><strong>Coverage</strong>: Istanbul/nyc</li>
+              </ul>
+
+              <h6>Backend Testing Stack</h6>
+              <ul>
+                <li><strong>Unit Testing</strong>: Jest + NestJS Testing Utilities</li>
+                <li><strong>Integration Testing</strong>: Supertest + Test Containers</li>
+                <li><strong>E2E Testing</strong>: Jest + Test Database</li>
+                <li><strong>API Testing</strong>: Supertest + OpenAPI Testing</li>
+                <li><strong>Coverage</strong>: Istanbul/nyc</li>
+              </ul>
+
+              <h5 class="pt-3 pb-2">Test Organization and Structure</h5>
+              <h6>Test File Organization</h6>
+              <ul>
+                <li>Test files <span class="fw-bold">MUST</span> mirror source file structure.</li>
+                <li>Test files <span class="fw-bold">SHOULD</span> use descriptive naming conventions.</li>
+                <li>
+                  Test files <span class="fw-bold">MUST</span> be placed in <code>__tests__</code> directories or
+                  <code>.test.ts</code> files.
+                </li>
+                <li>
+                  Test files <span class="fw-bold">SHOULD</span> group related tests using <code>describe</code> blocks.
+                </li>
+              </ul>
+
+              <h6>Test Data Management</h6>
+              <ul>
+                <li>Test data <span class="fw-bold">MUST</span> be isolated and deterministic.</li>
+                <li>Test data <span class="fw-bold">SHOULD</span> use factories and builders for complex objects.</li>
+                <li>Test data <span class="fw-bold">MUST</span> clean up after each test.</li>
+                <li>Test data <span class="fw-bold">SHOULD</span> use realistic but anonymized data.</li>
+              </ul>
+
+              <h5 class="pt-3 pb-2">Performance Testing</h5>
+              <h6>Load Testing</h6>
+              <ul>
+                <li>Applications <span class="fw-bold">SHOULD</span> implement load testing for critical endpoints.</li>
+                <li>Load tests <span class="fw-bold">MUST</span> simulate realistic user scenarios.</li>
+                <li>Load tests <span class="fw-bold">SHOULD</span> measure response times and throughput.</li>
+                <li>Load tests <span class="fw-bold">MUST</span> identify performance bottlenecks.</li>
+              </ul>
+
+              <h6>Stress Testing</h6>
+              <ul>
+                <li>Applications <span class="fw-bold">SHOULD</span> implement stress testing for system limits.</li>
+                <li>Stress tests <span class="fw-bold">MUST</span> test system behavior under extreme conditions.</li>
+                <li>Stress tests <span class="fw-bold">SHOULD</span> verify graceful degradation.</li>
+                <li>Stress tests <span class="fw-bold">MUST</span> test recovery mechanisms.</li>
+              </ul>
+
+              <h5 class="pt-3 pb-2">Test Automation and CI/CD</h5>
+              <h6>Continuous Integration</h6>
+              <ul>
+                <li>All tests <span class="fw-bold">MUST</span> run on every pull request.</li>
+                <li>Test failures <span class="fw-bold">MUST</span> block deployment.</li>
+                <li>Test results <span class="fw-bold">SHOULD</span> be reported and tracked.</li>
+                <li>Test coverage <span class="fw-bold">MUST</span> be monitored and maintained.</li>
+              </ul>
+
+              <h6>Test Environment Management</h6>
+              <ul>
+                <li>Test environments <span class="fw-bold">MUST</span> mirror production configurations.</li>
+                <li>Test environments <span class="fw-bold">SHOULD</span> use containerization for consistency.</li>
+                <li>Test environments <span class="fw-bold">MUST</span> be isolated and secure.</li>
+                <li>Test environments <span class="fw-bold">SHOULD</span> support parallel test execution.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Security Guidelines -->
+    <div class="row mb-4">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-body p-5">
+            <h4 class="card-title text-primary mb-4">Security Guidelines</h4>
+            <p class="text-muted mb-4">
+              This document defines comprehensive security practices and patterns for ensuring secure development,
+              deployment, and operation of applications.
+            </p>
+
+            <div class="text-start">
+              <h5 class="pt-3 pb-2">General Security Rules</h5>
+              <ul>
+                <li>Applications <span class="fw-bold">MUST</span> implement defense in depth security strategies.</li>
+                <li>Applications <span class="fw-bold">MUST</span> follow the principle of least privilege.</li>
+                <li>Applications <span class="fw-bold">SHOULD</span> implement security by design principles.</li>
+                <li>
+                  Applications <span class="fw-bold">MUST</span> undergo regular security assessments and penetration
+                  testing.
+                </li>
+              </ul>
+
+              <h5 class="pt-3 pb-2">Authentication and Authorization</h5>
+              <h6>Authentication</h6>
+              <ul>
+                <li>Applications <span class="fw-bold">MUST</span> implement secure authentication mechanisms.</li>
+                <li>
+                  Authentication <span class="fw-bold">SHOULD</span> use industry-standard protocols (OAuth 2.0, OpenID
+                  Connect).
+                </li>
+                <li>Authentication <span class="fw-bold">MUST</span> support multi-factor authentication (MFA).</li>
+                <li>
+                  Authentication <span class="fw-bold">SHOULD</span> implement session management and timeout policies.
+                </li>
+              </ul>
+
+              <h6>Authorization</h6>
+              <ul>
+                <li>Applications <span class="fw-bold">MUST</span> implement role-based access control (RBAC).</li>
+                <li>
+                  Authorization <span class="fw-bold">SHOULD</span> use attribute-based access control (ABAC) for
+                  complex scenarios.
+                </li>
+                <li>Authorization <span class="fw-bold">MUST</span> validate permissions on every request.</li>
+                <li>Authorization <span class="fw-bold">SHOULD</span> implement principle of least privilege.</li>
+              </ul>
+
+              <h6>Identity Management</h6>
+              <ul>
+                <li>
+                  Identity management <span class="fw-bold">MUST</span> integrate with enterprise identity providers.
+                </li>
+                <li>Identity management <span class="fw-bold">SHOULD</span> support single sign-on (SSO).</li>
+                <li>Identity management <span class="fw-bold">MUST</span> implement account lifecycle management.</li>
+                <li>
+                  Identity management <span class="fw-bold">SHOULD</span> support audit trails for identity events.
+                </li>
+              </ul>
+
+              <h5 class="pt-3 pb-2">Data Protection</h5>
+              <h6>Data Encryption</h6>
+              <ul>
+                <li>Sensitive data <span class="fw-bold">MUST</span> be encrypted at rest and in transit.</li>
+                <li>
+                  Encryption <span class="fw-bold">SHOULD</span> use industry-standard algorithms (AES-256, RSA-2048).
+                </li>
+                <li>Encryption <span class="fw-bold">MUST</span> implement proper key management practices.</li>
+                <li>
+                  Encryption <span class="fw-bold">SHOULD</span> use hardware security modules (HSM) for key storage.
+                </li>
+              </ul>
+
+              <h6>Data Classification</h6>
+              <ul>
+                <li>Data <span class="fw-bold">MUST</span> be classified according to sensitivity levels.</li>
+                <li>
+                  Data classification <span class="fw-bold">SHOULD</span> drive access controls and protection measures.
+                </li>
+                <li>Data classification <span class="fw-bold">MUST</span> be documented and maintained.</li>
+                <li>Data classification <span class="fw-bold">SHOULD</span> be automated where possible.</li>
+              </ul>
+
+              <h6>Privacy Protection</h6>
+              <ul>
+                <li>Applications <span class="fw-bold">MUST</span> comply with privacy regulations (GDPR, CCPA).</li>
+                <li>Privacy <span class="fw-bold">SHOULD</span> implement data minimization principles.</li>
+                <li>
+                  Privacy <span class="fw-bold">MUST</span> provide data subject rights (access, rectification,
+                  erasure).
+                </li>
+                <li>Privacy <span class="fw-bold">SHOULD</span> implement privacy by design principles.</li>
+              </ul>
+
+              <h6>GDPR Compliance Requirements</h6>
+              <ul>
+                <li>
+                  <strong>Data Processing Lawfulness</strong>: Applications <span class="fw-bold">MUST</span> document
+                  legal basis for data processing (consent, contract, legal obligation, vital interests, public task,
+                  legitimate interests)
+                </li>
+                <li>
+                  <strong>Consent Management</strong>: Applications <span class="fw-bold">MUST</span> implement granular
+                  consent mechanisms with clear opt-in/opt-out options
+                </li>
+                <li>
+                  <strong>Data Subject Rights</strong>: Applications <span class="fw-bold">MUST</span> provide automated
+                  systems for:
+                  <ul>
+                    <li>
+                      <strong>Right of Access</strong>: Data subjects can request copies of their personal data within
+                      30 days
+                    </li>
+                    <li><strong>Right of Rectification</strong>: Data subjects can correct inaccurate personal data</li>
+                    <li>
+                      <strong>Right of Erasure</strong>: Data subjects can request deletion of personal data ("right to
+                      be forgotten")
+                    </li>
+                    <li>
+                      <strong>Right to Portability</strong>: Data subjects can export their data in machine-readable
+                      format
+                    </li>
+                    <li>
+                      <strong>Right to Restrict Processing</strong>: Data subjects can limit how their data is processed
+                    </li>
+                    <li>
+                      <strong>Right to Object</strong>: Data subjects can object to processing for marketing or
+                      legitimate interests
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <strong>Data Protection Impact Assessment</strong>: Applications
+                  <span class="fw-bold">MUST</span> conduct DPIAs for high-risk processing activities
+                </li>
+                <li>
+                  <strong>Data Breach Notification</strong>: Applications <span class="fw-bold">MUST</span> notify
+                  supervisory authority within 72 hours of data breaches
+                </li>
+                <li>
+                  <strong>Privacy by Design</strong>: Applications <span class="fw-bold">MUST</span> implement privacy
+                  controls by default (data minimization, purpose limitation, storage limitation)
+                </li>
+              </ul>
+
+              <h6>CCPA Compliance Requirements</h6>
+              <ul>
+                <li>
+                  <strong>Consumer Rights</strong>: Applications <span class="fw-bold">MUST</span> provide California
+                  residents with:
+                  <ul>
+                    <li>
+                      <strong>Right to Know</strong>: Information about personal information collected, used, and shared
+                    </li>
+                    <li><strong>Right to Delete</strong>: Deletion of personal information upon request</li>
+                    <li><strong>Right to Opt-Out</strong>: Opt-out of sale of personal information</li>
+                    <li><strong>Right to Non-Discrimination</strong>: Equal service regardless of privacy choices</li>
+                  </ul>
+                </li>
+                <li>
+                  <strong>Data Collection Transparency</strong>: Applications <span class="fw-bold">MUST</span> provide
+                  clear privacy notices explaining data collection practices
+                </li>
+                <li>
+                  <strong>Third-Party Data Sharing</strong>: Applications <span class="fw-bold">MUST</span> disclose
+                  categories of personal information shared with third parties
+                </li>
+                <li>
+                  <strong>Financial Incentives</strong>: Applications <span class="fw-bold">MUST</span> disclose any
+                  financial incentives offered for personal information
+                </li>
+              </ul>
+
+              <h5 class="pt-3 pb-2">API Security</h5>
+              <h6>API Protection</h6>
+              <ul>
+                <li>APIs <span class="fw-bold">MUST</span> implement authentication and authorization.</li>
+                <li>APIs <span class="fw-bold">SHOULD</span> use HTTPS for all communications.</li>
+                <li>APIs <span class="fw-bold">MUST</span> implement rate limiting and throttling.</li>
+                <li>APIs <span class="fw-bold">SHOULD</span> use API gateways for centralized security.</li>
+              </ul>
+
+              <h6>Input Validation</h6>
+              <ul>
+                <li>All inputs <span class="fw-bold">MUST</span> be validated and sanitized.</li>
+                <li>Input validation <span class="fw-bold">SHOULD</span> use whitelist approaches.</li>
+                <li>Input validation <span class="fw-bold">MUST</span> prevent injection attacks (SQL, NoSQL, XSS).</li>
+                <li>Input validation <span class="fw-bold">SHOULD</span> implement schema validation.</li>
+              </ul>
+
+              <h6>Output Encoding</h6>
+              <ul>
+                <li>All outputs <span class="fw-bold">MUST</span> be properly encoded.</li>
+                <li>Output encoding <span class="fw-bold">SHOULD</span> prevent XSS and injection attacks.</li>
+                <li>Output encoding <span class="fw-bold">MUST</span> use context-appropriate encoding.</li>
+                <li>Output encoding <span class="fw-bold">SHOULD</span> be automated where possible.</li>
+              </ul>
+
+              <h5 class="pt-3 pb-2">Infrastructure Security</h5>
+              <h6>Container Security</h6>
+              <ul>
+                <li>Containers <span class="fw-bold">MUST</span> use minimal base images.</li>
+                <li>Containers <span class="fw-bold">SHOULD</span> run with non-root users.</li>
+                <li>Containers <span class="fw-bold">MUST</span> be scanned for vulnerabilities.</li>
+                <li>Containers <span class="fw-bold">SHOULD</span> use secrets management for sensitive data.</li>
+                <li>Containers <span class="fw-bold">SHOULD</span> use read-only root filesystems.</li>
+                <li>Containers <span class="fw-bold">SHOULD</span> use security contexts and pod security policies.</li>
+              </ul>
+
+              <h6>Network Security</h6>
+              <ul>
+                <li>Networks <span class="fw-bold">MUST</span> implement network segmentation.</li>
+                <li>Networks <span class="fw-bold">SHOULD</span> use firewalls and intrusion detection systems.</li>
+                <li>Networks <span class="fw-bold">MUST</span> implement secure communication protocols.</li>
+                <li>Networks <span class="fw-bold">SHOULD</span> use VPNs for remote access.</li>
+              </ul>
+
+              <h6>Cloud Security</h6>
+              <ul>
+                <li>Cloud resources <span class="fw-bold">MUST</span> follow cloud security best practices.</li>
+                <li>Cloud security <span class="fw-bold">SHOULD</span> use cloud-native security services.</li>
+                <li>Cloud security <span class="fw-bold">MUST</span> implement proper IAM policies.</li>
+                <li>Cloud security <span class="fw-bold">SHOULD</span> use infrastructure as code (IaC).</li>
+              </ul>
+
+              <h5 class="pt-3 pb-2">Security Monitoring and Incident Response</h5>
+              <h6>Security Monitoring</h6>
+              <ul>
+                <li>Applications <span class="fw-bold">MUST</span> implement comprehensive security monitoring.</li>
+                <li>
+                  Security monitoring <span class="fw-bold">SHOULD</span> use SIEM systems for centralized logging.
+                </li>
+                <li>Security monitoring <span class="fw-bold">MUST</span> detect and alert on security events.</li>
+                <li>Security monitoring <span class="fw-bold">SHOULD</span> implement behavioral analytics.</li>
+              </ul>
+
+              <h6>Incident Response</h6>
+              <ul>
+                <li>Organizations <span class="fw-bold">MUST</span> have incident response plans.</li>
+                <li>Incident response <span class="fw-bold">SHOULD</span> be tested regularly.</li>
+                <li>Incident response <span class="fw-bold">MUST</span> include communication procedures.</li>
+                <li>
+                  Incident response <span class="fw-bold">SHOULD</span> implement automated response capabilities.
+                </li>
+              </ul>
+
+              <h6>Vulnerability Management</h6>
+              <ul>
+                <li>Applications <span class="fw-bold">MUST</span> implement vulnerability scanning.</li>
+                <li>Vulnerability management <span class="fw-bold">SHOULD</span> use automated tools.</li>
+                <li>
+                  Vulnerability management <span class="fw-bold">MUST</span> prioritize and remediate vulnerabilities.
+                </li>
+                <li>
+                  Vulnerability management <span class="fw-bold">SHOULD</span> implement patch management processes.
+                </li>
+              </ul>
+
+              <h5 class="pt-3 pb-2">Compliance and Governance</h5>
+              <h6>Security Compliance</h6>
+              <ul>
+                <li>Applications <span class="fw-bold">MUST</span> comply with relevant security standards.</li>
+                <li>Security compliance <span class="fw-bold">SHOULD</span> be verified through audits.</li>
+                <li>Security compliance <span class="fw-bold">MUST</span> be documented and maintained.</li>
+                <li>Security compliance <span class="fw-bold">SHOULD</span> be automated where possible.</li>
+              </ul>
+
+              <h6>Security Governance</h6>
+              <ul>
+                <li>Organizations <span class="fw-bold">MUST</span> implement security governance frameworks.</li>
+                <li>
+                  Security governance <span class="fw-bold">SHOULD</span> include security policies and procedures.
+                </li>
+                <li>Security governance <span class="fw-bold">MUST</span> define roles and responsibilities.</li>
+                <li>Security governance <span class="fw-bold">SHOULD</span> include regular security training.</li>
+              </ul>
+
+              <h5 class="pt-3 pb-2">Security Testing</h5>
+              <h6>Security Testing Requirements</h6>
+              <ul>
+                <li>Applications <span class="fw-bold">MUST</span> undergo security testing before deployment.</li>
+                <li>Security testing <span class="fw-bold">SHOULD</span> include static and dynamic analysis.</li>
+                <li>Security testing <span class="fw-bold">MUST</span> include penetration testing.</li>
+                <li>Security testing <span class="fw-bold">SHOULD</span> be automated where possible.</li>
+              </ul>
+
+              <h6>Security Test Types</h6>
+              <ul>
+                <li><strong>Static Application Security Testing (SAST)</strong>: Code analysis for vulnerabilities</li>
+                <li><strong>Dynamic Application Security Testing (DAST)</strong>: Runtime security testing</li>
+                <li><strong>Interactive Application Security Testing (IAST)</strong>: Real-time security analysis</li>
+                <li><strong>Software Composition Analysis (SCA)</strong>: Dependency vulnerability scanning</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Software Development Principles -->
+    <div class="row mb-4">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-body p-5">
+            <h4 class="card-title text-primary mb-4">Software Development Principles</h4>
+            <p class="text-muted mb-4">
+              This document defines the rules and best practices for general software development. It enforces
+              consistency, reliability, and maintainability across all agent-driven tasks.
+            </p>
+
+            <div class="text-start">
+              <h5 class="pt-3 pb-2">General Rules</h5>
+              <p class="text-muted mb-4">
+                When trade-offs are necessary, prioritize principles in this order: KISS first, then maintainability and
+                readability, then testability.
+              </p>
+
+              <h6>Conflict Resolution Guidelines</h6>
+              <ul>
+                <li>
+                  <strong>KISS vs. Analysis</strong>: When analysis requirements conflict with simplicity, you
+                  <span class="fw-bold">MUST</span> prioritize analysis for critical systems, security, and compliance
+                  requirements
+                </li>
+                <li>
+                  <strong>Testing vs. Performance</strong>: When testing requirements conflict with performance, you
+                  <span class="fw-bold">MUST</span> prioritize testing for production systems, but
+                  <span class="fw-bold">MAY</span> optimize performance for non-critical paths
+                </li>
+                <li>
+                  <strong>Security vs. Usability</strong>: When security requirements conflict with usability, you
+                  <span class="fw-bold">MUST</span> prioritize security while
+                  <span class="fw-bold">SHOULD</span> implement user-friendly alternatives
+                </li>
+                <li>
+                  <strong>Coverage vs. Speed</strong>: When test coverage conflicts with development speed, you
+                  <span class="fw-bold">MUST</span> maintain minimum coverage requirements but
+                  <span class="fw-bold">MAY</span> optimize test execution speed
+                </li>
+              </ul>
+
+              <h5 class="pt-3 pb-2">Simplicity</h5>
+              <ul>
+                <li>
+                  You <span class="fw-bold">MUST</span> follow the
+                  <strong>KISS (Keep It Simple, Stupid)</strong> principle: solutions should be as simple as possible
+                  while still meeting requirements. Avoid unnecessary complexity.
+                </li>
+                <li>
+                  You <span class="fw-bold">MUST</span> avoid premature optimization unless performance issues are
+                  proven or critical.
+                </li>
+                <li>
+                  You <span class="fw-bold">SHOULD</span> adhere to <strong>YAGNI (You Aren't Gonna Need It)</strong>:
+                  do not implement features or abstractions until they are actually required.
+                </li>
+              </ul>
+
+              <h5 class="pt-3 pb-2">Code Reuse and Modularity</h5>
+              <ul>
+                <li>
+                  You <span class="fw-bold">SHOULD</span> apply <strong>DRY (Don't Repeat Yourself)</strong>: eliminate
+                  duplicated code or logic by creating reusable functions, modules, or components.
+                </li>
+                <li>
+                  You <span class="fw-bold">SHOULD</span> design code that is modular, readable, maintainable, and
+                  self-documenting. Favor clear structure and meaningful names over clever but opaque solutions.
+                </li>
+              </ul>
+
+              <h5 class="pt-3 pb-2">Readability and Conventions</h5>
+              <ul>
+                <li>
+                  You <span class="fw-bold">SHOULD</span> prefer consistent coding conventions and style guides across
+                  the codebase.
+                </li>
+                <li>
+                  You <span class="fw-bold">MAY</span> add comments or documentation for complex logic that cannot be
+                  simplified or made self-explanatory.
+                </li>
+              </ul>
+
+              <h5 class="pt-3 pb-2">Testability and Refactoring</h5>
+              <ul>
+                <li>
+                  You <span class="fw-bold">SHOULD</span> write code with testability in mind, enabling unit tests or
+                  automated checks where appropriate.
+                </li>
+                <li>
+                  You <span class="fw-bold">SHOULD</span> refactor code iteratively to maintain clarity, simplicity, and
+                  maintainability.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Conventional Commits -->
+    <div class="row mb-4">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-body p-5">
+            <h4 class="card-title text-primary mb-4">Conventional Commit Guidelines</h4>
+            <p class="text-muted mb-4">
+              This document defines the rules and best practices for writing commit messages. It enforces consistency,
+              readability, and tooling compatibility across the monorepo.
+            </p>
+
+            <div class="text-start">
+              <h5 class="pt-3 pb-2">General Rules</h5>
+              <ul>
+                <li>Commit messages <span class="fw-bold">MUST</span> be prefixed with a type.</li>
+                <li>
+                  The type <span class="fw-bold">MUST</span> be a verb such as <code>feat</code>, <code>fix</code>,
+                  <code>docs</code>, <code>chore</code>, etc., followed by:
+                  <ul>
+                    <li>An optional scope in parentheses, e.g., <code>feat(parser)</code>.</li>
+                    <li>An optional <code>!</code> to indicate a breaking change.</li>
+                    <li>A required colon <code>:</code> and space.</li>
+                  </ul>
+                </li>
+                <li>
+                  Commit messages <span class="fw-bold">MUST</span> contain a short description immediately following
+                  the type/scope prefix.
+                </li>
+                <li>
+                  Commit messages <span class="fw-bold">MAY</span> include a longer body, separated by one blank line
+                  from the short description.
+                </li>
+                <li>
+                  Commit messages <span class="fw-bold">MAY</span> include one or more footers, separated by one blank
+                  line from the body.
+                </li>
+              </ul>
+
+              <h5 class="pt-3 pb-2">Types</h5>
+              <ul>
+                <li><code>feat</code> <span class="fw-bold">MUST</span> be used for commits that add a new feature.</li>
+                <li><code>fix</code> <span class="fw-bold">MUST</span> be used for commits that fix a bug.</li>
+                <li>
+                  Other types (e.g., <code>docs</code>, <code>chore</code>, <code>refactor</code>)
+                  <span class="fw-bold">MAY</span> be used as appropriate.
+                </li>
+              </ul>
+
+              <h5 class="pt-3 pb-2">Scope</h5>
+              <ul>
+                <li>
+                  A scope <span class="fw-bold">MAY</span> be provided to indicate the section of the codebase affected.
+                </li>
+                <li>
+                  A scope <span class="fw-bold">MUST</span> consist of a verb describing a section of the codebase,
+                  surrounded by parentheses, e.g., <code>fix(parser)</code>.
+                </li>
+              </ul>
+
+              <h5 class="pt-3 pb-2">Description</h5>
+              <ul>
+                <li>A short description <span class="fw-bold">MUST</span> follow the colon and space.</li>
+                <li>
+                  The description <span class="fw-bold">SHOULD</span> be concise and descriptive of the change, e.g.,
+                  <code>fix: array parsing issue</code>.
+                </li>
+              </ul>
+
+              <h5 class="pt-3 pb-2">Body</h5>
+              <ul>
+                <li>A longer body <span class="fw-bold">MAY</span> be included for additional context.</li>
+                <li>The body <span class="fw-bold">MUST</span> begin one blank line after the description.</li>
+                <li>The body <span class="fw-bold">CAN</span> include multiple newline-separated paragraphs.</li>
+              </ul>
+
+              <h5 class="pt-3 pb-2">Footers</h5>
+              <ul>
+                <li>Footers <span class="fw-bold">MAY</span> be provided one blank line after the body.</li>
+                <li>
+                  Each footer <span class="fw-bold">MUST</span> consist of a token followed by either
+                  <code>:&lt;space&gt;</code> or <code>&lt;space&gt;#</code> and a string value.
+                </li>
+                <li>
+                  Footer tokens <span class="fw-bold">MUST</span> replace whitespace with <code>-</code>, e.g.,
+                  <code>Acked-by</code>.
+                </li>
+                <li>
+                  An exception is <code>BREAKING CHANGE</code>, which <span class="fw-bold">MAY</span> also be used as a
+                  token.
+                </li>
+              </ul>
+
+              <h5 class="pt-3 pb-2">Breaking Changes</h5>
+              <ul>
+                <li>
+                  Breaking changes <span class="fw-bold">MUST</span> be indicated in either:
+                  <ul>
+                    <li>The type/scope prefix with <code>!</code>, or</li>
+                    <li>A footer entry with <code>BREAKING CHANGE: description</code>.</li>
+                  </ul>
+                </li>
+                <li>
+                  If <code>!</code> is used in the prefix, the footer <span class="fw-bold">MAY</span> omit
+                  <code>BREAKING CHANGE</code>.
+                </li>
+                <li>Breaking change descriptions <span class="fw-bold">SHALL</span> clearly explain the impact.</li>
+              </ul>
+
+              <h5 class="pt-3 pb-2">Additional Rules</h5>
+              <ul>
+                <li>
+                  Commit units (type, scope, description) <span class="fw-bold">MUST NOT</span> be treated as case
+                  sensitive, except <code>BREAKING CHANGE</code> which <span class="fw-bold">MUST</span> be uppercase.
+                </li>
+                <li>
+                  <code>BREAKING-CHANGE</code> <span class="fw-bold">MUST</span> be treated as synonymous with
+                  <code>BREAKING CHANGE</code> when used as a footer token.
+                </li>
+                <li>
+                  Commit messages <span class="fw-bold">SHOULD</span> be readable by humans and compatible with
+                  automation tools.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Deployment Guidelines -->
+    <div class="row mb-4">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-body p-5">
+            <h4 class="card-title text-primary mb-4">Deployment Guidelines</h4>
+            <p class="text-muted mb-4">
+              This document defines comprehensive deployment strategies and patterns for ensuring reliable, scalable,
+              and maintainable application deployments.
+            </p>
+
+            <div class="text-start">
+              <h5 class="pt-3 pb-2">General Deployment Rules</h5>
+              <ul>
+                <li>Applications <span class="fw-bold">MUST</span> implement automated deployment pipelines.</li>
+                <li>
+                  Applications <span class="fw-bold">MUST</span> use infrastructure as code (IaC) for environment
+                  management.
+                </li>
+                <li>
+                  Applications <span class="fw-bold">SHOULD</span> implement blue-green or canary deployment strategies.
+                </li>
+                <li>
+                  Applications <span class="fw-bold">MUST</span> have rollback capabilities for failed deployments.
+                </li>
+              </ul>
+
+              <h5 class="pt-3 pb-2">Environment Management</h5>
+              <h6>Environment Strategy</h6>
+              <ul>
+                <li>
+                  Applications <span class="fw-bold">MUST</span> maintain separate environments for development,
+                  staging, and production.
+                </li>
+                <li>
+                  Environments <span class="fw-bold">SHOULD</span> mirror production configurations as closely as
+                  possible.
+                </li>
+                <li>Environments <span class="fw-bold">MUST</span> be provisioned using infrastructure as code.</li>
+                <li>Environments <span class="fw-bold">SHOULD</span> support environment-specific configurations.</li>
+              </ul>
+
+              <h6>Environment Configuration</h6>
+              <ul>
+                <li>Configuration <span class="fw-bold">MUST</span> be externalized from application code.</li>
+                <li>
+                  Configuration <span class="fw-bold">SHOULD</span> use environment variables and configuration files.
+                </li>
+                <li>Configuration <span class="fw-bold">MUST</span> support different values per environment.</li>
+                <li>Configuration <span class="fw-bold">SHOULD</span> use secrets management for sensitive data.</li>
+              </ul>
+
+              <h5 class="pt-3 pb-2">Containerization</h5>
+              <h6>Docker Best Practices</h6>
+              <ul>
+                <li>Applications <span class="fw-bold">MUST</span> be containerized using Docker.</li>
+                <li>Docker images <span class="fw-bold">SHOULD</span> use minimal base images.</li>
+                <li>Docker images <span class="fw-bold">MUST</span> be scanned for vulnerabilities.</li>
+                <li>Docker images <span class="fw-bold">SHOULD</span> use multi-stage builds for optimization.</li>
+              </ul>
+
+              <h6>Container Orchestration</h6>
+              <ul>
+                <li>
+                  Applications <span class="fw-bold">SHOULD</span> use container orchestration platforms (Kubernetes,
+                  Docker Swarm).
+                </li>
+                <li>
+                  Container orchestration <span class="fw-bold">MUST</span> implement health checks and liveness probes.
+                </li>
+                <li>Container orchestration <span class="fw-bold">SHOULD</span> support horizontal pod autoscaling.</li>
+                <li>
+                  Container orchestration <span class="fw-bold">MUST</span> implement resource limits and requests.
+                </li>
+              </ul>
+
+              <h5 class="pt-3 pb-2">Deployment Strategies</h5>
+              <h6>Blue-Green Deployment</h6>
+              <ul>
+                <li>
+                  Blue-green deployments <span class="fw-bold">SHOULD</span> be used for zero-downtime deployments.
+                </li>
+                <li>Blue-green deployments <span class="fw-bold">MUST</span> include traffic switching mechanisms.</li>
+                <li>
+                  Blue-green deployments <span class="fw-bold">SHOULD</span> support instant rollback capabilities.
+                </li>
+                <li>
+                  Blue-green deployments <span class="fw-bold">MUST</span> validate deployments before traffic
+                  switching.
+                </li>
+              </ul>
+
+              <h6>Canary Deployment</h6>
+              <ul>
+                <li>Canary deployments <span class="fw-bold">SHOULD</span> be used for gradual rollouts.</li>
+                <li>Canary deployments <span class="fw-bold">MUST</span> include monitoring and alerting.</li>
+                <li>Canary deployments <span class="fw-bold">SHOULD</span> support automatic rollback on failure.</li>
+                <li>Canary deployments <span class="fw-bold">MUST</span> implement traffic splitting mechanisms.</li>
+              </ul>
+
+              <h5 class="pt-3 pb-2">Infrastructure as Code (IaC)</h5>
+              <h6>IaC Principles</h6>
+              <ul>
+                <li>Infrastructure <span class="fw-bold">MUST</span> be defined as code.</li>
+                <li>IaC <span class="fw-bold">SHOULD</span> be version controlled and reviewed.</li>
+                <li>IaC <span class="fw-bold">MUST</span> be tested and validated.</li>
+                <li>IaC <span class="fw-bold">SHOULD</span> support multiple environments.</li>
+              </ul>
+
+              <h6>IaC Tools</h6>
+              <ul>
+                <li><strong>Terraform</strong>: Infrastructure provisioning and management</li>
+                <li><strong>Ansible</strong>: Configuration management and automation</li>
+                <li><strong>CloudFormation</strong>: AWS-specific infrastructure management</li>
+                <li><strong>ARM Templates</strong>: Azure-specific infrastructure management</li>
+                <li><strong>Helm</strong>: Kubernetes application deployment</li>
+              </ul>
+
+              <h6>IaC Best Practices</h6>
+              <ul>
+                <li>IaC <span class="fw-bold">MUST</span> use modular and reusable components.</li>
+                <li>IaC <span class="fw-bold">SHOULD</span> implement proper state management.</li>
+                <li>IaC <span class="fw-bold">MUST</span> include documentation and examples.</li>
+                <li>IaC <span class="fw-bold">SHOULD</span> support environment-specific configurations.</li>
+              </ul>
+
+              <h5 class="pt-3 pb-2">Monitoring and Observability</h5>
+              <h6>Application Monitoring</h6>
+              <ul>
+                <li>Applications <span class="fw-bold">MUST</span> implement comprehensive monitoring.</li>
+                <li>Monitoring <span class="fw-bold">SHOULD</span> include metrics, logs, and traces.</li>
+                <li>
+                  Monitoring <span class="fw-bold">MUST</span> provide real-time visibility into application health.
+                </li>
+                <li>Monitoring <span class="fw-bold">SHOULD</span> support alerting and notification systems.</li>
+              </ul>
+
+              <h6>Log Management</h6>
+              <ul>
+                <li>Applications <span class="fw-bold">MUST</span> implement structured logging.</li>
+                <li>Logs <span class="fw-bold">SHOULD</span> be centralized and searchable.</li>
+                <li>Logs <span class="fw-bold">MUST</span> include correlation IDs for request tracing.</li>
+                <li>Logs <span class="fw-bold">SHOULD</span> support log aggregation and analysis.</li>
+              </ul>
+
+              <h5 class="pt-3 pb-2">Disaster Recovery and Backup</h5>
+              <h6>Backup Strategies</h6>
+              <ul>
+                <li>Applications <span class="fw-bold">MUST</span> implement regular backup procedures.</li>
+                <li>Backups <span class="fw-bold">SHOULD</span> be tested and validated regularly.</li>
+                <li>Backups <span class="fw-bold">MUST</span> be stored securely and offsite.</li>
+                <li>Backups <span class="fw-bold">SHOULD</span> support point-in-time recovery.</li>
+              </ul>
+
+              <h6>Disaster Recovery</h6>
+              <ul>
+                <li>Organizations <span class="fw-bold">MUST</span> have disaster recovery plans.</li>
+                <li>Disaster recovery <span class="fw-bold">SHOULD</span> be tested regularly.</li>
+                <li>
+                  Disaster recovery <span class="fw-bold">MUST</span> include recovery time objectives (RTO) and
+                  recovery point objectives (RPO).
+                </li>
+                <li>Disaster recovery <span class="fw-bold">SHOULD</span> support automated failover capabilities.</li>
+              </ul>
+
+              <h6>High Availability</h6>
+              <ul>
+                <li>Applications <span class="fw-bold">SHOULD</span> implement high availability architectures.</li>
+                <li>High availability <span class="fw-bold">MUST</span> include redundancy and failover mechanisms.</li>
+                <li>
+                  High availability <span class="fw-bold">SHOULD</span> support load balancing and traffic distribution.
+                </li>
+                <li>High availability <span class="fw-bold">MUST</span> implement health checks and monitoring.</li>
+              </ul>
+
+              <h5 class="pt-3 pb-2">Environment Promotion</h5>
+              <ul>
+                <li>Code <span class="fw-bold">MUST</span> flow through environments in a controlled manner.</li>
+                <li>
+                  Environment promotion <span class="fw-bold">SHOULD</span> include automated testing and validation.
+                </li>
+                <li>
+                  Environment promotion <span class="fw-bold">MUST</span> require approval for production deployments.
+                </li>
+                <li>
+                  Environment promotion <span class="fw-bold">SHOULD</span> implement feature flags for controlled
+                  rollouts.
+                </li>
+              </ul>
+
+              <h5 class="pt-3 pb-2">CI/CD Pipelines</h5>
+              <h6>Pipeline Design</h6>
+              <ul>
+                <li>
+                  CI/CD pipelines <span class="fw-bold">MUST</span> implement continuous integration and continuous
+                  deployment.
+                </li>
+                <li>Pipelines <span class="fw-bold">SHOULD</span> be fast, reliable, and maintainable.</li>
+                <li>Pipelines <span class="fw-bold">MUST</span> include automated testing and quality gates.</li>
+                <li>Pipelines <span class="fw-bold">SHOULD</span> support parallel execution where possible.</li>
+              </ul>
+
+              <h6>Pipeline Stages</h6>
+              <ul>
+                <li><strong>Build Stage</strong>: Compile, test, and package applications</li>
+                <li><strong>Test Stage</strong>: Run unit, integration, and end-to-end tests</li>
+                <li><strong>Security Stage</strong>: Perform security scanning and vulnerability assessment</li>
+                <li><strong>Deploy Stage</strong>: Deploy to target environments</li>
+                <li><strong>Verify Stage</strong>: Validate deployment success and functionality</li>
+              </ul>
+
+              <h6>Pipeline Tools</h6>
+              <ul>
+                <li><strong>CI/CD Platforms</strong>: GitHub Actions, GitLab CI, Jenkins, Azure DevOps</li>
+                <li><strong>Build Tools</strong>: Nx, Webpack, Vite, Rollup</li>
+                <li><strong>Testing Tools</strong>: Jest, Cypress, Playwright, Supertest</li>
+                <li><strong>Security Tools</strong>: Snyk, OWASP ZAP, SonarQube</li>
+                <li><strong>Deployment Tools</strong>: Helm, Kustomize, Terraform, Ansible</li>
+              </ul>
+
+              <h5 class="pt-3 pb-2">Rolling Deployment</h5>
+              <ul>
+                <li>Rolling deployments <span class="fw-bold">SHOULD</span> be used for stateless applications.</li>
+                <li>Rolling deployments <span class="fw-bold">MUST</span> maintain application availability.</li>
+                <li>
+                  Rolling deployments <span class="fw-bold">SHOULD</span> support configurable rollout strategies.
+                </li>
+                <li>Rolling deployments <span class="fw-bold">MUST</span> implement health checks and validation.</li>
+              </ul>
+
+              <h5 class="pt-3 pb-2">Performance and Scalability</h5>
+              <h6>Performance Optimization</h6>
+              <ul>
+                <li>
+                  Applications <span class="fw-bold">SHOULD</span> implement performance monitoring and optimization.
+                </li>
+                <li>Performance <span class="fw-bold">MUST</span> meet defined service level objectives (SLOs).</li>
+                <li>Performance <span class="fw-bold">SHOULD</span> support horizontal and vertical scaling.</li>
+                <li>Performance <span class="fw-bold">MUST</span> implement caching strategies where appropriate.</li>
+              </ul>
+
+              <h6>Scalability Patterns</h6>
+              <ul>
+                <li>Applications <span class="fw-bold">SHOULD</span> implement scalable architectures.</li>
+                <li>Scalability <span class="fw-bold">MUST</span> support increasing load and traffic.</li>
+                <li>Scalability <span class="fw-bold">SHOULD</span> use auto-scaling mechanisms.</li>
+                <li>Scalability <span class="fw-bold">MUST</span> implement proper resource management.</li>
+              </ul>
+
+              <h5 class="pt-3 pb-2">Security in Deployment</h5>
+              <h6>Deployment Security</h6>
+              <ul>
+                <li>Deployments <span class="fw-bold">MUST</span> implement security best practices.</li>
+                <li>
+                  Deployment security <span class="fw-bold">SHOULD</span> include secrets management and encryption.
+                </li>
+                <li>
+                  Deployment security <span class="fw-bold">MUST</span> implement access controls and authentication.
+                </li>
+                <li>
+                  Deployment security <span class="fw-bold">SHOULD</span> support security scanning and validation.
+                </li>
+              </ul>
+
+              <h6>Compliance and Governance</h6>
+              <ul>
+                <li>Deployments <span class="fw-bold">MUST</span> comply with relevant regulations and standards.</li>
+                <li>Compliance <span class="fw-bold">SHOULD</span> be automated and monitored.</li>
+                <li>Compliance <span class="fw-bold">MUST</span> include audit trails and documentation.</li>
+                <li>Compliance <span class="fw-bold">SHOULD</span> support regular assessments and reviews.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Operations Guidelines -->
+    <div class="row mb-4">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-body p-5">
+            <h4 class="card-title text-primary mb-4">Operational Guidelines</h4>
+            <p class="text-muted mb-4">
+              This document defines comprehensive operational practices and patterns for ensuring reliable,
+              maintainable, and efficient application operations.
+            </p>
+
+            <div class="text-start">
+              <h5 class="pt-3 pb-2">General Operational Rules</h5>
+              <ul>
+                <li>Applications <span class="fw-bold">MUST</span> implement comprehensive monitoring and alerting.</li>
+                <li>
+                  Applications <span class="fw-bold">MUST</span> have documented operational procedures and runbooks.
+                </li>
+                <li>Applications <span class="fw-bold">SHOULD</span> implement automated operational tasks.</li>
+                <li>
+                  Applications <span class="fw-bold">MUST</span> support 24/7 operations with proper on-call procedures.
+                </li>
+              </ul>
+
+              <h5 class="pt-3 pb-2">Monitoring and Observability</h5>
+              <h6>Application Monitoring</h6>
+              <ul>
+                <li>
+                  Applications <span class="fw-bold">MUST</span> implement application performance monitoring (APM).
+                </li>
+                <li>
+                  APM <span class="fw-bold">SHOULD</span> track key performance indicators (KPIs) and business metrics.
+                </li>
+                <li>APM <span class="fw-bold">MUST</span> provide real-time visibility into application health.</li>
+                <li>APM <span class="fw-bold">SHOULD</span> support distributed tracing and request correlation.</li>
+              </ul>
+
+              <h6>Infrastructure Monitoring</h6>
+              <ul>
+                <li>Infrastructure <span class="fw-bold">MUST</span> be monitored for performance and availability.</li>
+                <li>
+                  Infrastructure monitoring <span class="fw-bold">SHOULD</span> include resource utilization and
+                  capacity planning.
+                </li>
+                <li>
+                  Infrastructure monitoring <span class="fw-bold">MUST</span> detect and alert on infrastructure issues.
+                </li>
+                <li>
+                  Infrastructure monitoring <span class="fw-bold">SHOULD</span> support predictive analytics and
+                  forecasting.
+                </li>
+              </ul>
+
+              <h6>Log Management</h6>
+              <ul>
+                <li>
+                  Applications <span class="fw-bold">MUST</span> implement structured logging with consistent formats.
+                </li>
+                <li>
+                  Logs <span class="fw-bold">SHOULD</span> be centralized and searchable using log aggregation systems.
+                </li>
+                <li>
+                  Logs <span class="fw-bold">MUST</span> include correlation IDs for request tracing across services.
+                </li>
+                <li>Logs <span class="fw-bold">SHOULD</span> support log analysis and pattern detection.</li>
+              </ul>
+
+              <h5 class="pt-3 pb-2">Alerting and Incident Management</h5>
+              <h6>Alerting Strategy</h6>
+              <ul>
+                <li>Alerting <span class="fw-bold">MUST</span> be based on defined thresholds and conditions.</li>
+                <li>
+                  Alerting <span class="fw-bold">SHOULD</span> use multiple channels (email, SMS, Slack, PagerDuty).
+                </li>
+                <li>Alerting <span class="fw-bold">MUST</span> include escalation procedures and on-call rotations.</li>
+                <li>
+                  Alerting <span class="fw-bold">SHOULD</span> support alert fatigue prevention and noise reduction.
+                </li>
+              </ul>
+
+              <h6>Incident Response</h6>
+              <ul>
+                <li>
+                  Organizations <span class="fw-bold">MUST</span> have incident response procedures and playbooks.
+                </li>
+                <li>Incident response <span class="fw-bold">SHOULD</span> follow ITIL or similar frameworks.</li>
+                <li>
+                  Incident response <span class="fw-bold">MUST</span> include communication procedures and stakeholder
+                  notification.
+                </li>
+                <li>
+                  Incident response <span class="fw-bold">SHOULD</span> support incident classification and
+                  prioritization.
+                </li>
+              </ul>
+
+              <h5 class="pt-3 pb-2">Performance Management</h5>
+              <h6>Performance Monitoring</h6>
+              <ul>
+                <li>Applications <span class="fw-bold">MUST</span> implement performance monitoring and profiling.</li>
+                <li>
+                  Performance monitoring <span class="fw-bold">SHOULD</span> track response times, throughput, and error
+                  rates.
+                </li>
+                <li>
+                  Performance monitoring <span class="fw-bold">MUST</span> identify performance bottlenecks and issues.
+                </li>
+                <li>
+                  Performance monitoring <span class="fw-bold">SHOULD</span> support capacity planning and scaling
+                  decisions.
+                </li>
+              </ul>
+
+              <h6>Capacity Planning</h6>
+              <ul>
+                <li>Organizations <span class="fw-bold">MUST</span> implement capacity planning processes.</li>
+                <li>
+                  Capacity planning <span class="fw-bold">SHOULD</span> be based on historical data and growth
+                  projections.
+                </li>
+                <li>
+                  Capacity planning <span class="fw-bold">MUST</span> include resource utilization analysis and
+                  forecasting.
+                </li>
+                <li>
+                  Capacity planning <span class="fw-bold">SHOULD</span> support proactive scaling and resource
+                  allocation.
+                </li>
+              </ul>
+
+              <h5 class="pt-3 pb-2">Reliability and Availability</h5>
+              <h6>Reliability Engineering</h6>
+              <ul>
+                <li>Applications <span class="fw-bold">SHOULD</span> implement reliability engineering practices.</li>
+                <li>
+                  Reliability engineering <span class="fw-bold">MUST</span> include fault tolerance and error handling.
+                </li>
+                <li>
+                  Reliability engineering <span class="fw-bold">SHOULD</span> support graceful degradation and fallback
+                  mechanisms.
+                </li>
+                <li>
+                  Reliability engineering <span class="fw-bold">MUST</span> implement circuit breakers and bulkhead
+                  patterns.
+                </li>
+              </ul>
+
+              <h6>Availability Management</h6>
+              <ul>
+                <li>Applications <span class="fw-bold">MUST</span> meet defined availability targets (SLA/SLO).</li>
+                <li>
+                  Availability management <span class="fw-bold">SHOULD</span> include redundancy and failover
+                  mechanisms.
+                </li>
+                <li>
+                  Availability management <span class="fw-bold">MUST</span> implement health checks and liveness probes.
+                </li>
+                <li>
+                  Availability management <span class="fw-bold">SHOULD</span> support automated recovery and
+                  self-healing.
+                </li>
+              </ul>
+
+              <h5 class="pt-3 pb-2">Maintenance and Updates</h5>
+              <h6>Maintenance Windows</h6>
+              <ul>
+                <li>Applications <span class="fw-bold">SHOULD</span> implement scheduled maintenance windows.</li>
+                <li>
+                  Maintenance windows <span class="fw-bold">MUST</span> be communicated to stakeholders and users.
+                </li>
+                <li>Maintenance windows <span class="fw-bold">SHOULD</span> minimize impact on business operations.</li>
+                <li>
+                  Maintenance windows <span class="fw-bold">MUST</span> include rollback procedures and contingency
+                  plans.
+                </li>
+              </ul>
+
+              <h6>Update Management</h6>
+              <ul>
+                <li>Applications <span class="fw-bold">MUST</span> implement update management processes.</li>
+                <li>Update management <span class="fw-bold">SHOULD</span> support automated updates where possible.</li>
+                <li>Update management <span class="fw-bold">MUST</span> include testing and validation procedures.</li>
+                <li>
+                  Update management <span class="fw-bold">SHOULD</span> support gradual rollouts and canary deployments.
+                </li>
+              </ul>
+
+              <h5 class="pt-3 pb-2">Cost Management</h5>
+              <h6>Cost Optimization</h6>
+              <ul>
+                <li>Applications <span class="fw-bold">SHOULD</span> implement cost optimization strategies.</li>
+                <li>
+                  Cost optimization <span class="fw-bold">MUST</span> be based on usage patterns and resource
+                  utilization.
+                </li>
+                <li>
+                  Cost optimization <span class="fw-bold">SHOULD</span> include right-sizing and resource optimization.
+                </li>
+                <li>Cost optimization <span class="fw-bold">MUST</span> support cost monitoring and budgeting.</li>
+              </ul>
+
+              <h6>Resource Management</h6>
+              <ul>
+                <li>Applications <span class="fw-bold">MUST</span> implement proper resource management.</li>
+                <li>
+                  Resource management <span class="fw-bold">SHOULD</span> include resource tagging and cost allocation.
+                </li>
+                <li>Resource management <span class="fw-bold">MUST</span> support resource lifecycle management.</li>
+                <li>
+                  Resource management <span class="fw-bold">SHOULD</span> include automated resource cleanup and
+                  optimization.
+                </li>
+              </ul>
+
+              <h5 class="pt-3 pb-2">Documentation and Knowledge Management</h5>
+              <h6>Operational Documentation</h6>
+              <ul>
+                <li>Applications <span class="fw-bold">MUST</span> have comprehensive operational documentation.</li>
+                <li>
+                  Operational documentation <span class="fw-bold">SHOULD</span> include runbooks, procedures, and
+                  troubleshooting guides.
+                </li>
+                <li>Operational documentation <span class="fw-bold">MUST</span> be kept up-to-date and accurate.</li>
+                <li>Operational documentation <span class="fw-bold">SHOULD</span> be accessible and searchable.</li>
+              </ul>
+
+              <h6>Change Management</h6>
+              <ul>
+                <li>Applications <span class="fw-bold">MUST</span> implement change management processes.</li>
+                <li>Change management <span class="fw-bold">SHOULD</span> follow ITIL or similar frameworks.</li>
+                <li>
+                  Change management <span class="fw-bold">MUST</span> include change approval and validation procedures.
+                </li>
+                <li>Change management <span class="fw-bold">SHOULD</span> support change tracking and audit trails.</li>
+              </ul>
+
+              <h5 class="pt-3 pb-2">Metrics and KPIs</h5>
+              <ul>
+                <li>Applications <span class="fw-bold">MUST</span> track business and technical metrics.</li>
+                <li>Metrics <span class="fw-bold">SHOULD</span> be defined as service level indicators (SLIs).</li>
+                <li>
+                  Metrics <span class="fw-bold">MUST</span> support service level objectives (SLOs) and service level
+                  agreements (SLAs).
+                </li>
+                <li>Metrics <span class="fw-bold">SHOULD</span> be visualized using dashboards and reports.</li>
+              </ul>
+
+              <h5 class="pt-3 pb-2">On-Call Procedures</h5>
+              <ul>
+                <li>On-call rotations <span class="fw-bold">MUST</span> be defined and maintained.</li>
+                <li>
+                  On-call procedures <span class="fw-bold">SHOULD</span> include escalation paths and backup coverage.
+                </li>
+                <li>On-call procedures <span class="fw-bold">MUST</span> include training and knowledge transfer.</li>
+                <li>
+                  On-call procedures <span class="fw-bold">SHOULD</span> support work-life balance and burnout
+                  prevention.
+                </li>
+              </ul>
+
+              <h5 class="pt-3 pb-2">Performance Optimization</h5>
+              <ul>
+                <li>Applications <span class="fw-bold">SHOULD</span> implement performance optimization strategies.</li>
+                <li>Performance optimization <span class="fw-bold">MUST</span> be data-driven and measurable.</li>
+                <li>
+                  Performance optimization <span class="fw-bold">SHOULD</span> include caching, compression, and
+                  optimization techniques.
+                </li>
+                <li>
+                  Performance optimization <span class="fw-bold">MUST</span> support A/B testing and gradual rollouts.
+                </li>
+              </ul>
+
+              <h5 class="pt-3 pb-2">Chaos Engineering</h5>
+              <ul>
+                <li>Organizations <span class="fw-bold">SHOULD</span> implement chaos engineering practices.</li>
+                <li>Chaos engineering <span class="fw-bold">MUST</span> be conducted in controlled environments.</li>
+                <li>
+                  Chaos engineering <span class="fw-bold">SHOULD</span> test system resilience and failure scenarios.
+                </li>
+                <li>
+                  Chaos engineering <span class="fw-bold">MUST</span> include proper planning and risk mitigation.
+                </li>
+              </ul>
+
+              <h5 class="pt-3 pb-2">Patch Management</h5>
+              <ul>
+                <li>Applications <span class="fw-bold">MUST</span> implement patch management procedures.</li>
+                <li>
+                  Patch management <span class="fw-bold">SHOULD</span> prioritize security patches and critical updates.
+                </li>
+                <li>
+                  Patch management <span class="fw-bold">MUST</span> include testing and validation before deployment.
+                </li>
+                <li>
+                  Patch management <span class="fw-bold">SHOULD</span> support automated patching where appropriate.
+                </li>
+              </ul>
+
+              <h5 class="pt-3 pb-2">Security Operations</h5>
+              <h6>Security Monitoring</h6>
+              <ul>
+                <li>
+                  Applications <span class="fw-bold">MUST</span> implement security monitoring and threat detection.
+                </li>
+                <li>
+                  Security monitoring <span class="fw-bold">SHOULD</span> use SIEM systems for centralized security
+                  management.
+                </li>
+                <li>
+                  Security monitoring <span class="fw-bold">MUST</span> detect and alert on security events and
+                  incidents.
+                </li>
+                <li>
+                  Security monitoring <span class="fw-bold">SHOULD</span> support behavioral analytics and anomaly
+                  detection.
+                </li>
+              </ul>
+
+              <h6>Vulnerability Management</h6>
+              <ul>
+                <li>Applications <span class="fw-bold">MUST</span> implement vulnerability management processes.</li>
+                <li>
+                  Vulnerability management <span class="fw-bold">SHOULD</span> include regular scanning and assessment.
+                </li>
+                <li>
+                  Vulnerability management <span class="fw-bold">MUST</span> prioritize and remediate vulnerabilities.
+                </li>
+                <li>
+                  Vulnerability management <span class="fw-bold">SHOULD</span> support automated vulnerability scanning.
+                </li>
+              </ul>
+
+              <h6>Incident Response</h6>
+              <ul>
+                <li>Organizations <span class="fw-bold">MUST</span> have security incident response procedures.</li>
+                <li>
+                  Security incident response <span class="fw-bold">SHOULD</span> follow NIST or similar frameworks.
+                </li>
+                <li>
+                  Security incident response <span class="fw-bold">MUST</span> include communication and notification
+                  procedures.
+                </li>
+                <li>
+                  Security incident response <span class="fw-bold">SHOULD</span> support forensic analysis and evidence
+                  collection.
+                </li>
+              </ul>
+
+              <h5 class="pt-3 pb-2">Budget Management</h5>
+              <ul>
+                <li>Organizations <span class="fw-bold">MUST</span> implement budget management and cost controls.</li>
+                <li>Budget management <span class="fw-bold">SHOULD</span> include cost alerts and spending limits.</li>
+                <li>Budget management <span class="fw-bold">MUST</span> support cost forecasting and planning.</li>
+                <li>Budget management <span class="fw-bold">SHOULD</span> include cost reporting and analysis.</li>
+              </ul>
+
+              <h5 class="pt-3 pb-2">Knowledge Management</h5>
+              <ul>
+                <li>Organizations <span class="fw-bold">SHOULD</span> implement knowledge management systems.</li>
+                <li>Knowledge management <span class="fw-bold">MUST</span> capture and share operational knowledge.</li>
+                <li>
+                  Knowledge management <span class="fw-bold">SHOULD</span> support collaboration and knowledge sharing.
+                </li>
+                <li>
+                  Knowledge management <span class="fw-bold">MUST</span> include training and onboarding procedures.
+                </li>
+              </ul>
+
+              <h5 class="pt-3 pb-2">Compliance and Governance</h5>
+              <h6>Compliance Management</h6>
+              <ul>
+                <li>Applications <span class="fw-bold">MUST</span> comply with relevant regulations and standards.</li>
+                <li>Compliance management <span class="fw-bold">SHOULD</span> be automated and monitored.</li>
+                <li>Compliance management <span class="fw-bold">MUST</span> include audit trails and documentation.</li>
+                <li>
+                  Compliance management <span class="fw-bold">SHOULD</span> support regular assessments and reviews.
+                </li>
+              </ul>
+
+              <h6>Governance Frameworks</h6>
+              <ul>
+                <li>Organizations <span class="fw-bold">MUST</span> implement governance frameworks and policies.</li>
+                <li>
+                  Governance frameworks <span class="fw-bold">SHOULD</span> include roles, responsibilities, and
+                  accountability.
+                </li>
+                <li>Governance frameworks <span class="fw-bold">MUST</span> support decision-making and oversight.</li>
+                <li>Governance frameworks <span class="fw-bold">SHOULD</span> include regular reviews and updates.</li>
+              </ul>
+
+              <h6>Risk Management</h6>
+              <ul>
+                <li>Organizations <span class="fw-bold">MUST</span> implement risk management processes.</li>
+                <li>
+                  Risk management <span class="fw-bold">SHOULD</span> include risk assessment and mitigation strategies.
+                </li>
+                <li>Risk management <span class="fw-bold">MUST</span> support risk monitoring and reporting.</li>
+                <li>
+                  Risk management <span class="fw-bold">SHOULD</span> include business continuity and disaster recovery
+                  planning.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Internal Documentation Guidelines -->
+    <div class="row mb-4">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-body p-5">
+            <h4 class="card-title text-primary mb-4">Internal Documentation Guidelines</h4>
+            <p class="text-muted mb-4">
+              This document defines the rules and best practices for how you interact with documentation regarding
+              internal documentation. It enforces consistency, reliability, and maintainability across all agent-driven
+              tasks.
+            </p>
+
+            <div class="text-start">
+              <h5 class="pt-3 pb-2">General Rules</h5>
+              <ul>
+                <li>
+                  You <span class="fw-bold">MAY</span> gather structured information on internal documentation using the
+                  <code>devkit_list_docs</code> and <code>devkit_get_doc</code> tools of the <code>devkit</code> mcp
+                  server
+                </li>
+                <li>
+                  You <span class="fw-bold">SHALL PREFER</span> to interact with internal documentation / Markdown
+                  (<code>.md</code>) file placed in the root-level <code>docs/</code> directory using the
+                  <code>devkit</code> mcp server
+                </li>
+                <li>
+                  You <span class="fw-bold">MUST</span> interact with these files using other tooling only if the
+                  preferred action cannot be performed through the <code>devkit</code> mcp server
+                  <ul>
+                    <li>
+                      It is <span class="fw-bold">RECOMMENDED</span> to make use of built-in file read functionality (if
+                      available) in case no special tooling is provided.
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+
+              <h5 class="pt-3 pb-2">Tooling Hierarchy for Documentation</h5>
+              <ul>
+                <li>
+                  For files in the <code>docs/</code> directory, this rule
+                  <span class="fw-bold">TAKES PRECEDENCE</span> over the general tooling hierarchy defined in
+                  <code>agents.mdc</code>
+                </li>
+                <li>
+                  For documentation files outside the <code>docs/</code> directory, follow the general tooling
+                  hierarchy: <code>devkit</code> MCP → <code>nx</code> MCP → other MCP tools
+                </li>
+                <li>
+                  When <code>devkit</code> MCP tools are unavailable for <code>docs/</code> content, fall back to the
+                  general tooling hierarchy
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt-4">
+      <div class="col-md-12 text-center">
+        <div class="alert alert-light border-primary mb-0 text-center">
+          <h6 class="alert-heading text-primary">
+            <i class="bi bi-info-circle me-2"></i>
+            <span i18n="@@rulesNoteTitle">Note</span>
+          </h6>
+          <p class="mb-0" i18n="@@rulesNoteText">
+            These rules are automatically enforced by the framework tooling and guide every aspect of your enterprise
+            application development.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

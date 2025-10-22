@@ -1,5 +1,5 @@
 import { Route } from '@angular/router';
-import { GettingStartedComponent, HomeComponent } from '@forepath/landingpage/frontend';
+import { FrameworkComponent, GettingStartedComponent, HomeComponent } from '@forepath/landingpage/frontend';
 
 export const appRoutes: Route[] = [
   {
@@ -9,5 +9,9 @@ export const appRoutes: Route[] = [
   {
     path: 'getting-started',
     component: GettingStartedComponent,
+  },
+  {
+    path: 'framework',
+    component: FrameworkComponent,
   },
 ];
