@@ -138,6 +138,10 @@
           <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-home/src/lib/page/home.component.ts</context>
           <context context-type="linenumber">39</context>
         </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-workflow/src/lib/page/workflow.component.ts</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
       </trans-unit>
       <trans-unit id="homeMetaKeywords" datatype="html">
         <source>TSEF, TypeScript, Enterprise Framework, AI-ready, Angular, web development, scalable, application framework, cloud, modern apps, enterprise solutions, software tools, best practices</source>
@@ -148,6 +152,10 @@
         <context-group purpose="location">
           <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-home/src/lib/page/home.component.ts</context>
           <context context-type="linenumber">43</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-workflow/src/lib/page/workflow.component.ts</context>
+          <context context-type="linenumber">24</context>
         </context-group>
       </trans-unit>
       <trans-unit id="gettingStartedHeroTitle" datatype="html">
@@ -1291,6 +1299,118 @@
           <context context-type="linenumber">92,94</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="workflowHeroTitle" datatype="html">
+        <source> Transform your <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;text-highlight&quot;&gt;"/>development workflow<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> with AI-powered automation </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-workflow/src/lib/page/hero/hero.component.html</context>
+          <context context-type="linenumber">6,8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="workflowHeroSubtitle" datatype="html">
+        <source> Streamline your entire development lifecycle from <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;text-highlight&quot;&gt;"/>research<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> to <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;text-highlight&quot;&gt;"/>ship<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> with intelligent Cursor commands. Built on proven Nx monorepo architecture for enterprise-grade reliability. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-workflow/src/lib/page/hero/hero.component.html</context>
+          <context context-type="linenumber">9,12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="gsWorkflowTitle" datatype="html">
+        <source>AI-Assisted Development Workflow</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-workflow/src/lib/page/workflow-overview/workflow-overview.component.html</context>
+          <context context-type="linenumber">5,6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="gsWorkflowIntro" datatype="html">
+        <source> Follow our structured four-step workflow to ensure quality and consistency. Start with <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;text-highlight&quot;&gt;"/>research<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/>, create a detailed <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;text-highlight&quot;&gt;"/>plan<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/>, then <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;text-highlight&quot;&gt;"/>implement<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> and finally <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;text-highlight&quot;&gt;"/>ship<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> your features with confidence. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-workflow/src/lib/page/workflow-overview/workflow-overview.component.html</context>
+          <context context-type="linenumber">7,11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="workflowResearchCommand" datatype="html">
+        <source>/research</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-workflow/src/lib/page/workflow-overview/workflow-overview.component.html</context>
+          <context context-type="linenumber">21,24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="workflowResearchTitle" datatype="html">
+        <source>1. Research</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-workflow/src/lib/page/workflow-overview/workflow-overview.component.html</context>
+          <context context-type="linenumber">25,26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="workflowResearchDesc" datatype="html">
+        <source> Conduct comprehensive research using multiple sources and perspectives. Document findings, evaluate approaches, and identify risks and constraints. Create a research file in .research/ with proper citations and recommendations to inform planning. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-workflow/src/lib/page/workflow-overview/workflow-overview.component.html</context>
+          <context context-type="linenumber">27,29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="workflowPlanTitle" datatype="html">
+        <source>2. Plan</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-workflow/src/lib/page/workflow-overview/workflow-overview.component.html</context>
+          <context context-type="linenumber">44,45</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="workflowPlanDesc" datatype="html">
+        <source> Review documentation and research findings, then break down features into actionable tasks. Determine appropriate locations following domain rules and use Nx generators. Document the plan in .plans/ with clear acceptance criteria and wait for confirmation. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-workflow/src/lib/page/workflow-overview/workflow-overview.component.html</context>
+          <context context-type="linenumber">46,48</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="workflowPlanCommand" datatype="html">
+        <source>/plan</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-workflow/src/lib/page/workflow-overview/workflow-overview.component.html</context>
+          <context context-type="linenumber">52,54</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="workflowImplementCommand" datatype="html">
+        <source>/implement</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-workflow/src/lib/page/workflow-overview/workflow-overview.component.html</context>
+          <context context-type="linenumber">66,68</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="workflowImplementTitle" datatype="html">
+        <source>3. Implement</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-workflow/src/lib/page/workflow-overview/workflow-overview.component.html</context>
+          <context context-type="linenumber">69,70</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="workflowImplementDesc" datatype="html">
+        <source> Implement features following the plan, established conventions, and naming standards. Create feature branches, make focused commits, and update documentation. Write comprehensive tests and run validation tasks to ensure quality before confirming. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-workflow/src/lib/page/workflow-overview/workflow-overview.component.html</context>
+          <context context-type="linenumber">71,73</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="workflowShipTitle" datatype="html">
+        <source>4. Ship</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-workflow/src/lib/page/workflow-overview/workflow-overview.component.html</context>
+          <context context-type="linenumber">88,89</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="workflowShipDesc" datatype="html">
+        <source> Open a pull request with a descriptive title and complete the PR template. Request review from code owners and stakeholders. Address feedback promptly and ensure all checks pass before merging. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-workflow/src/lib/page/workflow-overview/workflow-overview.component.html</context>
+          <context context-type="linenumber">90,91</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="workflowShipCommand" datatype="html">
+        <source>/ship</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-workflow/src/lib/page/workflow-overview/workflow-overview.component.html</context>
+          <context context-type="linenumber">95,97</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="footerCopyright" datatype="html">
         <source>© <x id="INTERPOLATION" equiv-text="{{ currentYear }}"/> The Typescript Enterprise Framework (TSEF)</source>
         <context-group purpose="location">
@@ -1326,11 +1446,18 @@
           <context context-type="linenumber">36,37</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="headerWorkflow" datatype="html">
+        <source>Workflow</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/domains/landingpage/frontend/ui-components/src/lib/header/header.component.html</context>
+          <context context-type="linenumber">39,40</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="headerDocs" datatype="html">
         <source>Documentation</source>
         <context-group purpose="location">
           <context context-type="sourcefile">libs/domains/landingpage/frontend/ui-components/src/lib/header/header.component.html</context>
-          <context context-type="linenumber">41,42</context>
+          <context context-type="linenumber">47,48</context>
         </context-group>
       </trans-unit>
     </body>

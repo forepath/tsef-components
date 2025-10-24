@@ -1,5 +1,10 @@
 import { Route } from '@angular/router';
-import { FrameworkComponent, GettingStartedComponent, HomeComponent } from '@forepath/landingpage/frontend';
+import {
+  FrameworkComponent,
+  GettingStartedComponent,
+  HomeComponent,
+  WorkflowComponent,
+} from '@forepath/landingpage/frontend';
 
 export const appRoutes: Route[] = [
   {
@@ -13,5 +18,9 @@ export const appRoutes: Route[] = [
   {
     path: 'framework',
     component: FrameworkComponent,
+  },
+  {
+    path: 'workflow',
+    component: WorkflowComponent,
   },
 ];

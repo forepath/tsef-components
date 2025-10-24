@@ -208,7 +208,7 @@
       </trans-unit>
       <trans-unit id="gettingStartedHeroTitle" datatype="html">
         <source> The fastest way to an <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;text-highlight&quot;&gt;"/>AI-ready<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> Nx workspace </source>
-        <target> Der schnellste Weg zu einem <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;text-highlight&quot;&gt;"/>KI-bereiten<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> Nx-Workspace </target>
+        <target> Der schnellste Weg zu einem <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;text-highlight&quot;&gt;"/>KI-gestützten<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> Nx-Workspace </target>
       </trans-unit>
       <trans-unit id="gettingStartedHeroSubtitle" datatype="html">
         <source><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;text-highlight&quot;&gt;"/>Enterprise-grade<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> TypeScript stack with smart Nx workflows, agent-powered tooling, and built-in compliance. </source>
@@ -384,7 +384,7 @@
       </trans-unit>
       <trans-unit id="heroTitle" datatype="html">
         <source> The <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;text-highlight&quot;&gt;"/>AI-ready<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> TypeScript Enterprise Framework </source>
-        <target> Das <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;text-highlight&quot;&gt;"/>KI-bereite<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> TypeScript Enterprise Framework </target>
+        <target> Das <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;text-highlight&quot;&gt;"/>KI-gestützte<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> TypeScript Enterprise Framework </target>
       </trans-unit>
       <trans-unit id="heroSubtitle" datatype="html">
         <source><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;text-highlight&quot;&gt;"/>Enterprise-grade<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> Nx workflow with AI-powered development agents and built-in compliance. </source>
@@ -432,7 +432,7 @@
       </trans-unit>
       <trans-unit id="homeMetaDescription" datatype="html">
         <source>TSEF is the AI-ready TypeScript Enterprise Framework. Easily build, deploy, and scale modern enterprise applications with best practices, advanced tooling, and AI capabilities out of the box.</source>
-        <target>TSEF ist das KI-bereite TypeScript Enterprise Framework. Erstellen, deployen und skalieren Sie mühelos moderne Enterprise-Anwendungen mit Best Practices, fortschrittlichen Tools und KI-Funktionen out-of-the-box.</target>
+        <target>TSEF ist das KI-gestützte TypeScript Enterprise Framework. Erstellen, deployen und skalieren Sie mühelos moderne Enterprise-Anwendungen mit Best Practices, fortschrittlichen Tools und KI-Funktionen out-of-the-box.</target>
       </trans-unit>
       <trans-unit id="homeMetaKeywords" datatype="html">
         <source>TSEF, TypeScript, Enterprise Framework, AI-ready, Angular, web development, scalable, application framework, cloud, modern apps, enterprise solutions, software tools, best practices</source>
@@ -757,6 +757,74 @@
       <trans-unit id="whyCard3SolutionText" datatype="html">
         <source>Built-in compliance, automated monitoring, enterprise governance rules</source>
         <target>Integrierte Compliance, automatisiertes Monitoring, Unternehmens-Governance-Regeln</target>
+      </trans-unit>
+      <trans-unit id="workflowHeroTitle" datatype="html">
+        <source> Transform your <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;text-highlight&quot;&gt;"/>development workflow<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> with AI-powered automation </source>
+        <target> Transformieren Sie Ihren <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;text-highlight&quot;&gt;"/>Entwicklungsworkflow<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> mit KI-gestützter Automatisierung </target>
+      </trans-unit>
+      <trans-unit id="workflowHeroSubtitle" datatype="html">
+        <source> Streamline your entire development lifecycle from <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;text-highlight&quot;&gt;"/>research<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> to <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;text-highlight&quot;&gt;"/>ship<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> with intelligent Cursor commands. Built on proven Nx monorepo architecture for enterprise-grade reliability. </source>
+        <target> Optimieren Sie Ihren gesamten Entwicklungslebenszyklus von <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;text-highlight&quot;&gt;"/>Research<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> bis <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;text-highlight&quot;&gt;"/>Ship<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> mit intelligenten Cursor-Befehlen. Auf bewährter Nx-Monorepo-Architektur aufgebaut für unternehmensreife Zuverlässigkeit. </target>
+      </trans-unit>
+      <trans-unit id="gsWorkflowTitle" datatype="html">
+        <source>AI-Assisted Development Workflow</source>
+        <target>KI-gestützter Entwicklungsworkflow</target>
+      </trans-unit>
+      <trans-unit id="gsWorkflowIntro" datatype="html">
+        <source> Follow our structured four-step workflow to ensure quality and consistency. Start with <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;text-highlight&quot;&gt;"/>research<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/>, create a detailed <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;text-highlight&quot;&gt;"/>plan<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/>, then <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;text-highlight&quot;&gt;"/>implement<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> and finally <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;text-highlight&quot;&gt;"/>ship<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> your features with confidence. </source>
+        <target> Folgen Sie unserem strukturierten Vier-Schritte-Workflow, um Qualität und Konsistenz sicherzustellen. Beginnen Sie mit <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;text-highlight&quot;&gt;"/>Research<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/>, erstellen Sie einen detaillierten <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;text-highlight&quot;&gt;"/>Plan<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/>, dann <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;text-highlight&quot;&gt;"/>Implementieren<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> Sie und schließlich <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;text-highlight&quot;&gt;"/>Ship<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> Sie Ihre Features mit Vertrauen. </target>
+      </trans-unit>
+      <trans-unit id="workflowResearchCommand" datatype="html">
+        <source>/research</source>
+        <target>/research</target>
+      </trans-unit>
+      <trans-unit id="workflowResearchTitle" datatype="html">
+        <source>1. Research</source>
+        <target>1. Research</target>
+      </trans-unit>
+      <trans-unit id="workflowResearchDesc" datatype="html">
+        <source> Conduct comprehensive research using multiple sources and perspectives. Document findings, evaluate approaches, and identify risks and constraints. Create a research file in .research/ with proper citations and recommendations to inform planning. </source>
+        <target> Führen Sie umfassende Recherchen mit mehreren Quellen und Perspektiven durch. Dokumentieren Sie Ergebnisse, bewerten Sie Ansätze und identifizieren Sie Risiken und Einschränkungen. Erstellen Sie eine Research-Datei in .research/ mit ordnungsgemäßen Zitaten und Empfehlungen zur Informationsgrundlage für die Planung. </target>
+      </trans-unit>
+      <trans-unit id="workflowPlanTitle" datatype="html">
+        <source>2. Plan</source>
+        <target>2. Plan</target>
+      </trans-unit>
+      <trans-unit id="workflowPlanDesc" datatype="html">
+        <source> Review documentation and research findings, then break down features into actionable tasks. Determine appropriate locations following domain rules and use Nx generators. Document the plan in .plans/ with clear acceptance criteria and wait for confirmation. </source>
+        <target> Überprüfen Sie Dokumentation und Rechercheergebnisse, zerlegen Sie dann Features in umsetzbare Aufgaben. Bestimmen Sie geeignete Standorte gemäß Domänenregeln und verwenden Sie Nx-Generatoren. Dokumentieren Sie den Plan in .plans/ mit klaren Akzeptanzkriterien und warten Sie auf Bestätigung. </target>
+      </trans-unit>
+      <trans-unit id="workflowPlanCommand" datatype="html">
+        <source>/plan</source>
+        <target>/plan</target>
+      </trans-unit>
+      <trans-unit id="workflowImplementCommand" datatype="html">
+        <source>/implement</source>
+        <target>/implement</target>
+      </trans-unit>
+      <trans-unit id="workflowImplementTitle" datatype="html">
+        <source>3. Implement</source>
+        <target>3. Implementieren</target>
+      </trans-unit>
+      <trans-unit id="workflowImplementDesc" datatype="html">
+        <source> Implement features following the plan, established conventions, and naming standards. Create feature branches, make focused commits, and update documentation. Write comprehensive tests and run validation tasks to ensure quality before confirming. </source>
+        <target> Implementieren Sie Features gemäß Plan, etablierten Konventionen und Namensstandards. Erstellen Sie Feature-Branches, machen Sie fokussierte Commits und aktualisieren Sie die Dokumentation. Schreiben Sie umfassende Tests und führen Sie Validierungsaufgaben aus, um die Qualität vor der Bestätigung sicherzustellen. </target>
+      </trans-unit>
+      <trans-unit id="workflowShipTitle" datatype="html">
+        <source>4. Ship</source>
+        <target>4. Ausliefern</target>
+      </trans-unit>
+      <trans-unit id="workflowShipDesc" datatype="html">
+        <source> Open a pull request with a descriptive title and complete the PR template. Request review from code owners and stakeholders. Address feedback promptly and ensure all checks pass before merging. </source>
+        <target> Öffnen Sie einen Pull Request mit aussagekräftigem Titel und vervollständigen Sie die PR-Vorlage. Fordern Sie Reviews von Code-Ownern und Stakeholdern an. Beantworten Sie Feedback umgehend und stellen Sie sicher, dass alle Checks bestehen, bevor Sie mergen. </target>
+      </trans-unit>
+      <trans-unit id="workflowShipCommand" datatype="html">
+        <source>/ship</source>
+        <target>/ship</target>
+      </trans-unit>
+      <trans-unit id="headerWorkflow" datatype="html">
+        <source>Workflow</source>
+        <target>Workflow</target>
       </trans-unit>
     </body>
   </file>
