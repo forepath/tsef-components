@@ -1321,7 +1321,7 @@
         </context-group>
       </trans-unit>
       <trans-unit id="gsWorkflowIntro" datatype="html">
-        <source> TSEF&apos;s streamlined workflow enhances quality and consistency in every project. Starts with <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;text-highlight&quot;&gt;"/>research<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> to explore possibilities, creates a detailed <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;text-highlight&quot;&gt;"/>plan<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> to guide development, <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;text-highlight&quot;&gt;"/>implements<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> with precision, and confidently <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;text-highlight&quot;&gt;"/>ships<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> features. </source>
+        <source> TSEF&apos;s streamlined workflow enhances quality and consistency. Start with <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;text-highlight&quot;&gt;"/>research<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> to explore possibilities, use <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;text-highlight&quot;&gt;"/>planning<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> to map strategy, <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;text-highlight&quot;&gt;"/>implement<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> with precision, and <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;text-highlight&quot;&gt;"/>ship<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> with confidence. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-workflow/src/lib/page/workflow-overview/workflow-overview.component.html</context>
           <context context-type="linenumber">7,13</context>
@@ -1342,7 +1342,7 @@
         </context-group>
       </trans-unit>
       <trans-unit id="workflowResearchDesc" datatype="html">
-        <source> Explores topics deeply through multiple sources and perspectives. Synthesizes findings, evaluates different approaches, and uncovers potential risks and constraints. Saves everything in a research file within .research/ with clear citations and actionable recommendations that guide the planning process. </source>
+        <source> Explore topics deeply through multiple sources and perspectives. Synthesize findings, evaluate different approaches, and uncover potential risks and constraints. Save everything in a research file within .research/ with clear citations and actionable recommendations that guide the planning process. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-workflow/src/lib/page/workflow-overview/workflow-overview.component.html</context>
           <context context-type="linenumber">28,31</context>
@@ -1356,7 +1356,7 @@
         </context-group>
       </trans-unit>
       <trans-unit id="workflowPlanDesc" datatype="html">
-        <source> Transforms research into a clear roadmap by reviewing documentation and synthesizing findings. Breaks down features into manageable, actionable tasks and identifies the right locations within the domain structure. Leverages Nx generators to streamline setup, then documents everything in .plans/ with well-defined acceptance criteria. </source>
+        <source> Transform research into a clear roadmap by reviewing documentation and synthesizing findings. Break down features into manageable, actionable tasks and identify the right locations within the domain structure. Leverage Nx generators to streamline setup, then document everything in .plans/ with well-defined acceptance criteria. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-workflow/src/lib/page/workflow-overview/workflow-overview.component.html</context>
           <context context-type="linenumber">48,51</context>
@@ -1384,7 +1384,7 @@
         </context-group>
       </trans-unit>
       <trans-unit id="workflowImplementDesc" datatype="html">
-        <source> Brings plans to life by building features that align with established conventions and naming standards. Works on dedicated feature branches, commits changes with clear, focused messages, and keeps documentation up to date. Prioritizes quality by writing thorough tests and running the full validation suite before finalizing work. </source>
+        <source> Bring plans to life by building features that align with established conventions and naming standards. Work on dedicated feature branches, commit changes with clear, focused messages, and keep documentation up to date. Prioritize quality by writing thorough tests and running the full validation suite before finalizing work. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-workflow/src/lib/page/workflow-overview/workflow-overview.component.html</context>
           <context context-type="linenumber">74,77</context>
@@ -1398,7 +1398,7 @@
         </context-group>
       </trans-unit>
       <trans-unit id="workflowShipDesc" datatype="html">
-        <source> Shares work by opening pull requests with descriptive titles and filling out PR templates completely. Engages code owners and stakeholders for review, responds thoughtfully to feedback, and ensures all checks pass successfully before merging changes. </source>
+        <source> Share work by opening pull requests with descriptive titles and filling out PR templates completely. Engage code owners and stakeholders for review, respond thoughtfully to feedback, and ensure all checks pass successfully before merging changes. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">libs/domains/landingpage/frontend/feature-workflow/src/lib/page/workflow-overview/workflow-overview.component.html</context>
           <context context-type="linenumber">94,96</context>
