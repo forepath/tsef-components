@@ -426,6 +426,11 @@ Fixes #ISSUE_NUMBER</code></pre>
                   Frontend applications <span class="fw-bold">SHOULD</span> integrate design system libraries
                   consistently.
                 </li>
+                <li>
+                  Frontend applications <span class="fw-bold">SHOULD</span> use SCSS for styling. CSS
+                  <span class="fw-bold">MAY</span> be used only when SCSS is not available or not supported by the build
+                  tooling.
+                </li>
               </ul>
 
               <h6>State Management Guidelines</h6>
@@ -494,6 +499,17 @@ Fixes #ISSUE_NUMBER</code></pre>
                 <li>
                   Frontend applications <span class="fw-bold">MUST</span> respect dependency boundaries when
                   implementing state management across domains.
+                </li>
+                <li>
+                  Frontend applications <span class="fw-bold">MUST</span> use facades to abstract state management from
+                  components. Components <span class="fw-bold">MUST NOT</span> directly access the store or dispatch
+                  actions. Facades <span class="fw-bold">SHOULD</span> be provided in <code>data-access</code> libraries
+                  and expose a type-safe, domain-specific API for components to interact with state.
+                </li>
+                <li>
+                  For simple state management patterns (Signals, BehaviorSubjects), components
+                  <span class="fw-bold">MAY</span> interact with state directly through services, but
+                  <span class="fw-bold">SHOULD</span> still use facades for complex state scenarios.
                 </li>
               </ul>
 
